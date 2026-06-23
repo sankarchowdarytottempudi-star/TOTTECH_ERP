@@ -1,0 +1,12 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search patient, record id, phone, status, notes...\"]')\u001b[22m\n\n    at createPharmacyMedicine (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:106:22)\n    at async main (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:195:30)"
+  }
+]

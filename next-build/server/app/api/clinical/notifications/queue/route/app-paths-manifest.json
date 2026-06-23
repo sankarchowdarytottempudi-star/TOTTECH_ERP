@@ -1,0 +1,3 @@
+{
+  "/api/clinical/notifications/queue/route": "app/api/clinical/notifications/queue/route.js"
+}

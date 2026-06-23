@@ -1,0 +1,40 @@
+{
+  "createHospital": "WORKING",
+  "uploadLogo": "WORKING",
+  "createBranches": "WORKING",
+  "createUsers": "WORKING",
+  "assignSubscription": "WORKING",
+  "disableTenant": "WORKING",
+  "reactivateTenant": "WORKING",
+  "dataIsolation": "WORKING",
+  "counts": [
+    {
+      "label": "Hospital A patients",
+      "count": 100
+    },
+    {
+      "label": "Hospital B patients",
+      "count": 1
+    },
+    {
+      "label": "Hospital A invoices",
+      "count": 113
+    },
+    {
+      "label": "Hospital B invoices",
+      "count": 0
+    },
+    {
+      "label": "Hospital A medicines",
+      "count": 100
+    },
+    {
+      "label": "Hospital B medicines",
+      "count": 0
+    }
+  ],
+  "hospitalB": {
+    "hospital_id": 14,
+    "branch_id": 14
+  }
+}

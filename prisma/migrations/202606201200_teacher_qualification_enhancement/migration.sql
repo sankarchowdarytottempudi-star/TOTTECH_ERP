@@ -1,0 +1,6 @@
+ALTER TABLE teachers
+ADD COLUMN IF NOT EXISTS qualifications JSONB,
+ADD COLUMN IF NOT EXISTS certifications JSONB,
+ADD COLUMN IF NOT EXISTS teacher_notes JSONB,
+ADD COLUMN IF NOT EXISTS performance_notes JSONB;
+

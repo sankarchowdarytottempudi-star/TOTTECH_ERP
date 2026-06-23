@@ -1,0 +1,36 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "pharmacy-medicines",
+    "status": "PASS",
+    "details": {
+      "medicine_code": "MED-1781984800222",
+      "brand_name": "UAT Brand UAT MED-1781984769839"
+    }
+  },
+  {
+    "area": "pharmacy-sales",
+    "status": "PASS",
+    "details": "Created pharmacy sale for patient Go Live."
+  },
+  {
+    "area": "lab",
+    "status": "PASS",
+    "details": {
+      "id": 97,
+      "order_uid": "LAB-1781984864007-4210",
+      "sample_number": "SMP-LAB-1781984863112",
+      "result_value": "Slightly elevated",
+      "status": "ORDERED"
+    }
+  },
+  {
+    "area": "persistence",
+    "status": "PASS",
+    "details": "Browser reload retained the module pages and records remained visible."
+  }
+]

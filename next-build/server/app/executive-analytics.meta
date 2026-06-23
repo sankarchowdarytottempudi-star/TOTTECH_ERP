@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/executive-analytics/layout,_N_T_/executive-analytics/page,_N_T_/executive-analytics"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/executive-analytics/__PAGE__",
+    "/executive-analytics",
+    "/_index",
+    "/_head"
+  ]
+}

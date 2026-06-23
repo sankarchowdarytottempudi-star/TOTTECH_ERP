@@ -1,0 +1,3 @@
+{
+  "/api/ptm/[id]/notify/route": "app/api/ptm/[id]/notify/route.js"
+}

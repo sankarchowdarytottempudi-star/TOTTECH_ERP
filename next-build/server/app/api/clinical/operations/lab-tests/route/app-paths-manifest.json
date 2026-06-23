@@ -1,0 +1,3 @@
+{
+  "/api/clinical/operations/lab-tests/route": "app/api/clinical/operations/lab-tests/route.js"
+}

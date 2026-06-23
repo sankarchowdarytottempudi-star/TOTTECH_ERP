@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ai-command-center/layout,_N_T_/ai-command-center/page,_N_T_/ai-command-center"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/ai-command-center/__PAGE__",
+    "/ai-command-center",
+    "/_index",
+    "/_head"
+  ]
+}

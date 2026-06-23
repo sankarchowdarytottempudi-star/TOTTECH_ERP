@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/academics/layout,_N_T_/academics/student-evaluation/layout,_N_T_/academics/student-evaluation/page,_N_T_/academics/student-evaluation"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/academics/student-evaluation/__PAGE__",
+    "/academics/student-evaluation",
+    "/academics",
+    "/_index",
+    "/_head"
+  ]
+}

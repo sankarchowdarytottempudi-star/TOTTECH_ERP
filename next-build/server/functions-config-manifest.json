@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/clinical/billing/invoices/[id]/pdf": {},
+    "/api/clinical/documents/[id]/pdf": {},
+    "/api/clinical/documents/render/[documentType]/[id]": {},
+    "/api/clinical/documents/verify": {},
+    "/api/clinical/finance/credit-notes": {},
+    "/api/clinical/finance/hardening": {},
+    "/api/clinical/insurance/claims/[id]/workflow": {},
+    "/api/clinical/notifications/appointment-reminders": {},
+    "/api/clinical/notifications/queue": {},
+    "/api/clinical/security/role-permission-audit": {},
+    "/api/clinical/security/tenant-security-audit": {},
+    "/api/finance/expenses": {},
+    "/api/schools/upload": {},
+    "/uploads/students/certificates/[file]": {}
+  }
+}

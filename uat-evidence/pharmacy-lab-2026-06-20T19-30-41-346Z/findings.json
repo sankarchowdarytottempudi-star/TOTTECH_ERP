@@ -1,0 +1,12 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "locator.fill: Error: strict mode violation: getByPlaceholder(/Search/) resolved to 3 elements:\n    1) <input value=\"\" placeholder=\"Search patient, mobile, MRN, ABHA, doctor, appointment...\" class=\"min-w-0 flex-1 bg-transparent py-2 text-sm font-bold outline-none placeholder:text-slate-400\"/> aka getByPlaceholder('Search patient, mobile, MRN,')\n    2) <input value=\"\" placeholder=\"Search navigation...\" class=\"min-w-0 flex-1 bg-transparent py-2 text-sm font-bold outline-none placeholder:text-slate-400\"/> aka getByPlaceholder('Search navigation...')\n    3) <input value=\"\" placeholder=\"Search patient, UHID, mobile, doctor, prescription...\" class=\"min-w-0 flex-1 bg-transparent text-sm font-bold outline-none\"/> aka getByPlaceholder('Search patient, UHID, mobile')\n\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Search/)\u001b[22m\n\n    at createPharmacyMedicine (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:103:41)\n    at async main (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:189:30)"
+  }
+]

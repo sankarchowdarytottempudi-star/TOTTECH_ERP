@@ -1,0 +1,3 @@
+{
+  "/api/clinical/insurance/claims/[id]/workflow/route": "app/api/clinical/insurance/claims/[id]/workflow/route.js"
+}

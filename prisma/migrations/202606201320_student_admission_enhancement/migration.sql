@@ -1,0 +1,16 @@
+ALTER TABLE students
+  ADD COLUMN IF NOT EXISTS previous_school_name VARCHAR(255),
+  ADD COLUMN IF NOT EXISTS previous_school_address TEXT,
+  ADD COLUMN IF NOT EXISTS previous_board VARCHAR(255),
+  ADD COLUMN IF NOT EXISTS previous_class_studied VARCHAR(100),
+  ADD COLUMN IF NOT EXISTS previous_academic_year VARCHAR(50),
+  ADD COLUMN IF NOT EXISTS previous_school_percentage DECIMAL(5,2),
+  ADD COLUMN IF NOT EXISTS previous_school_grade VARCHAR(20),
+  ADD COLUMN IF NOT EXISTS previous_school_tc_number VARCHAR(120),
+  ADD COLUMN IF NOT EXISTS previous_school_leaving_date DATE,
+  ADD COLUMN IF NOT EXISTS previous_school_reason_for_leaving TEXT,
+  ADD COLUMN IF NOT EXISTS has_academic_gap BOOLEAN DEFAULT FALSE,
+  ADD COLUMN IF NOT EXISTS academic_gap_from_year VARCHAR(50),
+  ADD COLUMN IF NOT EXISTS academic_gap_to_year VARCHAR(50),
+  ADD COLUMN IF NOT EXISTS academic_gap_duration VARCHAR(100),
+  ADD COLUMN IF NOT EXISTS academic_gap_reason TEXT;

@@ -1,0 +1,71 @@
+{
+  "url": "http://127.0.0.1:3000/clinical-services/ivf/cycles",
+  "saveSuccessVisible": false,
+  "recordVisible": false,
+  "apiResponses": [
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:3000/api/clinical/ivf/cycles",
+      "body": "{\"context\":{\"user\":{\"id\":3,\"full_name\":\"Clinical Services Super Admin\",\"email\":\"CS-Superadmin@erp.com\",\"role\":\"SUPER_ADMIN\",\"project\":\"tottech_clinical_services\",\"projectType\":\"CLINICAL\"},\"tenantId\":1,\"hospitalId\":1,\"branchId\":1,\"clinicId\":1,\"organizationId\":1,\"organizationName\":\"TOTTECH Clinical Services\",\"tenantName\":\"TOTTECH Clinical Services\",\"hospitalName\":\"TOTTECH Clinical Services Hospital Network\",\"hospitalAddress\":\"\",\"hospitalPhone\":\"\",\"hospitalEmail\":\"\",\"hospitalLicenseNumber\":\"\",\"bran"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:3000/api/clinical/ivf/cycles",
+      "body": "{\"context\":{\"user\":{\"id\":3,\"full_name\":\"Clinical Services Super Admin\",\"email\":\"CS-Superadmin@erp.com\",\"role\":\"SUPER_ADMIN\",\"project\":\"tottech_clinical_services\",\"projectType\":\"CLINICAL\"},\"tenantId\":1,\"hospitalId\":1,\"branchId\":1,\"clinicId\":1,\"organizationId\":1,\"organizationName\":\"TOTTECH Clinical Services\",\"tenantName\":\"TOTTECH Clinical Services\",\"hospitalName\":\"TOTTECH Clinical Services Hospital Network\",\"hospitalAddress\":\"\",\"hospitalPhone\":\"\",\"hospitalEmail\":\"\",\"hospitalLicenseNumber\":\"\",\"bran"
+    },
+    {
+      "status": 400,
+      "url": "http://127.0.0.1:3000/api/clinical/ivf/cycles",
+      "body": "{\"error\":\"Couple selection is required for this IVF workflow.\"}"
+    }
+  ],
+  "consoleMessages": [
+    "error: Failed to load resource: the server responded with a status of 400 (Bad Request)"
+  ],
+  "failedRequests": [
+    "GET http://127.0.0.1:3000/clinical-services/analytics/ai-insights?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/bed-analytics?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/medical-director?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/ceo-dashboard?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/bed-analytics?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/ai-insights?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/medical-director?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/ceo-dashboard?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/cfo-dashboard?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles/13?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/analytics/cfo-dashboard?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles/13?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/couples?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/male-assessment?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/female-assessment?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/treatment-plans?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/couples?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/female-assessment?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/treatment-plans?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/male-assessment?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/embryology?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/retrievals?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/stimulation?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cryo?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/stimulation?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/retrievals?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cryo?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/transfers?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/transfers?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/donors?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/surrogacy?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/pregnancies?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/pregnancies?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/patients/1?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles?record=13&mode=edit&_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles/14?_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles?record=14&mode=edit&_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/patients/1?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles?record=13&mode=edit&_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles/14?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles?record=12&mode=edit&_rsc=23dcLkoDms9dJ-e6 net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles?record=12&mode=edit&_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED",
+    "GET http://127.0.0.1:3000/clinical-services/ivf/cycles/11?_rsc=RCnQ89DubIY5GJly net::ERR_ABORTED"
+  ]
+}

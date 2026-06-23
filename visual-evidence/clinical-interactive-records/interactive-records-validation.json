@@ -1,0 +1,461 @@
+{
+  "auditedPages": 11,
+  "totalInteractiveCards": 519,
+  "pagesWithoutInteractiveCards": [
+    "/clinical-services/finance/claims",
+    "/clinical-services/mobile/appointments",
+    "/clinical-services/hrms/employees"
+  ],
+  "samplesChecked": 31,
+  "samplesWithPointer": 31,
+  "samplesWithNativePrimaryLink": 31,
+  "samplesMissingActions": 0,
+  "audits": [
+    {
+      "route": "/clinical-services/patients",
+      "interactiveCards": 101,
+      "samples": [
+        {
+          "text": "PAT-1780845965249UAT17 Patient 100 Female9000000100ACTIVEAppts 3Records 0IVF 0View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/patients/101",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 100 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "PAT-1780845965233UAT17 Patient 099 Male9000000099ACTIVEAppts 3Records 0IVF 0View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/patients/100",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 099 Male",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "PAT-1780845965215UAT17 Patient 098 Female9000000098ACTIVEAppts 3Records 0IVF 0View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/patients/99",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 098 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "PAT-1780845965196UAT17 Patient 097 Male9000000097ACTIVEAppts 3Records 0IVF 0View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/patients/98",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 097 Male",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "PAT-1780845965177UAT17 Patient 096 Female9000000096ACTIVEAppts 3Records 0IVF 0View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/patients/97",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 096 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/appointments",
+      "interactiveCards": 29,
+      "samples": [
+        {
+          "text": "T-028UAT17 Patient 076 FemaleUAT17 Doctor 025 | 1970-01-01T09:00:00.000ZBOOKEDQueue WAITINGType OPDBOOKEDWAITINGCheck In",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/appointments/76",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 076 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        },
+        {
+          "text": "T-020UAT17 Patient 100 FemaleUAT17 Doctor 001 | 1970-01-01T09:00:00.000ZIN_PROGRESSQueue CHECKED_INType OPDIN_PROGRESSCH",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/appointments/52",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 100 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        },
+        {
+          "text": "T-019UAT17 Patient 076 FemaleUAT17 Doctor 025 | 1970-01-01T09:00:00.000ZBOOKEDQueue WAITINGType OPDBOOKEDWAITINGCheck In",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/appointments/51",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 076 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        },
+        {
+          "text": "T-011UAT17 Patient 100 FemaleUAT17 Doctor 001 | 1970-01-01T09:00:00.000ZIN_PROGRESSQueue CHECKED_INType OPDIN_PROGRESSCH",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/appointments/27",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 100 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        },
+        {
+          "text": "T-010UAT17 Patient 076 FemaleUAT17 Doctor 025 | 1970-01-01T09:00:00.000ZBOOKEDQueue WAITINGType OPDBOOKEDWAITINGCheck In",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/appointments/26",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Patient 076 Female",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/hms/icu",
+      "interactiveCards": 3,
+      "samples": [
+        {
+          "text": "#3STABLEPatient 101STABLEModule ICU ManagementPatient 101View DetailsEditAudit TimelineHistoryPatient 360",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/hms/icu/3",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open STABLE",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        },
+        {
+          "text": "#2STABLEPatient 101STABLEModule ICU ManagementPatient 101View DetailsEditAudit TimelineHistoryPatient 360",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/hms/icu/2",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open STABLE",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        },
+        {
+          "text": "#1STABLEPatient 101STABLEModule ICU ManagementPatient 101View DetailsEditAudit TimelineHistoryPatient 360",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/hms/icu/1",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open STABLE",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": true
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/ivf/cycles",
+      "interactiveCards": 3,
+      "samples": [
+        {
+          "text": "#3CYC-1780846583830Couple 3ACTIVEModule IVF CyclesCouple 3View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/ivf/cycles/3",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open CYC-1780846583830",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "#2CYC-1780846087919Couple 2ACTIVEModule IVF CyclesCouple 2View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/ivf/cycles/2",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open CYC-1780846087919",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "#1CYC-1780845966751Couple 1ACTIVEModule IVF CyclesCouple 1View DetailsEditAudit TimelineHistory",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/ivf/cycles/1",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open CYC-1780845966751",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/pharmacy/purchase-orders",
+      "interactiveCards": 3,
+      "samples": [
+        {
+          "text": "#3PO-1780846583995Pharmacy Purchase Orders recordAPPROVEDModule Purchase OrdersRecord 3View DetailsEditAudit TimelineHis",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/pharmacy/purchase-orders/3",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open PO-1780846583995",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "#2PO-1780846088050Pharmacy Purchase Orders recordAPPROVEDModule Purchase OrdersRecord 2View DetailsEditAudit TimelineHis",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/pharmacy/purchase-orders/2",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open PO-1780846088050",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "#1PO-1780845966949Pharmacy Purchase Orders recordAPPROVEDModule Purchase OrdersRecord 1View DetailsEditAudit TimelineHis",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/pharmacy/purchase-orders/1",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open PO-1780845966949",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/finance/claims",
+      "interactiveCards": 0,
+      "samples": []
+    },
+    {
+      "route": "/clinical-services/analytics/ceo-dashboard",
+      "interactiveCards": 2,
+      "samples": [
+        {
+          "text": "ID 2UAT17 Clinical Workflow ReadinessExecutive | CEO DashboardACTIVEUAT17 Clinical Workflow ReadinessID 2Removeid2tenant",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/analytics/ceo-dashboard/2",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Clinical Workflow Readiness",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID 1UAT17 Clinical Workflow ReadinessExecutive | CEO DashboardACTIVEUAT17 Clinical Workflow ReadinessID 1Removeid1tenant",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/analytics/ceo-dashboard/1",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open UAT17 Clinical Workflow Readiness",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/security/roles",
+      "interactiveCards": 128,
+      "samples": [
+        {
+          "text": "ID fd3141af-107d-461a-9511-42e67cec0df6AI Governance ManagerSecurity governance recordACTIVEAI Governance Managerrole ke",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/security/roles/fd3141af-107d-461a-9511-42e67cec0df6",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open AI Governance Manager",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID fac9392f-faa9-40f8-a477-ecbe8153e4e4Pediatrics LeadSecurity governance recordACTIVEPediatrics Leadrole keypediatrics_",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/security/roles/fac9392f-faa9-40f8-a477-ecbe8153e4e4",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Pediatrics Lead",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID f8ad016f-900e-42f2-9b3a-a00621721217Finance LeadSecurity governance recordACTIVEFinance Leadrole keyfinance_leadrole ",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/security/roles/f8ad016f-900e-42f2-9b3a-a00621721217",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Finance Lead",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID f53c5989-182c-4085-aa3c-461438cfd984IVF ExecutiveSecurity governance recordACTIVEIVF Executiverole keyivf_executivero",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/security/roles/f53c5989-182c-4085-aa3c-461438cfd984",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open IVF Executive",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID f11fc433-9ad0-4956-b81d-b7d4bbd40840PharmacistSecurity governance recordACTIVEPharmacistrole keypharmacistrole namePh",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/security/roles/f11fc433-9ad0-4956-b81d-b7d4bbd40840",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Pharmacist",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/dictionary/entities",
+      "interactiveCards": 250,
+      "samples": [
+        {
+          "text": "ID ffb5ce5f-6af5-4891-974e-4630f0d69940Pharmacy Entity 002Dictionary Entity Catalog recordACTIVEPharmacy Entity 002ID ff",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/dictionary/entities/ffb5ce5f-6af5-4891-974e-4630f0d69940",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Pharmacy Entity 002",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID ffb16f5a-b2bc-4065-bb32-356073a21b7eFinance Entity 028Dictionary Entity Catalog recordACTIVEFinance Entity 028ID ffb1",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/dictionary/entities/ffb16f5a-b2bc-4065-bb32-356073a21b7e",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Finance Entity 028",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID ffabbb16-09ab-4aa4-95c0-9300d5f68495Op Entity 007Dictionary Entity Catalog recordACTIVEOp Entity 007ID ffabbb16-09ab-",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/dictionary/entities/ffabbb16-09ab-4aa4-95c0-9300d5f68495",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Op Entity 007",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID ff72429b-ebfc-407c-a61e-712473bf05a1Referral Entity 039Dictionary Entity Catalog recordACTIVEReferral Entity 039ID ff",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/dictionary/entities/ff72429b-ebfc-407c-a61e-712473bf05a1",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Referral Entity 039",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        },
+        {
+          "text": "ID ff2b9426-a890-4435-bfb6-8ad5c0940655Referral Entity 003Dictionary Entity Catalog recordACTIVEReferral Entity 003ID ff",
+          "cursor": "pointer",
+          "primaryHref": "/clinical-services/dictionary/entities/ff2b9426-a890-4435-bfb6-8ad5c0940655",
+          "primaryTabIndex": "native",
+          "primaryAria": "Open Referral Entity 003",
+          "hasViewDetails": true,
+          "hasAudit": true,
+          "hasHistory": true,
+          "hasPatient360": false
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/mobile/appointments",
+      "interactiveCards": 0,
+      "samples": []
+    },
+    {
+      "route": "/clinical-services/hrms/employees",
+      "interactiveCards": 0,
+      "samples": []
+    }
+  ],
+  "detailRoutes": [
+    {
+      "route": "/clinical-services/hms/icu/3",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/appointments/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/ivf/cycles/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/pharmacy/purchase-orders/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/finance/claims/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/analytics/ceo-dashboard/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/security/roles/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/dictionary/entities/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/mobile/appointments/1",
+      "status": 200
+    },
+    {
+      "route": "/clinical-services/hrms/employees/1",
+      "status": 200
+    }
+  ]
+}

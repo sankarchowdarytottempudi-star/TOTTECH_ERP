@@ -1,0 +1,37 @@
+{
+  "name": "tottech-one-mobile",
+  "version": "1.0.0-recovery",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "build:android": "npm run build:android:platform",
+    "build:android:platform": "cd android && ./gradlew :app:assemblePlatformRelease",
+    "build:android:corporate": "cd android && ./gradlew :app:assembleCorporateRelease -PentryFile=index.corporate.js",
+    "start": "react-native start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-native/new-app-screen": "^0.83.0",
+    "@react-navigation/bottom-tabs": "^7.8.12",
+    "@react-navigation/native": "^7.2.0",
+    "@react-navigation/native-stack": "^7.8.1",
+    "react": "^19.2.0",
+    "react-native": "^0.83.0",
+    "react-native-safe-area-context": "^5.7.0",
+    "react-native-screens": "^4.19.0",
+    "react-native-webview": "^13.16.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/runtime": "^7.29.7",
+    "@react-native-community/cli": "^20.0.0",
+    "@react-native-community/cli-platform-android": "^20.0.0",
+    "@react-native/babel-preset": "^0.83.0",
+    "@react-native/eslint-config": "^0.83.0",
+    "@react-native/metro-config": "^0.83.0",
+    "@react-native/typescript-config": "^0.83.0",
+    "@types/react": "^19.2.7",
+    "typescript": "^5.9.3"
+  }
+}

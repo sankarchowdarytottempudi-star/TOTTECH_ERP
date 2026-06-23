@@ -1,0 +1,292 @@
+{
+  "baseline": {
+    "count": 4
+  },
+  "creationRows": [
+    {
+      "hospital": "UAT Hospital A",
+      "code": "UATA01",
+      "foundInSearch": true,
+      "visibleRows": 1,
+      "visibleAfterRefresh": true
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "code": "UATB01",
+      "foundInSearch": true,
+      "visibleRows": 1,
+      "visibleAfterRefresh": true
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "code": "UATC01",
+      "foundInSearch": true,
+      "visibleRows": 1,
+      "visibleAfterRefresh": true
+    }
+  ],
+  "editResults": [
+    {
+      "hospital": "UAT Hospital A",
+      "updatedField": "address",
+      "updatedValue": "UAT Hospital A Address - EDITED | UAT VERIFIED",
+      "visibleAfterEdit": true,
+      "searchCount": 1
+    }
+  ],
+  "switcherRows": [
+    {
+      "hospital": "UAT Hospital A",
+      "switched": true,
+      "headerHasHospital": true,
+      "sidebarSnippet": [
+        "Dashboard7 workflows",
+        "Dashboard Workspace",
+        "Overview",
+        "Executive Dashboard",
+        "Clinical Dashboard",
+        "Operations Dashboard",
+        "Financial Dashboard",
+        "AI Insights",
+        "Operational Masters",
+        "Patient Management8 workflows",
+        "Doctors12 workflows",
+        "Outpatient (OP)6 workflows"
+      ],
+      "routeChecks": [
+        {
+          "route": "/clinical-services/ivf",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/laboratory",
+          "expectedLicensed": false,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/pharmacy",
+          "expectedLicensed": false,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/finance",
+          "expectedLicensed": false,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        }
+      ]
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "switched": true,
+      "headerHasHospital": true,
+      "sidebarSnippet": [
+        "Dashboard7 workflows",
+        "Dashboard Workspace",
+        "Overview",
+        "Executive Dashboard",
+        "Clinical Dashboard",
+        "Operations Dashboard",
+        "Financial Dashboard",
+        "AI Insights",
+        "Operational Masters",
+        "Patient Management8 workflows",
+        "Doctors12 workflows",
+        "Outpatient (OP)6 workflows"
+      ],
+      "routeChecks": [
+        {
+          "route": "/clinical-services/ivf",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/laboratory",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/pharmacy",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/finance",
+          "expectedLicensed": false,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        }
+      ]
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "switched": true,
+      "headerHasHospital": true,
+      "sidebarSnippet": [
+        "Dashboard7 workflows",
+        "Dashboard Workspace",
+        "Overview",
+        "Executive Dashboard",
+        "Clinical Dashboard",
+        "Operations Dashboard",
+        "Financial Dashboard",
+        "AI Insights",
+        "Operational Masters",
+        "Patient Management8 workflows",
+        "Doctors12 workflows",
+        "Outpatient (OP)6 workflows"
+      ],
+      "routeChecks": [
+        {
+          "route": "/clinical-services/ivf",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/laboratory",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/pharmacy",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        },
+        {
+          "route": "/clinical-services/finance",
+          "expectedLicensed": true,
+          "blocked": false,
+          "status": 200,
+          "bodySample": "Kandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nKandimalla Speciality Hospital\nUAT Hospital A\nUAT Hospital B\nUAT Hospital C\n\nUSER\n\nC\n\nClinical Services Super Admin\n\nCLINICAL SERVICES SUPER ADMIN\n\nLogout\n\nKandimalla Speciality Hospital\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nKANDIMALLA SPECIALITY HOSPITAL\n\nKandimalla Speciality Hospital Main Branch\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nENTERPRISE NAVIGATION\n\nOrganized by hospital business domains for clinic"
+        }
+      ]
+    }
+  ],
+  "moduleRows": [
+    {
+      "hospital": "UAT Hospital A",
+      "desiredModules": [
+        "IVF"
+      ],
+      "hasModuleCountText": false,
+      "containsLicensedModuleNames": true
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "desiredModules": [
+        "IVF",
+        "LAB",
+        "PHARMACY"
+      ],
+      "hasModuleCountText": false,
+      "containsLicensedModuleNames": true
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "desiredModules": [
+        "PATIENTS",
+        "APPOINTMENTS",
+        "OP",
+        "IP",
+        "ER",
+        "ICU",
+        "OT",
+        "IVF",
+        "LAB",
+        "RADIOLOGY",
+        "PHARMACY",
+        "INVENTORY",
+        "PROCUREMENT",
+        "BILLING",
+        "INSURANCE",
+        "REFERRAL",
+        "FINANCE",
+        "HR",
+        "ANALYTICS",
+        "AI"
+      ],
+      "hasModuleCountText": true,
+      "containsLicensedModuleNames": true
+    }
+  ],
+  "deleteResults": [
+    {
+      "hospital": "UAT Hospital C",
+      "deletedFromUi": true,
+      "searchCount": 0
+    }
+  ],
+  "finalHospitals": [
+    {
+      "id": 36,
+      "hospital_name": "Kandimalla Speciality Hospital",
+      "hospital_code": "KSH",
+      "status": "ACTIVE",
+      "is_deleted": false
+    },
+    {
+      "id": 37,
+      "hospital_name": "UAT Hospital A",
+      "hospital_code": "UATA01",
+      "status": "ACTIVE",
+      "is_deleted": false
+    },
+    {
+      "id": 38,
+      "hospital_name": "UAT Hospital B",
+      "hospital_code": "UATB01",
+      "status": "ACTIVE",
+      "is_deleted": false
+    }
+  ],
+  "licensingRows": [
+    {
+      "hospital_name": "UAT Hospital A",
+      "hospital_code": "UATA01",
+      "enabled_modules": "17"
+    },
+    {
+      "hospital_name": "UAT Hospital B",
+      "hospital_code": "UATB01",
+      "enabled_modules": "17"
+    }
+  ],
+  "signals": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "failedRequests": [
+      "GET https://erp.tottechsolutions.com/clinical-services/appointments?_rsc=jadBIdB0ScwOlG06 :: net::ERR_ABORTED",
+      "GET https://erp.tottechsolutions.com/clinical-services/patients?_rsc=jadBIdB0ScwOlG06 :: net::ERR_ABORTED",
+      "GET https://erp.tottechsolutions.com/clinical-services/reports?_rsc=jadBIdB0ScwOlG06 :: net::ERR_ABORTED",
+      "GET https://erp.tottechsolutions.com/clinical-services/hms/billing?_rsc=jadBIdB0ScwOlG06 :: net::ERR_ABORTED",
+      "POST https://erp.tottechsolutions.com/api/clinical/context :: net::ERR_ABORTED",
+      "POST https://erp.tottechsolutions.com/api/clinical/context :: net::ERR_ABORTED",
+      "POST https://erp.tottechsolutions.com/api/clinical/context :: net::ERR_ABORTED",
+      "POST https://erp.tottechsolutions.com/api/clinical/context :: net::ERR_ABORTED",
+      "POST https://erp.tottechsolutions.com/api/auth/logout :: net::ERR_ABORTED"
+    ]
+  },
+  "refreshKeepsHospital": true,
+  "reloginKeepsHospital": true
+}

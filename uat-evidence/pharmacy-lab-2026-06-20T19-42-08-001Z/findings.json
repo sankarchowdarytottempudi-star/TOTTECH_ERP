@@ -1,0 +1,25 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "pharmacy-medicines",
+    "status": "PASS",
+    "details": {
+      "medicine_code": "MED-1781984560320",
+      "brand_name": "UAT Brand UAT MED-1781984529945"
+    }
+  },
+  {
+    "area": "pharmacy-sales",
+    "status": "PASS",
+    "details": "Created pharmacy sale for patient Go Live."
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Edit/i }).first()\u001b[22m\n\n    at createLabRecord (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:175:61)\n    at async main (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:200:23)"
+  }
+]

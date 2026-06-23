@@ -1,0 +1,474 @@
+[
+  {
+    "route": "/clinical-services",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 4761
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 221
+    },
+    "kpiGrid": {
+      "left": 369,
+      "right": 1871,
+      "width": 1502,
+      "top": 113,
+      "height": 155
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "886.797px 591.203px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/patients",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 6036
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 164
+    },
+    "kpiGrid": {
+      "left": 361,
+      "right": 405,
+      "width": 44,
+      "top": 293,
+      "height": 44
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "44px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/hms",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 813
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 176
+    },
+    "kpiGrid": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 280,
+      "height": 206
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "100%",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "300.797px 300.797px 300.797px 300.797px 300.797px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/hms/op",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1680
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 156
+    },
+    "kpiGrid": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 260,
+      "height": 206
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "100%",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "380px 380px 380px 380px 0px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/ivf",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1721
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 176
+    },
+    "kpiGrid": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 280,
+      "height": 428
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "100%",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "300.797px 300.797px 300.797px 300.797px 300.797px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/pharmacy",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1791
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 176
+    },
+    "kpiGrid": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 280,
+      "height": 428
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "100%",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "300.797px 300.797px 300.797px 300.797px 300.797px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/finance",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1864
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 176
+    },
+    "kpiGrid": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 280,
+      "height": 428
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "100%",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "300.797px 300.797px 300.797px 300.797px 300.797px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  },
+  {
+    "route": "/clinical-services/analytics",
+    "viewportWidth": 1920,
+    "sidebar": {
+      "left": 0,
+      "right": 320,
+      "width": 320,
+      "top": 64,
+      "height": 1016
+    },
+    "content": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 1016
+    },
+    "firstChild": {
+      "left": 320,
+      "right": 1920,
+      "width": 1600,
+      "top": 64,
+      "height": 3804
+    },
+    "firstSection": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 80,
+      "height": 176
+    },
+    "kpiGrid": {
+      "left": 336,
+      "right": 1904,
+      "width": 1568,
+      "top": 280,
+      "height": 299
+    },
+    "firstChildStyles": {
+      "maxWidth": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gridTemplateColumns": "none"
+    },
+    "kpiGridStyles": {
+      "maxWidth": "100%",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "gridTemplateColumns": "300.797px 300.797px 300.797px 300.797px 300.797px"
+    },
+    "wastedLeftInsideContent": 0,
+    "wastedRightInsideContent": 0,
+    "firstChildUsesFullContentWidth": true,
+    "horizontalOverflow": false
+  }
+]

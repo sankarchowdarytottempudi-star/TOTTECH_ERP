@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TOTTECH ONE Mark</title>
+  <desc id="desc">Gold gateway mark for TOTTECH ONE</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7a4a0a"/>
+      <stop offset="0.32" stop-color="#f0c56a"/>
+      <stop offset="0.56" stop-color="#fff0a8"/>
+      <stop offset="0.82" stop-color="#b97916"/>
+      <stop offset="1" stop-color="#2c1905"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#120a03"/>
+      <stop offset="0.65" stop-color="#533008"/>
+      <stop offset="1" stop-color="#c48b25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#fff2a4" stop-opacity="0.95"/>
+      <stop offset="0.52" stop-color="#d99625" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="84" fill="#120b04"/>
+  <circle cx="256" cy="236" r="195" fill="url(#glow)"/>
+  <path d="M126 82h108v55h-64l38 33h38v180L87 389l82-117V170l-43-88z" fill="url(#dark)" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M278 82h108l-43 88v102l82 117-159-39V170h38l38-33h-64V82z" fill="url(#dark)" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M256 145v176" stroke="#fff1a6" stroke-width="16" stroke-linecap="round"/>
+  <path d="M203 188l45 32v150l-45 12V188z" fill="#090603" stroke="#f0b94b" stroke-width="5"/>
+  <path d="M309 188l-45 32v150l45 12V188z" fill="#090603" stroke="#f0b94b" stroke-width="5"/>
+  <path d="M190 386h122l75 64H115l75-64z" fill="#0c0703" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="256" cy="237" r="15" fill="#100904"/>
+  <path d="M246 254h20l9 74h-38l9-74z" fill="#100904"/>
+</svg>

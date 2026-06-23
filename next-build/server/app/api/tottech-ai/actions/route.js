@@ -1,0 +1,10 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/tottech-ai/actions/route.js")
+R.c("server/chunks/[root-of-the-server]__0c8j43l._.js")
+R.c("server/chunks/lib_tottech-ai_actions_ts_10x.wyr._.js")
+R.c("server/chunks/[root-of-the-server]__0ga-2r9._.js")
+R.c("server/chunks/node_modules_bcryptjs_index_0bjz0ul.js")
+R.c("server/chunks/_0qubx0o._.js")
+R.c("server/chunks/[root-of-the-server]__0v8bdq7._.js")
+R.c("server/chunks/_next-internal_server_app_api_tottech-ai_actions_route_actions_0d57w3g.js")
+R.m(282359)
+module.exports=R.m(282359).exports

@@ -1,0 +1,2180 @@
+[
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 233
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-8 text-white shadow-xl",
+        "textNodes": [
+          {
+            "tag": "div",
+            "text": "Clinical Command CenterTOTTECH IVF CenterTOTTECH Clinical Services Hospital Network dashbo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "Clinical Command CenterTOTTECH IVF CenterTOTTECH Clinical Services Hospital Network dashbo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Clinical Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "TOTTECH IVF Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "TOTTECH Clinical Services Hospital Network dashboard grounded in patients, appointments, d",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%Clinical dashboard is grounded in patient, appointment, doctor, lab, IVF, fin",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "AI Insight",
+            "color": "rgb(115, 83, 0)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 7.08,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "24px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Clinical dashboard is grounded in patient, appointment, doctor, lab, IVF, finance, and que",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/patients/1",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 188
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-6 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "div",
+            "text": "Patient 360Tottempudi Leela sankar chowdaryPAT-1780824029828 | 8179618819 | ACTIVEQR Paylo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "Patient 360Tottempudi Leela sankar chowdaryPAT-1780824029828 | 8179618819 | ACTIVE",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Patient 360",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Tottempudi Leela sankar chowdary",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "PAT-1780824029828 | 8179618819 | ACTIVE",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "QR PayloadPAT-1780824029828",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "QR Payload",
+            "color": "rgb(115, 83, 0)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 7.08,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "PAT-1780824029828",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "14px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/ivf",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 176
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "IVF & Fertility Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "IVF Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Couple-centric fertility workflows integrated with HMS, lab, billing, referral tracking, e",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/ivf/couples/1",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 142,
+          "width": 1088,
+          "height": 156
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "IVF 360",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "CPL-1780845966673",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "UAT17 Patient 100 Female / UAT17 Patient 099 Male",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/hms",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 176
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "HMS Core",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Operations Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Registration, appointments, OP, IP, ER, ICU, OT, nursing, billing, insurance, reports, and",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/hms/op",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 156
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "HMS Core Module",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "OP Management",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Records, workflow screens, APIs, reports, audit, and timeline are branch-scoped through th",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/pharmacy",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 176
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Pharmacy + Inventory + Procurement",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Pharmacy Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "OP, IP, ER, OT, ICU, IVF pharmacy, central warehouse, batch tracking, expiry control, proc",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/finance",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 176
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Finance + RCM + Insurance + Referral",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Finance Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "GL, AR, AP, GST, TDS, assets, budgeting, insurance claims, TPA, corporate billing, referra",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/analytics",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 176
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Data Warehouse + BI + AI Insights",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Enterprise Healthcare Intelligence Platform",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Phase 9 command center for real-time analytics, executive dashboards, clinical analytics, ",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "desktop",
+    "route": "/clinical-services/security",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 336,
+          "top": 80,
+          "width": 1088,
+          "height": 176
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Phase 13 Enterprise RBAC + ABAC",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Security Governance Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Hospital-grade role hierarchy, permission matrix, data masking, record-level security, fie",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 389
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-8 text-white shadow-xl",
+        "textNodes": [
+          {
+            "tag": "div",
+            "text": "Clinical Command CenterTOTTECH IVF CenterTOTTECH Clinical Services Hospital Network dashbo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "Clinical Command CenterTOTTECH IVF CenterTOTTECH Clinical Services Hospital Network dashbo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Clinical Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "TOTTECH IVF Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "TOTTECH Clinical Services Hospital Network dashboard grounded in patients, appointments, d",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%Clinical dashboard is grounded in patient, appointment, doctor, lab, IVF, fin",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "AI Insight",
+            "color": "rgb(115, 83, 0)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 7.08,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "24px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Clinical dashboard is grounded in patient, appointment, doctor, lab, IVF, finance, and que",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/patients/1",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 289
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-6 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "div",
+            "text": "Patient 360Tottempudi Leela sankar chowdaryPAT-1780824029828 | 8179618819 | ACTIVEQR Paylo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "Patient 360Tottempudi Leela sankar chowdaryPAT-1780824029828 | 8179618819 | ACTIVE",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Patient 360",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Tottempudi Leela sankar chowdary",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "PAT-1780824029828 | 8179618819 | ACTIVE",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "QR PayloadPAT-1780824029828",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "16px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "QR Payload",
+            "color": "rgb(115, 83, 0)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 7.08,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "PAT-1780824029828",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "14px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/ivf",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 173
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "IVF & Fertility Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "IVF Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Couple-centric fertility workflows integrated with HMS, lab, billing, referral tracking, e",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/ivf/couples/1",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 134,
+          "width": 802,
+          "height": 153
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "IVF 360",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "CPL-1780845966673",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "UAT17 Patient 100 Female / UAT17 Patient 099 Male",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/hms",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 173
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "HMS Core",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Operations Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Registration, appointments, OP, IP, ER, ICU, OT, nursing, billing, insurance, reports, and",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/hms/op",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 153
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "HMS Core Module",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "OP Management",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Records, workflow screens, APIs, reports, audit, and timeline are branch-scoped through th",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/pharmacy",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 173
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Pharmacy + Inventory + Procurement",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Pharmacy Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "OP, IP, ER, OT, ICU, IVF pharmacy, central warehouse, batch tracking, expiry control, proc",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/finance",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 173
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Finance + RCM + Insurance + Referral",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Finance Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "GL, AR, AP, GST, TDS, assets, budgeting, insurance claims, TPA, corporate billing, referra",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/analytics",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 194
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Data Warehouse + BI + AI Insights",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Enterprise Healthcare Intelligence Platform",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Phase 9 command center for real-time analytics, executive dashboards, clinical analytics, ",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "tablet",
+    "route": "/clinical-services/security",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 802,
+          "height": 194
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Phase 13 Enterprise RBAC + ABAC",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Security Governance Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "33.36px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Hospital-grade role hierarchy, permission matrix, data masking, record-level security, fie",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 525
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-8 text-white shadow-xl",
+        "textNodes": [
+          {
+            "tag": "div",
+            "text": "Clinical Command CenterTOTTECH IVF CenterTOTTECH Clinical Services Hospital Network dashbo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "Clinical Command CenterTOTTECH IVF CenterTOTTECH Clinical Services Hospital Network dashbo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Clinical Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "TOTTECH IVF Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "TOTTECH Clinical Services Hospital Network dashboard grounded in patients, appointments, d",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "16px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%Clinical dashboard is grounded in patient, appointment, doctor, lab, IVF, fin",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "AI Insight82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "AI Insight",
+            "color": "rgb(115, 83, 0)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 7.08,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "82%",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "24px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Clinical dashboard is grounded in patient, appointment, doctor, lab, IVF, finance, and que",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/patients/1",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 333
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-6 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "div",
+            "text": "Patient 360Tottempudi Leela sankar chowdaryPAT-1780824029828 | 8179618819 | ACTIVEQR Paylo",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "Patient 360Tottempudi Leela sankar chowdaryPAT-1780824029828 | 8179618819 | ACTIVE",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Patient 360",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Tottempudi Leela sankar chowdary",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "PAT-1780824029828 | 8179618819 | ACTIVE",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "div",
+            "text": "QR PayloadPAT-1780824029828",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400",
+            "fontSize": "15px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "QR Payload",
+            "color": "rgb(115, 83, 0)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 7.08,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "PAT-1780824029828",
+            "color": "rgb(16, 32, 51)",
+            "effectiveBackgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "14px",
+            "contrastRatio": 16.45,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/ivf",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 260
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "IVF & Fertility Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "IVF Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Couple-centric fertility workflows integrated with HMS, lab, billing, referral tracking, e",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/ivf/couples/1",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 134,
+          "width": 358,
+          "height": 167
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "IVF 360",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "CPL-1780845966673",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "UAT17 Patient 100 Female / UAT17 Patient 099 Male",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/hms",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 239
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "HMS Core",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Operations Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Registration, appointments, OP, IP, ER, ICU, OT, nursing, billing, insurance, reports, and",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/hms/op",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 188
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "HMS Core Module",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "OP Management",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Records, workflow screens, APIs, reports, audit, and timeline are branch-scoped through th",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/pharmacy",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 277
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-teal-200 bg-slate-950 p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Pharmacy + Inventory + Procurement",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Pharmacy Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "OP, IP, ER, OT, ICU, IVF pharmacy, central warehouse, batch tracking, expiry control, proc",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/finance",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 277
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Finance + RCM + Insurance + Referral",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Hospital Finance Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "GL, AR, AP, GST, TDS, assets, budgeting, insurance claims, TPA, corporate billing, referra",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/analytics",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 363
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Data Warehouse + BI + AI Insights",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Enterprise Healthcare Intelligence Platform",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Phase 9 command center for real-time analytics, executive dashboards, clinical analytics, ",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "viewport": "mobile",
+    "route": "/clinical-services/security",
+    "heroes": [
+      {
+        "index": 0,
+        "rect": {
+          "left": 16,
+          "top": 72,
+          "width": 358,
+          "height": 280
+        },
+        "backgroundColor": "rgb(4, 20, 46)",
+        "backgroundImage": "none",
+        "className": "tt-clinical-dark-hero rounded-[8px] border border-[#D4AF37]/50 bg-[#0B1F3A] p-7 text-white shadow-sm",
+        "textNodes": [
+          {
+            "tag": "p",
+            "text": "Phase 13 Enterprise RBAC + ABAC",
+            "color": "rgb(212, 175, 55)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "900",
+            "fontSize": "12px",
+            "contrastRatio": 8.72,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "h1",
+            "text": "Security Governance Command Center",
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "800",
+            "fontSize": "28px",
+            "contrastRatio": 18.35,
+            "wcagAA": true,
+            "wcagAAA": true
+          },
+          {
+            "tag": "p",
+            "text": "Hospital-grade role hierarchy, permission matrix, data masking, record-level security, fie",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "effectiveBackgroundColor": "rgb(4, 20, 46)",
+            "opacity": "1",
+            "fontWeight": "600",
+            "fontSize": "14px",
+            "contrastRatio": 14.88,
+            "wcagAA": true,
+            "wcagAAA": true
+          }
+        ]
+      }
+    ]
+  }
+]

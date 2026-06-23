@@ -1,0 +1,3 @@
+{
+  "/api/clinical/patient-lookup/route": "app/api/clinical/patient-lookup/route.js"
+}

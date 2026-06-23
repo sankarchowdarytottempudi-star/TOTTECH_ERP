@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/billing-counter/layout,_N_T_/clinical-services/billing-counter/page,_N_T_/clinical-services/billing-counter"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/billing-counter/__PAGE__",
+    "/clinical-services/billing-counter",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

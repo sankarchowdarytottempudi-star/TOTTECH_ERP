@@ -1,0 +1,25 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "pharmacy-medicines",
+    "status": "PASS",
+    "details": {
+      "medicine_code": "MED-1781984435170",
+      "brand_name": "UAT Brand UAT MED-1781984404786"
+    }
+  },
+  {
+    "area": "pharmacy-sales",
+    "status": "PASS",
+    "details": "Created pharmacy sale for patient Go Live."
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "error: relation \"lab_tests\" does not exist\n    at /opt/tottech-one/node_modules/pg/lib/client.js:646:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async one (file:///opt/tottech-one/scripts/pharmacy-lab-uat.mjs:40:18)\n    at async createLabRecord (file:///opt/tottech-one/scripts/pharmacy-lab-uat.mjs:150:19)\n    at async main (file:///opt/tottech-one/scripts/pharmacy-lab-uat.mjs:200:23)"
+  }
+]

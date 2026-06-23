@@ -1,0 +1,3 @@
+{
+  "/api/clinical/hms/[module]/route": "app/api/clinical/hms/[module]/route.js"
+}

@@ -1,0 +1,32 @@
+export const colors = {
+  bg: "#f7f3ea",
+  bgSoft: "#fffaf0",
+  surface: "#ffffff",
+  surfaceWarm: "#fff6df",
+  black: "#080705",
+  black2: "#15110b",
+  black3: "#241c10",
+  navy: "#080705",
+  navy2: "#15110b",
+  gold: "#b8862f",
+  goldDeep: "#7a4f12",
+  goldSoft: "#f2d18a",
+  goldPale: "#fff0c2",
+  border: "#e5dccb",
+  borderWarm: "#d8b76c",
+  text: "#080705",
+  muted: "#74664d",
+  primary: "#080705",
+  primarySoft: "#15110b",
+  success: "#5f481d",
+  danger: "#6f1d12",
+  warning: "#9b6a16",
+  white: "#ffffff",
+  shadow: "#080705",
+};
+
+export const spacing = {
+  page: 18,
+  card: 18,
+  gap: 14,
+};

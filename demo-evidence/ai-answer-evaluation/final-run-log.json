@@ -1,0 +1,318 @@
+{
+  "loginJson": {
+    "success": true,
+    "project": "tottech_one",
+    "projectType": "ERP",
+    "redirectTo": "/",
+    "user": {
+      "id": 1,
+      "full_name": "Sankar Admin",
+      "email": "admin@erp.com",
+      "role": "SUPER_ADMIN",
+      "school_id": null,
+      "active_school_id": null,
+      "school_name": "",
+      "assigned_schools": [
+        {
+          "id": 9,
+          "school_name": "GR Junior College",
+          "school_code": "GRJC",
+          "is_primary": true
+        },
+        {
+          "id": 8,
+          "school_name": "Kakatheeya Vidya Samsthalu Elementary School",
+          "school_code": "KVSES",
+          "is_primary": false
+        },
+        {
+          "id": 7,
+          "school_name": "Kakatheeya Vidya Samsthalu High School",
+          "school_code": "KVSHS",
+          "is_primary": false
+        },
+        {
+          "id": 10,
+          "school_name": "MSUA School A 202606190954",
+          "school_code": "MSUA202606190954A",
+          "is_primary": false
+        },
+        {
+          "id": 11,
+          "school_name": "MSUA School B 202606190954",
+          "school_code": "MSUA202606190954B",
+          "is_primary": false
+        },
+        {
+          "id": 12,
+          "school_name": "MSUA School C 202606190954",
+          "school_code": "MSUA202606190954C",
+          "is_primary": false
+        }
+      ],
+      "requires_school_selection": false,
+      "username": "admin",
+      "platform_type": "EDUCATIONAL",
+      "permissions": [
+        "DASHBOARD.VIEW",
+        "STUDENTS.CREATE",
+        "STUDENTS.READ",
+        "STUDENTS.UPDATE",
+        "STUDENTS.DELETE",
+        "TEACHERS.CREATE",
+        "TEACHERS.READ",
+        "TEACHERS.UPDATE",
+        "TEACHERS.DELETE",
+        "ATTENDANCE.CREATE",
+        "ATTENDANCE.READ",
+        "ATTENDANCE.UPDATE",
+        "FEES.CREATE",
+        "FEES.READ",
+        "FEES.UPDATE",
+        "FEES.DELETE",
+        "HOSTEL.CREATE",
+        "HOSTEL.READ",
+        "HOSTEL.UPDATE",
+        "HOSTEL.DELETE",
+        "DINING.CREATE",
+        "DINING.READ",
+        "DINING.UPDATE",
+        "INVENTORY.CREATE",
+        "INVENTORY.READ",
+        "INVENTORY.UPDATE",
+        "INVENTORY.ISSUE",
+        "INVENTORY.PURCHASE",
+        "LIBRARY.CREATE",
+        "LIBRARY.READ",
+        "LIBRARY.ISSUE",
+        "TRANSPORT.CREATE",
+        "TRANSPORT.READ",
+        "TRANSPORT.UPDATE",
+        "CONCESSIONS.APPROVE",
+        "OPERATIONS.READ",
+        "CONCESSIONS.CREATE",
+        "CONCESSIONS.READ",
+        "GOVERNANCE.MANAGE",
+        "AI.USE",
+        "EVENT_LEDGER.READ",
+        "PLATFORM.MANAGE",
+        "AI.MANAGE",
+        "BILLING.MANAGE",
+        "GOVERNANCE.READ",
+        "AI.VIEW_USAGE",
+        "AI.VIEW_HEALTH",
+        "TIMELINE.READ",
+        "OPERATIONS.MANAGE",
+        "IMPORTS.MANAGE",
+        "REPORTS.READ",
+        "AUTOMATION.MANAGE",
+        "AI.KNOWLEDGE",
+        "AI.ACTION_REQUEST",
+        "AI.APPROVE_ACTION",
+        "AI.EXECUTE_ACTION",
+        "AI.VIEW_OBSERVABILITY",
+        "ACADEMIC_YEAR.MANAGE",
+        "FINANCE.VIEW_APPROVALS",
+        "DINING.MANAGE_OPERATIONS",
+        "HOSTEL.MANAGE_OPERATIONS",
+        "FINANCE.APPROVE",
+        "PROMOTIONS.READ",
+        "PROMOTIONS.CREATE",
+        "TIMELINE.VIEW_HISTORY",
+        "PROMOTIONS.APPROVE",
+        "TRANSPORT.MANAGE_OPERATIONS"
+      ],
+      "module_access": {
+        "STUDENTS": true,
+        "TEACHERS": true,
+        "ACADEMICS": true,
+        "FINANCE": true,
+        "OPERATIONS": true,
+        "DINING": true,
+        "TRANSPORT": true,
+        "HOSTEL": true,
+        "REPORTS": true,
+        "ANALYTICS": true,
+        "AI": true,
+        "USER_MANAGEMENT": true,
+        "PARENT_PORTAL": true,
+        "MOBILE_APP": true
+      },
+      "project": "tottech_one",
+      "projectType": "ERP",
+      "redirectTo": "/"
+    }
+  },
+  "recordStatus": "PENDING",
+  "ocrText": null,
+  "apiEvents": [
+    {
+      "url": "https://erp.tottechsolutions.com/api/exams/answer-evaluation",
+      "status": 200,
+      "body": {
+        "records": [],
+        "summary": {
+          "total_records": 0,
+          "pending_reviews": 0,
+          "approved_reviews": 0,
+          "override_reviews": 0
+        },
+        "analytics": []
+      }
+    },
+    {
+      "url": "https://erp.tottechsolutions.com/api/exams/answer-evaluation?academic_year_id=8",
+      "status": 200,
+      "body": {
+        "records": [],
+        "summary": {
+          "total_records": 0,
+          "pending_reviews": 0,
+          "approved_reviews": 0,
+          "override_reviews": 0
+        },
+        "analytics": []
+      }
+    },
+    {
+      "url": "https://erp.tottechsolutions.com/api/exams/answer-evaluation",
+      "status": 200,
+      "body": {
+        "records": [],
+        "summary": {
+          "total_records": 0,
+          "pending_reviews": 0,
+          "approved_reviews": 0,
+          "override_reviews": 0
+        },
+        "analytics": []
+      }
+    },
+    {
+      "url": "https://erp.tottechsolutions.com/api/exams/answer-evaluation?academic_year_id=8",
+      "status": 200,
+      "body": {
+        "records": [],
+        "summary": {
+          "total_records": 0,
+          "pending_reviews": 0,
+          "approved_reviews": 0,
+          "override_reviews": 0
+        },
+        "analytics": []
+      }
+    }
+  ],
+  "reviewJson": {
+    "success": true,
+    "record": {
+      "id": 1,
+      "school_id": 8,
+      "academic_year_id": 9,
+      "exam_schedule_id": 2,
+      "question_paper_id": 2,
+      "class_id": 12,
+      "section_id": 16,
+      "student_id": 4,
+      "uploaded_by": 1,
+      "original_file_name": "answer-sheet.pdf",
+      "stored_file_name": "2026-06-20T09-00-54-564Z-answer-sheet.pdf",
+      "file_path": "/opt/tottech-one/public/uploads/exams/answer-evaluation/2026-06-20T09-00-54-564Z-answer-sheet.pdf",
+      "mime_type": "application/pdf",
+      "page_count": 1,
+      "ocr_text": "Answer Sheet - Mid Term Science\nSchool: Kakatheeya Vidya Samsthalu Elementary School\nStudent: Likhitha Tottempudi\nClass: 10-A\nExam: Mid Term 2026\n\n\n  Q1. What is photosynthesis?\n  Photosynthesis is the process by which green plants use sunlight, carbon dioxide, and water to\n  make food and release oxygen.",
+      "extracted_answers": [
+        {
+          "max_marks": 5,
+          "reasoning": "Concept match 95%. keyword match 57%. completeness 100%. PARTIAL concept understanding",
+          "bloom_level": "Understand",
+          "question_id": 2,
+          "ideal_answer": "Photosynthesis is the process by which green plants use sunlight, carbon dioxide and water to make food and release oxygen.",
+          "grammar_score": 100,
+          "quality_label": "Good",
+          "question_text": "What is photosynthesis?",
+          "question_type": "Short Answer",
+          "misconceptions": [],
+          "student_answer": "What is photosynthesis?\nPhotosynthesis is the process by which green plants use sunlight, carbon dioxide, and water to\nmake food and release oxygen.",
+          "question_number": 1,
+          "strong_concepts": [
+            "photosynthesis",
+            "is",
+            "the",
+            "process",
+            "by",
+            "which"
+          ],
+          "difficulty_level": "Easy",
+          "missing_concepts": [],
+          "exact_match_score": 0,
+          "recommended_marks": 3.85,
+          "completeness_score": 100,
+          "confidence_percent": 80,
+          "logical_flow_score": 89,
+          "concept_match_score": 95,
+          "keyword_match_score": 57,
+          "understanding_level": "PARTIAL",
+          "writing_quality_score": 100,
+          "teacher_override_marks": null,
+          "critical_thinking_score": 79,
+          "semantic_similarity_score": 78
+        }
+      ],
+      "ai_evaluation": {
+        "writingSkillPercent": 98.35,
+        "problemSolvingPercent": 86.5,
+        "analyticalSkillPercent": 87.7,
+        "confidenceScorePercent": 80,
+        "memoryRetentionPercent": 39.95,
+        "applicationSkillPercent": 86.1,
+        "criticalThinkingPercent": 79,
+        "conceptUnderstandingPercent": 91.15
+      },
+      "ai_summary": {
+        "question_count": 1,
+        "average_recommended_marks": 3.85,
+        "teacher_approval_required": true,
+        "concept_detection_accuracy": 95
+      },
+      "teacher_review_status": "APPROVED",
+      "teacher_reviewed_by": 1,
+      "teacher_reviewed_at": "2026-06-20T11:07:25.342Z",
+      "teacher_comments": "Verified OCR extraction and approved AI suggested marks after review.",
+      "created_at": "2026-06-20T11:00:54.652Z",
+      "updated_at": "2026-06-20T11:07:25.342Z"
+    }
+  },
+  "cookies": [
+    {
+      "name": "erpUser",
+      "value": "%7B%22id%22%3A1%2C%22full_name%22%3A%22Sankar%20Admin%22%2C%22email%22%3A%22admin%40erp.com%22%2C%22role%22%3A%22SUPER_ADMIN%22%2C%22school_id%22%3Anull%2C%22active_school_id%22%3Anull%2C%22school_name%22%3A%22%22%2C%22assigned_schools%22%3A%5B%7B%22id%22%3A9%2C%22school_name%22%3A%22GR%20Junior%20College%22%2C%22school_code%22%3A%22GRJC%22%2C%22is_primary%22%3Atrue%7D%2C%7B%22id%22%3A8%2C%22school_name%22%3A%22Kakatheeya%20Vidya%20Samsthalu%20Elementary%20School%22%2C%22school_code%22%3A%22KVSES%22%2C%22is_primary%22%3Afalse%7D%2C%7B%22id%22%3A7%2C%22school_name%22%3A%22Kakatheeya%20Vidya%20Samsthalu%20High%20School%22%2C%22school_code%22%3A%22KVSHS%22%2C%22is_primary%22%3Afalse%7D%2C%7B%22id%22%3A10%2C%22school_name%22%3A%22MSUA%20School%20A%20202606190954%22%2C%22school_code%22%3A%22MSUA202606190954A%22%2C%22is_primary%22%3Afalse%7D%2C%7B%22id%22%3A11%2C%22school_name%22%3A%22MSUA%20School%20B%20202606190954%22%2C%22school_code%22%3A%22MSUA202606190954B%22%2C%22is_primary%22%3Afalse%7D%2C%7B%22id%22%3A12%2C%22school_name%22%3A%22MSUA%20School%20C%20202606190954%22%2C%22school_code%22%3A%22MSUA202606190954C%22%2C%22is_primary%22%3Afalse%7D%5D%2C%22requires_school_selection%22%3Afalse%2C%22username%22%3A%22admin%22%2C%22platform_type%22%3A%22EDUCATIONAL%22%2C%22permissions%22%3A%5B%22DASHBOARD.VIEW%22%2C%22STUDENTS.CREATE%22%2C%22STUDENTS.READ%22%2C%22STUDENTS.UPDATE%22%2C%22STUDENTS.DELETE%22%2C%22TEACHERS.CREATE%22%2C%22TEACHERS.READ%22%2C%22TEACHERS.UPDATE%22%2C%22TEACHERS.DELETE%22%2C%22ATTENDANCE.CREATE%22%2C%22ATTENDANCE.READ%22%2C%22ATTENDANCE.UPDATE%22%2C%22FEES.CREATE%22%2C%22FEES.READ%22%2C%22FEES.UPDATE%22%2C%22FEES.DELETE%22%2C%22HOSTEL.CREATE%22%2C%22HOSTEL.READ%22%2C%22HOSTEL.UPDATE%22%2C%22HOSTEL.DELETE%22%2C%22DINING.CREATE%22%2C%22DINING.READ%22%2C%22DINING.UPDATE%22%2C%22INVENTORY.CREATE%22%2C%22INVENTORY.READ%22%2C%22INVENTORY.UPDATE%22%2C%22INVENTORY.ISSUE%22%2C%22INVENTORY.PURCHASE%22%2C%22LIBRARY.CREATE%22%2C%22LIBRARY.READ%22%2C%22LIBRARY.ISSUE%22%2C%22TRANSPORT.CREATE%22%2C%22TRANSPORT.READ%22%2C%22TRANSPORT.UPDATE%22%2C%22CONCESSIONS.APPROVE%22%2C%22OPERATIONS.READ%22%2C%22CONCESSIONS.CREATE%22%2C%22CONCESSIONS.READ%22%2C%22GOVERNANCE.MANAGE%22%2C%22AI.USE%22%2C%22EVENT_LEDGER.READ%22%2C%22PLATFORM.MANAGE%22%2C%22AI.MANAGE%22%2C%22BILLING.MANAGE%22%2C%22GOVERNANCE.READ%22%2C%22AI.VIEW_USAGE%22%2C%22AI.VIEW_HEALTH%22%2C%22TIMELINE.READ%22%2C%22OPERATIONS.MANAGE%22%2C%22IMPORTS.MANAGE%22%2C%22REPORTS.READ%22%2C%22AUTOMATION.MANAGE%22%2C%22AI.KNOWLEDGE%22%2C%22AI.ACTION_REQUEST%22%2C%22AI.APPROVE_ACTION%22%2C%22AI.EXECUTE_ACTION%22%2C%22AI.VIEW_OBSERVABILITY%22%2C%22ACADEMIC_YEAR.MANAGE%22%2C%22FINANCE.VIEW_APPROVALS%22%2C%22DINING.MANAGE_OPERATIONS%22%2C%22HOSTEL.MANAGE_OPERATIONS%22%2C%22FINANCE.APPROVE%22%2C%22PROMOTIONS.READ%22%2C%22PROMOTIONS.CREATE%22%2C%22TIMELINE.VIEW_HISTORY%22%2C%22PROMOTIONS.APPROVE%22%2C%22TRANSPORT.MANAGE_OPERATIONS%22%5D%2C%22module_access%22%3A%7B%22STUDENTS%22%3Atrue%2C%22TEACHERS%22%3Atrue%2C%22ACADEMICS%22%3Atrue%2C%22FINANCE%22%3Atrue%2C%22OPERATIONS%22%3Atrue%2C%22DINING%22%3Atrue%2C%22TRANSPORT%22%3Atrue%2C%22HOSTEL%22%3Atrue%2C%22REPORTS%22%3Atrue%2C%22ANALYTICS%22%3Atrue%2C%22AI%22%3Atrue%2C%22USER_MANAGEMENT%22%3Atrue%2C%22PARENT_PORTAL%22%3Atrue%2C%22MOBILE_APP%22%3Atrue%7D%2C%22project%22%3A%22tottech_one%22%2C%22projectType%22%3A%22ERP%22%2C%22redirectTo%22%3A%22%2F%22%7D",
+      "domain": "erp.tottechsolutions.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "active_school_id",
+      "value": "all",
+      "domain": "erp.tottechsolutions.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "platform_type",
+      "value": "EDUCATIONAL",
+      "domain": "erp.tottechsolutions.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "/api/clinical/security/rbac/route": "app/api/clinical/security/rbac/route.js"
+}

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">TOTTECH ONE</title>
+  <desc id="desc">TOTTECH ONE Gateway To Learning gold gateway logo</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7a4a0a"/>
+      <stop offset="0.28" stop-color="#e6b65d"/>
+      <stop offset="0.52" stop-color="#fff0a8"/>
+      <stop offset="0.75" stop-color="#b97916"/>
+      <stop offset="1" stop-color="#3a2107"/>
+    </linearGradient>
+    <linearGradient id="darkGold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#211305"/>
+      <stop offset="0.44" stop-color="#57330a"/>
+      <stop offset="0.75" stop-color="#c99026"/>
+      <stop offset="1" stop-color="#1b1004"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="44%" r="34%">
+      <stop offset="0" stop-color="#fff8bf" stop-opacity="1"/>
+      <stop offset="0.34" stop-color="#f7b733" stop-opacity="0.72"/>
+      <stop offset="0.72" stop-color="#9a6b25" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#2a1705" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" fill="none"/>
+  <ellipse cx="600" cy="320" rx="300" ry="250" fill="url(#light)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M395 122h178v72H471l52 44h67v234L349 535l122-168V238l-76-116z" fill="url(#darkGold)" stroke="url(#gold)" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M627 122h178l-76 116v129l122 168-241-63V238h67l52-44H627v-72z" fill="url(#darkGold)" stroke="url(#gold)" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M511 455h178l112 94H399l112-94z" fill="url(#darkGold)" stroke="url(#gold)" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M558 238l42 34 42-34v219H558V238z" fill="#fff5b5" opacity="0.5"/>
+    <path d="M519 250l58 45v180l-58 15V250z" fill="#140b03" stroke="#f2b847" stroke-width="4"/>
+    <path d="M681 250l-58 45v180l58 15V250z" fill="#140b03" stroke="#f2b847" stroke-width="4"/>
+    <path d="M600 243v205" stroke="#fff4ae" stroke-width="12" stroke-linecap="round"/>
+    <path d="M491 545h218l72 60H419l72-60z" fill="#160d03" stroke="#d59323" stroke-width="3"/>
+    <path d="M524 496h152" stroke="#ffcf58" stroke-width="6" stroke-linecap="round"/>
+    <path d="M501 525h198" stroke="#ffcf58" stroke-width="6" stroke-linecap="round"/>
+    <path d="M473 555h254" stroke="#ffcf58" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="600" cy="304" r="18" fill="#1b1005"/>
+    <path d="M586 324h28l10 93h-48l10-93z" fill="#100a05"/>
+    <path d="M586 343l-72 35" stroke="#100a05" stroke-width="10" stroke-linecap="round"/>
+    <path d="M614 343l72 35" stroke="#100a05" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g fill="url(#gold)" stroke="#5f3809" stroke-width="1.8" font-family="Arial Black, Montserrat, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="666" font-size="92" font-weight="900" letter-spacing="20">TOTTECH ONE</text>
+  </g>
+  <g fill="#2b1805" font-family="Arial, Montserrat, sans-serif" text-anchor="middle">
+    <text x="600" y="721" font-size="34" font-weight="700" letter-spacing="15">GATEWAY TO LEARNING</text>
+  </g>
+  <path d="M146 708h118" stroke="url(#gold)" stroke-width="5"/>
+  <path d="M936 708h118" stroke="url(#gold)" stroke-width="5"/>
+</svg>

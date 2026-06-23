@@ -1,0 +1,10 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/tottech-ai/imports/route.js")
+R.c("server/chunks/[root-of-the-server]__0r1by.2._.js")
+R.c("server/chunks/_0qubx0o._.js")
+R.c("server/chunks/[root-of-the-server]__0ga-2r9._.js")
+R.c("server/chunks/[root-of-the-server]__0v8bdq7._.js")
+R.c("server/chunks/node_modules_xlsx_xlsx_mjs_0eepc5h._.js")
+R.c("server/chunks/_0wnp-zw._.js")
+R.c("server/chunks/_next-internal_server_app_api_tottech-ai_imports_route_actions_0b9w-8a.js")
+R.m(328184)
+module.exports=R.m(328184).exports

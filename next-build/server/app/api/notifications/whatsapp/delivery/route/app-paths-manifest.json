@@ -1,0 +1,3 @@
+{
+  "/api/notifications/whatsapp/delivery/route": "app/api/notifications/whatsapp/delivery/route.js"
+}

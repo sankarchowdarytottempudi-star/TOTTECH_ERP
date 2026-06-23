@@ -1,0 +1,110 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tottech-clinical
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clinical-frontend
+  namespace: tottech-clinical
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: clinical-frontend
+  template:
+    metadata:
+      labels:
+        app: clinical-frontend
+    spec:
+      containers:
+        - name: clinical-frontend
+          image: tottech/clinical-services:production
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: clinical-secrets
+          readinessProbe:
+            httpGet:
+              path: /login
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /login
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clinical-frontend
+  namespace: tottech-clinical
+spec:
+  selector:
+    app: clinical-frontend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: clinical-ingress
+  namespace: tottech-clinical
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  tls:
+    - hosts:
+        - clinical.tottechsolutions.com
+      secretName: clinical-tls
+  rules:
+    - host: clinical.tottechsolutions.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: clinical-frontend
+                port:
+                  number: 80
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: clinical-postgres-data
+  namespace: tottech-clinical
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 200Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: clinical-object-storage
+  namespace: tottech-clinical
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Ti

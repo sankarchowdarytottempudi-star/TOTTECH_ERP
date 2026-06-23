@@ -1,0 +1,251 @@
+[
+  {
+    "role": "Receptionist",
+    "email": "uat.receptionist@tottechclinical.local",
+    "expectedTasks": [
+      "Register/search patients",
+      "Book appointments",
+      "Collect front-desk payments"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 2660,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/receptionist--clinical-services.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/patients",
+        "elapsedMs": 4216,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/receptionist--clinical-services-patients.png",
+        "status": "WORKING",
+        "notes": [
+          "Slow page load over 4s"
+        ]
+      },
+      {
+        "route": "/clinical-services/appointments",
+        "elapsedMs": 2405,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/receptionist--clinical-services-appointments.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/finance",
+        "elapsedMs": 1783,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/receptionist--clinical-services-finance.png",
+        "status": "WORKING",
+        "notes": []
+      }
+    ]
+  },
+  {
+    "role": "Doctor",
+    "email": "uat.doctor@tottechclinical.local",
+    "expectedTasks": [
+      "Review patient 360",
+      "Consultation",
+      "Prescription",
+      "Lab/radiology orders"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 3371,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/doctor--clinical-services.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/patients",
+        "elapsedMs": 2643,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/doctor--clinical-services-patients.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/doctors",
+        "elapsedMs": 1719,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/doctor--clinical-services-doctors.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/laboratory",
+        "elapsedMs": 3181,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/doctor--clinical-services-laboratory.png",
+        "status": "WORKING",
+        "notes": []
+      }
+    ]
+  },
+  {
+    "role": "Nurse",
+    "email": "uat.nurse@tottechclinical.local",
+    "expectedTasks": [
+      "Open patients",
+      "View admissions",
+      "Review ICU cases",
+      "Record vitals workflow"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 2424,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/nurse--clinical-services.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/patients",
+        "elapsedMs": 1767,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/nurse--clinical-services-patients.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/hms/ip",
+        "elapsedMs": 2143,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/nurse--clinical-services-hms-ip.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/hms/icu",
+        "elapsedMs": 1144,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/nurse--clinical-services-hms-icu.png",
+        "status": "WORKING",
+        "notes": []
+      }
+    ]
+  },
+  {
+    "role": "Lab Technician",
+    "email": "uat.lab@tottechclinical.local",
+    "expectedTasks": [
+      "Open lab queue",
+      "Review samples",
+      "Submit lab results"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 1896,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/lab-technician--clinical-services.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/laboratory",
+        "elapsedMs": 2087,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/lab-technician--clinical-services-laboratory.png",
+        "status": "WORKING",
+        "notes": []
+      }
+    ]
+  },
+  {
+    "role": "Pharmacist",
+    "email": "uat.pharmacist@tottechclinical.local",
+    "expectedTasks": [
+      "Open prescriptions",
+      "Dispense medicines",
+      "Check stock"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 1366,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/pharmacist--clinical-services.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/pharmacy",
+        "elapsedMs": 2675,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/pharmacist--clinical-services-pharmacy.png",
+        "status": "WORKING",
+        "notes": []
+      }
+    ]
+  },
+  {
+    "role": "Hospital Admin",
+    "email": "uat.hospital.admin@tottechclinical.local",
+    "expectedTasks": [
+      "Manage setup",
+      "Review users",
+      "Monitor operations"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 4050,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/hospital-admin--clinical-services.png",
+        "status": "WORKING",
+        "notes": [
+          "Slow page load over 4s"
+        ]
+      },
+      {
+        "route": "/clinical-services/administration",
+        "elapsedMs": 1971,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/hospital-admin--clinical-services-administration.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/security",
+        "elapsedMs": 4102,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/hospital-admin--clinical-services-security.png",
+        "status": "WORKING",
+        "notes": [
+          "Slow page load over 4s"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Finance User",
+    "email": "uat.finance@tottechclinical.local",
+    "expectedTasks": [
+      "Review invoices",
+      "Collections",
+      "Outstanding receivables",
+      "Daily cash"
+    ],
+    "status": "WORKING",
+    "pages": [
+      {
+        "route": "/clinical-services",
+        "elapsedMs": 1521,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/finance-user--clinical-services.png",
+        "status": "WORKING",
+        "notes": []
+      },
+      {
+        "route": "/clinical-services/finance",
+        "elapsedMs": 4049,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/finance-user--clinical-services-finance.png",
+        "status": "WORKING",
+        "notes": [
+          "Slow page load over 4s"
+        ]
+      },
+      {
+        "route": "/clinical-services/billing",
+        "elapsedMs": 1197,
+        "screenshot": "/opt/tottech-one/uat-evidence/clinical-services/finance-user--clinical-services-billing.png",
+        "status": "WORKING",
+        "notes": []
+      }
+    ]
+  }
+]

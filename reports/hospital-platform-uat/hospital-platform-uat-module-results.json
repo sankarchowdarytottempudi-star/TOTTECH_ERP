@@ -1,0 +1,229 @@
+{
+  "hospitals": [
+    {
+      "name": "UAT Hospital A",
+      "adminEmail": "uat-admin-a-1781969722262@tottech.local",
+      "adminPassword": "UatHospAAdmin@2026",
+      "desiredModules": [
+        "IVF"
+      ],
+      "blockedPages": [
+        "/clinical-services/laboratory",
+        "/clinical-services/pharmacy",
+        "/clinical-services/finance"
+      ],
+      "blockedApis": [
+        "/api/clinical/finance/registry",
+        "/api/clinical/operations/lab-tests",
+        "/api/clinical/operations/pharmacy-dispense"
+      ]
+    },
+    {
+      "name": "UAT Hospital B",
+      "adminEmail": "uat-admin-b-1781969821862@tottech.local",
+      "adminPassword": "UatHospBAdmin@2026",
+      "desiredModules": [
+        "IVF",
+        "LAB",
+        "PHARMACY"
+      ],
+      "blockedPages": [
+        "/clinical-services/finance"
+      ],
+      "blockedApis": [
+        "/api/clinical/finance/registry"
+      ]
+    },
+    {
+      "name": "UAT Hospital C",
+      "adminEmail": "uat-hospital-c-admin@tottech.local",
+      "adminPassword": "UatHospCAdmin@2026",
+      "desiredModules": [
+        "PATIENTS",
+        "APPOINTMENTS",
+        "OP",
+        "IP",
+        "ER",
+        "ICU",
+        "OT",
+        "IVF",
+        "LAB",
+        "RADIOLOGY",
+        "PHARMACY",
+        "INVENTORY",
+        "PROCUREMENT",
+        "BILLING",
+        "INSURANCE",
+        "REFERRAL",
+        "FINANCE",
+        "HR",
+        "ANALYTICS",
+        "AI"
+      ],
+      "blockedPages": [],
+      "blockedApis": []
+    }
+  ],
+  "licensingWrites": [
+    {
+      "hospital": "UAT Hospital A",
+      "enabled_modules": 1
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "enabled_modules": 3
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "enabled_modules": 20
+    }
+  ],
+  "dbCounts": [
+    {
+      "hospital_name": "UAT Hospital A",
+      "hospital_code": "UATA01",
+      "enabled_modules": "1"
+    },
+    {
+      "hospital_name": "UAT Hospital B",
+      "hospital_code": "UATB01",
+      "enabled_modules": "3"
+    },
+    {
+      "hospital_name": "UAT Hospital C",
+      "hospital_code": "UATC02",
+      "enabled_modules": "20"
+    }
+  ],
+  "hospitalSnapshots": [
+    {
+      "hospital": "UAT Hospital A",
+      "sidebarHasLicensedOnly": true,
+      "bodyHasHospital": true,
+      "routeChecks": [
+        {
+          "route": "/clinical-services/laboratory",
+          "blocked": true,
+          "url": "https://erp.tottechsolutions.com/clinical-services/laboratory",
+          "sample": "UAT Hospital A\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital A\n\nUSER\n\nU\n\nUAT Admin A 1781969722262\n\nUAT ADMIN A 1781969722262\n\nLogout\n\nUAT Hospital A\n\nPOWERED BY TOTTECH CLINIC"
+        },
+        {
+          "route": "/clinical-services/pharmacy",
+          "blocked": true,
+          "url": "https://erp.tottechsolutions.com/clinical-services/pharmacy",
+          "sample": "UAT Hospital A\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital A\n\nUSER\n\nU\n\nUAT Admin A 1781969722262\n\nUAT ADMIN A 1781969722262\n\nLogout\n\nUAT Hospital A\n\nPOWERED BY TOTTECH CLINIC"
+        },
+        {
+          "route": "/clinical-services/finance",
+          "blocked": true,
+          "url": "https://erp.tottechsolutions.com/clinical-services/finance",
+          "sample": "UAT Hospital A\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital A\n\nUSER\n\nU\n\nUAT Admin A 1781969722262\n\nUAT ADMIN A 1781969722262\n\nLogout\n\nUAT Hospital A\n\nPOWERED BY TOTTECH CLINIC"
+        }
+      ],
+      "apiChecks": [
+        {
+          "apiPath": "/api/clinical/finance/registry",
+          "blocked": true,
+          "status": 403,
+          "sample": "{\"error\":\"Module Not Licensed\",\"module_code\":\"FINANCE\",\"module_name\":\"Finance\"}"
+        },
+        {
+          "apiPath": "/api/clinical/operations/lab-tests",
+          "blocked": true,
+          "status": 403,
+          "sample": "{\"error\":\"Module Not Licensed\",\"module_code\":\"LAB\",\"module_name\":\"Laboratory\"}"
+        },
+        {
+          "apiPath": "/api/clinical/operations/pharmacy-dispense",
+          "blocked": true,
+          "status": 403,
+          "sample": "{\"error\":\"Module Not Licensed\",\"module_code\":\"PHARMACY\",\"module_name\":\"Pharmacy\"}"
+        }
+      ]
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "sidebarHasLicensedOnly": true,
+      "bodyHasHospital": true,
+      "routeChecks": [
+        {
+          "route": "/clinical-services/finance",
+          "blocked": true,
+          "url": "https://erp.tottechsolutions.com/clinical-services/finance",
+          "sample": "UAT Hospital B\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital B\n\nUSER\n\nU\n\nUAT Admin B 1781969821862\n\nUAT ADMIN B 1781969821862\n\nLogout\n\nUAT Hospital B\n\nPOWERED BY TOTTECH CLINIC"
+        }
+      ],
+      "apiChecks": [
+        {
+          "apiPath": "/api/clinical/finance/registry",
+          "blocked": true,
+          "status": 403,
+          "sample": "{\"error\":\"Module Not Licensed\",\"module_code\":\"FINANCE\",\"module_name\":\"Finance\"}"
+        }
+      ]
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "sidebarHasLicensedOnly": true,
+      "bodyHasHospital": true,
+      "routeChecks": [],
+      "apiChecks": []
+    }
+  ],
+  "isolationRows": [
+    {
+      "hospital": "UAT Hospital A",
+      "brandSnippet": "UAT Hospital A\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital A\n\nUSER\n\nU\n\nUAT Admin A 1781969722262\n\nUAT ADMIN A 1781969722262\n\nLogout\n\nUAT Hospital A\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nUAT HOS",
+      "activeHospitalPersistedAfterReload": true
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "brandSnippet": "UAT Hospital B\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital B\n\nUSER\n\nU\n\nUAT Admin B 1781969821862\n\nUAT ADMIN B 1781969821862\n\nLogout\n\nUAT Hospital B\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nUAT HOS",
+      "activeHospitalPersistedAfterReload": true
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "brandSnippet": "UAT Hospital C\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nHOSPITAL CONTEXT\n\nUAT Hospital C\n\nUSER\n\nU\n\nUAT Hospital C Admin\n\nUAT HOSPITAL C ADMIN\n\nLogout\n\nUAT Hospital C\n\nPOWERED BY TOTTECH CLINICAL SERVICES\n\nUAT HOSPITAL C\n\nU",
+      "activeHospitalPersistedAfterReload": true
+    }
+  ],
+  "apiSecurityRows": [
+    {
+      "hospital": "UAT Hospital A",
+      "blockedApis": 3,
+      "allBlocked": true
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "blockedApis": 1,
+      "allBlocked": true
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "blockedApis": 0,
+      "allBlocked": true
+    }
+  ],
+  "routeSecurityRows": [
+    {
+      "hospital": "UAT Hospital A",
+      "blockedRoutes": 3,
+      "allBlocked": true
+    },
+    {
+      "hospital": "UAT Hospital B",
+      "blockedRoutes": 1,
+      "allBlocked": true
+    },
+    {
+      "hospital": "UAT Hospital C",
+      "blockedRoutes": 0,
+      "allBlocked": true
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [
+    "GET https://erp.tottechsolutions.com/clinical-services/hms/billing?_rsc=jadBIdB0ScwOlG06 :: net::ERR_ABORTED"
+  ]
+}

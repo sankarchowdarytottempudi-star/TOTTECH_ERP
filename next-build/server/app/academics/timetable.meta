@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/academics/layout,_N_T_/academics/timetable/layout,_N_T_/academics/timetable/page,_N_T_/academics/timetable"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/academics/timetable/__PAGE__",
+    "/academics/timetable",
+    "/academics",
+    "/_index",
+    "/_head"
+  ]
+}

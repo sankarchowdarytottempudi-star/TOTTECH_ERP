@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/finance/layout,_N_T_/finance/fees/layout,_N_T_/finance/fees/page,_N_T_/finance/fees"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/finance/fees/__PAGE__",
+    "/finance/fees",
+    "/finance",
+    "/_index",
+    "/_head"
+  ]
+}

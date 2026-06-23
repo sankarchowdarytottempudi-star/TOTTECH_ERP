@@ -1,0 +1,3 @@
+{
+  "/api/clinical/notifications/appointment-reminders/route": "app/api/clinical/notifications/appointment-reminders/route.js"
+}

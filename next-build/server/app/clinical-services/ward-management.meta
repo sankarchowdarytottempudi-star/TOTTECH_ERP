@@ -1,0 +1,18 @@
+{
+  "status": 307,
+  "headers": {
+    "location": "/clinical-services/hms/wards",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/ward-management/layout,_N_T_/clinical-services/ward-management/page,_N_T_/clinical-services/ward-management"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/ward-management/__PAGE__",
+    "/clinical-services/ward-management",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

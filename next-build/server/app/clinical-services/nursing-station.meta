@@ -1,0 +1,18 @@
+{
+  "status": 307,
+  "headers": {
+    "location": "/clinical-services/hms/nursing",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/nursing-station/layout,_N_T_/clinical-services/nursing-station/page,_N_T_/clinical-services/nursing-station"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/nursing-station/__PAGE__",
+    "/clinical-services/nursing-station",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

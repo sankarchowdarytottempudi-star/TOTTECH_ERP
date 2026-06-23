@@ -1,0 +1,20 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "pharmacy-medicines",
+    "status": "PASS",
+    "details": {
+      "medicine_code": "MED-1781984179235",
+      "brand_name": "UAT Brand UAT MED-1781984148864"
+    }
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "error: column \"medicine_name\" does not exist\n    at /opt/tottech-one/node_modules/pg/lib/client.js:646:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async one (file:///opt/tottech-one/scripts/pharmacy-lab-uat.mjs:40:18)\n    at async createPharmacySale (file:///opt/tottech-one/scripts/pharmacy-lab-uat.mjs:127:20)\n    at async main (file:///opt/tottech-one/scripts/pharmacy-lab-uat.mjs:198:27)"
+  }
+]

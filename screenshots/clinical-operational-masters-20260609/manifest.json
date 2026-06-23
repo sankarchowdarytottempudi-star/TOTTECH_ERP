@@ -1,0 +1,58 @@
+[
+  {
+    "name": "clinical-dashboard",
+    "route": "/clinical-services",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/clinical-dashboard.png"
+  },
+  {
+    "name": "operational-masters-index",
+    "route": "/clinical-services/operational-masters",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/operational-masters-index.png"
+  },
+  {
+    "name": "doctor-master",
+    "route": "/clinical-services/operational-masters/doctors",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters/doctors",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/doctor-master.png"
+  },
+  {
+    "name": "lab-test-master",
+    "route": "/clinical-services/operational-masters/lab-tests",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters/lab-tests",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/lab-test-master.png"
+  },
+  {
+    "name": "medicine-master",
+    "route": "/clinical-services/operational-masters/medicines",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters/medicines",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/medicine-master.png"
+  },
+  {
+    "name": "role-management",
+    "route": "/clinical-services/operational-masters/roles",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters/roles",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/role-management.png"
+  },
+  {
+    "name": "asset-master",
+    "route": "/clinical-services/operational-masters/assets",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters/assets",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/asset-master.png"
+  },
+  {
+    "name": "medical-equipment-master",
+    "route": "/clinical-services/operational-masters/equipment",
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters/equipment",
+    "title": "TOTTECH ONE",
+    "file": "/opt/tottech-one/screenshots/clinical-operational-masters-20260609/medical-equipment-master.png"
+  }
+]

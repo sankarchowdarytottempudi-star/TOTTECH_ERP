@@ -1,0 +1,27 @@
+import { chromium } from 'playwright';
+const baseUrl = 'https://erp.tottechsolutions.com';
+const browser = await chromium.launch({ headless: true });
+const context = await browser.newContext({ viewport: { width: 1600, height: 1200 } });
+const page = await context.newPage();
+await page.goto(`${baseUrl}/login?platform=clinical`, { waitUntil: 'networkidle' });
+await page.getByPlaceholder(/username/i).fill('cs-superadmin@erp.com');
+await page.getByPlaceholder(/password/i).fill('Clinical@2026');
+await page.locator('select').first().selectOption('CLINICAL').catch(()=>{});
+await page.getByRole('button', { name: /^Login$/i }).click();
+await page.waitForTimeout(4000);
+await page.goto(`${baseUrl}/clinical-services/ivf/cryo?record=1&mode=edit`, { waitUntil: 'domcontentloaded' });
+await page.waitForTimeout(1500);
+const article = page.locator('h2', { hasText: 'Edit Record' }).locator('xpath=ancestor::article[1]');
+const controls = article.locator('input,textarea,select');
+// change location code (last text input before status select)
+await controls.nth(8).fill('L2');
+const waitPost = page.waitForResponse(resp => resp.url().includes('/api/clinical/ivf/cryo') && resp.request().method() === 'POST');
+await article.getByRole('button', { name: /Update/i }).click();
+const response = await waitPost;
+console.log('status', response.status());
+console.log(await response.text());
+await page.goto(`${baseUrl}/clinical-services/ivf/cryo`, { waitUntil: 'networkidle' });
+const body = await page.locator('body').innerText();
+console.log(body.slice(0, 500));
+await page.screenshot({ path: '/opt/tottech-one/ivf-uat/cryo-edit.png', fullPage: true });
+await browser.close();

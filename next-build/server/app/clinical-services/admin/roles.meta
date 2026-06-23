@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/admin/layout,_N_T_/clinical-services/admin/roles/layout,_N_T_/clinical-services/admin/roles/page,_N_T_/clinical-services/admin/roles"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/admin/roles/__PAGE__",
+    "/clinical-services/admin/roles",
+    "/clinical-services/admin",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

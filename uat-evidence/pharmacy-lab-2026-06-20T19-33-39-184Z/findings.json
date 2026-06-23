@@ -1,0 +1,12 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Edit/i }).first()\u001b[22m\n\n    at createPharmacyMedicine (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:113:61)\n    at async main (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:195:30)"
+  }
+]

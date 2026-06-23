@@ -1,0 +1,3 @@
+{
+  "/api/clinical/documents/verify/route": "app/api/clinical/documents/verify/route.js"
+}

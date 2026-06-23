@@ -1,0 +1,25 @@
+export const routePermissionKeys: Record<
+  string,
+  string
+> = {
+  "/api/dashboard": "DASHBOARD.VIEW",
+  "/api/students": "STUDENTS.READ",
+  "/api/teachers": "TEACHERS.READ",
+  "/api/classes": "CLASSES.READ",
+  "/api/sections": "SECTIONS.READ",
+  "/api/subjects": "SUBJECTS.READ",
+  "/api/attendance": "ATTENDANCE.READ",
+  "/api/finance": "FEES.READ",
+  "/api/hostels": "HOSTEL.READ",
+  "/api/transport": "TRANSPORT.READ",
+  "/api/tottech-ai": "AI.USE",
+  "/api/operations": "OPERATIONS.READ",
+  "/api/reports": "REPORTS.READ",
+  "/api/imports": "IMPORTS.MANAGE",
+  "/api/concessions": "CONCESSIONS.READ",
+  "/settings/ai": "AI.MANAGE",
+  "/operations": "OPERATIONS.READ",
+  "/reports": "REPORTS.READ",
+  "/imports": "IMPORTS.MANAGE",
+  "/finance/concessions": "CONCESSIONS.READ",
+};

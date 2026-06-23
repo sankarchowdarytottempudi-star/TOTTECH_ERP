@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/academics/layout,_N_T_/academics/exam-schedule/layout,_N_T_/academics/exam-schedule/page,_N_T_/academics/exam-schedule"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/academics/exam-schedule/__PAGE__",
+    "/academics/exam-schedule",
+    "/academics",
+    "/_index",
+    "/_head"
+  ]
+}

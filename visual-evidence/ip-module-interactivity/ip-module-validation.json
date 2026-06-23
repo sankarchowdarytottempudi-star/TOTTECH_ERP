@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-06-07T18:54:09.716Z",
+  "pageResults": [
+    {
+      "route": "/clinical-services/hms/ip",
+      "finalUrl": "/clinical-services/hms/ip",
+      "title": "IP Admission",
+      "cards": 3,
+      "emptyMessage": false,
+      "samples": [
+        {
+          "aria": "Open IP-1780846583612",
+          "role": "link",
+          "tabIndex": "0",
+          "cursor": "pointer",
+          "href": "/clinical-services/hms/ip/3",
+          "actionLinks": [
+            "View Details",
+            "Edit",
+            "Audit Timeline",
+            "History",
+            "Patient 360"
+          ]
+        },
+        {
+          "aria": "Open IP-1780846087700",
+          "role": "link",
+          "tabIndex": "0",
+          "cursor": "pointer",
+          "href": "/clinical-services/hms/ip/2",
+          "actionLinks": [
+            "View Details",
+            "Edit",
+            "Audit Timeline",
+            "History",
+            "Patient 360"
+          ]
+        },
+        {
+          "aria": "Open IP-1780845966548",
+          "role": "link",
+          "tabIndex": "0",
+          "cursor": "pointer",
+          "href": "/clinical-services/hms/ip/1",
+          "actionLinks": [
+            "View Details",
+            "Edit",
+            "Audit Timeline",
+            "History",
+            "Patient 360"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/hms/nursing",
+      "finalUrl": "/clinical-services/hms/nursing",
+      "title": "Nursing",
+      "cards": 3,
+      "emptyMessage": false,
+      "samples": [
+        {
+          "aria": "Open Vitals stable; oral fluids tolerated.",
+          "role": "link",
+          "tabIndex": "0",
+          "cursor": "pointer",
+          "href": "/clinical-services/hms/nursing/3",
+          "actionLinks": [
+            "View Details",
+            "Edit",
+            "Audit Timeline",
+            "History",
+            "Patient 360"
+          ]
+        },
+        {
+          "aria": "Open Vitals stable; oral fluids tolerated.",
+          "role": "link",
+          "tabIndex": "0",
+          "cursor": "pointer",
+          "href": "/clinical-services/hms/nursing/2",
+          "actionLinks": [
+            "View Details",
+            "Edit",
+            "Audit Timeline",
+            "History",
+            "Patient 360"
+          ]
+        },
+        {
+          "aria": "Open Vitals stable; oral fluids tolerated.",
+          "role": "link",
+          "tabIndex": "0",
+          "cursor": "pointer",
+          "href": "/clinical-services/hms/nursing/1",
+          "actionLinks": [
+            "View Details",
+            "Edit",
+            "Audit Timeline",
+            "History",
+            "Patient 360"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/clinical-services/hms/beds",
+      "finalUrl": "/clinical-services/hms/beds",
+      "title": "Bed Management",
+      "cards": 0,
+      "emptyMessage": true,
+      "samples": []
+    },
+    {
+      "route": "/clinical-services/hms/wards",
+      "finalUrl": "/clinical-services/hms/wards",
+      "title": "Ward Management",
+      "cards": 0,
+      "emptyMessage": true,
+      "samples": []
+    },
+    {
+      "route": "/clinical-services/hms/bed-allocations",
+      "finalUrl": "/clinical-services/hms/bed-allocations",
+      "title": "Bed Allocations",
+      "cards": 0,
+      "emptyMessage": true,
+      "samples": []
+    },
+    {
+      "route": "/clinical-services/hms/discharges",
+      "finalUrl": "/clinical-services/hms/discharges",
+      "title": "Discharge Planning",
+      "cards": 0,
+      "emptyMessage": true,
+      "samples": []
+    }
+  ],
+  "redirectResults": [
+    {
+      "from": "/clinical-services/ip",
+      "finalUrl": "/clinical-services/hms/ip",
+      "expected": "/clinical-services/hms/ip",
+      "ok": true
+    },
+    {
+      "from": "/clinical-services/ipd",
+      "finalUrl": "/clinical-services/hms/ip",
+      "expected": "/clinical-services/hms/ip",
+      "ok": true
+    },
+    {
+      "from": "/clinical-services/bed-management",
+      "finalUrl": "/clinical-services/hms/beds",
+      "expected": "/clinical-services/hms/beds",
+      "ok": true
+    },
+    {
+      "from": "/clinical-services/ward-management",
+      "finalUrl": "/clinical-services/hms/wards",
+      "expected": "/clinical-services/hms/wards",
+      "ok": true
+    },
+    {
+      "from": "/clinical-services/discharges",
+      "finalUrl": "/clinical-services/hms/discharges",
+      "expected": "/clinical-services/hms/discharges",
+      "ok": true
+    },
+    {
+      "from": "/clinical-services/nursing-station",
+      "finalUrl": "/clinical-services/hms/nursing",
+      "expected": "/clinical-services/hms/nursing",
+      "ok": true
+    }
+  ],
+  "detailResult": {
+    "href": "/clinical-services/hms/ip/3",
+    "finalUrl": "/clinical-services/hms/ip/3",
+    "headingsPresent": 20,
+    "missingHeadings": [],
+    "allRequiredHeadingsPresent": true
+  },
+  "consoleErrors": [],
+  "keyboardResult": {
+    "expectedHref": "/clinical-services/hms/ip/3",
+    "finalUrl": "/clinical-services/hms/ip/3",
+    "keyboardEnterNavigationOk": true
+  }
+}

@@ -1,0 +1,90 @@
+export const normalizePermissionKey = (
+  value: string
+) =>
+  value
+    .trim()
+    .replaceAll(" ", "_")
+    .replaceAll(".", "_")
+    .toUpperCase();
+
+export const legacyPermissionAliases: Record<
+  string,
+  string[]
+> = {
+  DASHBOARD: ["DASHBOARD.VIEW"],
+  STUDENTS: ["STUDENTS.READ"],
+  TEACHERS: ["TEACHERS.READ"],
+  ATTENDANCE: ["ATTENDANCE.READ"],
+  ACADEMICS: [
+    "ACADEMICS.READ",
+    "ACADEMICS.CREATE",
+    "ACADEMICS.UPDATE",
+    "CLASSES.READ",
+    "SECTIONS.READ",
+    "SUBJECTS.READ",
+    "TIMETABLE.READ",
+    "EXAMS.READ",
+    "EXAM_SCHEDULE.READ",
+    "QUESTION_BANK.READ",
+    "QUESTION_PAPERS.READ",
+    "HOMEWORK.READ",
+    "MARKS.READ",
+    "MARKS_ENTRY.READ",
+  ],
+  CLASSES: ["CLASSES.READ"],
+  SECTIONS: ["SECTIONS.READ"],
+  SUBJECTS: ["SUBJECTS.READ"],
+  TIMETABLE: [
+    "TIMETABLE.READ",
+    "TIMETABLE.CREATE",
+    "TIMETABLE.UPDATE",
+  ],
+  EXAMS: [
+    "EXAMS.READ",
+    "EXAMS.CREATE",
+    "EXAMS.UPDATE",
+  ],
+  EXAM_SCHEDULE: [
+    "EXAM_SCHEDULE.READ",
+    "EXAM_SCHEDULE.CREATE",
+    "EXAM_SCHEDULE.UPDATE",
+  ],
+  QUESTION_BANK: [
+    "QUESTION_BANK.READ",
+    "QUESTION_BANK.CREATE",
+    "QUESTION_BANK.UPDATE",
+  ],
+  QUESTION_PAPERS: [
+    "QUESTION_PAPERS.READ",
+    "QUESTION_PAPERS.CREATE",
+    "QUESTION_PAPERS.UPDATE",
+  ],
+  HOMEWORK: [
+    "HOMEWORK.READ",
+    "HOMEWORK.CREATE",
+    "HOMEWORK.UPDATE",
+  ],
+  MARKS: [
+    "MARKS.READ",
+    "MARKS.CREATE",
+    "MARKS.UPDATE",
+    "MARKS.ENTER",
+  ],
+  MARKS_ENTRY: [
+    "MARKS_ENTRY.READ",
+    "MARKS_ENTRY.CREATE",
+    "MARKS_ENTRY.UPDATE",
+    "MARKS_ENTRY.ENTER",
+  ],
+  FINANCE: ["FEES.READ"],
+  FEES: ["FEES.READ"],
+  HOSTEL: ["HOSTEL.READ"],
+  DINING: ["DINING.READ"],
+  TRANSPORT: ["TRANSPORT.READ"],
+  PARENT: ["PARENT.READ"],
+  STUDENT: ["STUDENT.READ"],
+  AI: ["AI.USE"],
+  GOVERNANCE: ["GOVERNANCE.READ"],
+  OPERATIONS: ["OPERATIONS.READ"],
+  REPORTS: ["REPORTS.READ"],
+};

@@ -1,0 +1,3 @@
+{
+  "/api/clinical/pharmacy/[module]/route": "app/api/clinical/pharmacy/[module]/route.js"
+}

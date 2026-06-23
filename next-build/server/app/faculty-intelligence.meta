@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/faculty-intelligence/layout,_N_T_/faculty-intelligence/page,_N_T_/faculty-intelligence"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/faculty-intelligence/__PAGE__",
+    "/faculty-intelligence",
+    "/_index",
+    "/_head"
+  ]
+}

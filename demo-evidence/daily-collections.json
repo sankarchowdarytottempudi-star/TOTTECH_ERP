@@ -1,0 +1,1 @@
+{"report":"daily-collections","title":"Daily Collections","scope":{"tenant_id":8,"hospital_id":7,"branch_id":7},"fromDate":"2026-06-09","toDate":"2026-06-09","rows":[{"payment_mode":"CASH","payment_count":1,"total_amount":"600"},{"payment_mode":"UPI","payment_count":1,"total_amount":"450"},{"payment_mode":"CARD","payment_count":1,"total_amount":"150"}]}

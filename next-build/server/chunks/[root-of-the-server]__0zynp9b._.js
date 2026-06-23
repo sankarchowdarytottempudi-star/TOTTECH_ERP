@@ -1,0 +1,225 @@
+module.exports=[193695,(e,t,i)=>{t.exports=e.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},918622,(e,t,i)=>{t.exports=e.x("next/dist/compiled/next-server/app-page-turbo.runtime.prod.js",()=>require("next/dist/compiled/next-server/app-page-turbo.runtime.prod.js"))},556704,(e,t,i)=>{t.exports=e.x("next/dist/server/app-render/work-async-storage.external.js",()=>require("next/dist/server/app-render/work-async-storage.external.js"))},832319,(e,t,i)=>{t.exports=e.x("next/dist/server/app-render/work-unit-async-storage.external.js",()=>require("next/dist/server/app-render/work-unit-async-storage.external.js"))},324725,(e,t,i)=>{t.exports=e.x("next/dist/server/app-render/after-task-async-storage.external.js",()=>require("next/dist/server/app-render/after-task-async-storage.external.js"))},270406,(e,t,i)=>{t.exports=e.x("next/dist/compiled/@opentelemetry/api",()=>require("next/dist/compiled/@opentelemetry/api"))},274173,e=>{"use strict";let t="tottech_clinical_services";e.s(["dashboardForProject",0,function(e){return e===t?"/clinical-services":"/"},"isClinicalServicesEmail",0,function(e){let t=String(e||"").trim().toLowerCase();return"cs-superadmin@erp.com"===t||t.startsWith("cs-")},"projectForPlatform",0,function(e){return"CLINICAL"===String(e||"").trim().toUpperCase()?t:"tottech_one"},"projectTypeForPlatform",0,function(e){return"CLINICAL"===String(e||"").trim().toUpperCase()?"CLINICAL":"ERP"}])},503031,e=>{"use strict";let t=[{startsWith:"/clinical-services/patients",moduleCode:"PATIENTS"},{startsWith:"/api/clinical/patients",moduleCode:"PATIENTS"},{startsWith:"/api/clinical/patient-lookup",moduleCode:"PATIENTS"},{startsWith:"/api/clinical/global-search",moduleCode:"PATIENTS"},{startsWith:"/clinical-services/patient-timeline",moduleCode:"PATIENTS"},{startsWith:"/clinical-services/appointments",moduleCode:"APPOINTMENTS"},{startsWith:"/api/clinical/appointments",moduleCode:"APPOINTMENTS"},{startsWith:"/clinical-services/doctors",moduleCode:"OP"},{startsWith:"/api/clinical/doctors",moduleCode:"OP"},{startsWith:"/clinical-services/operations",moduleCode:"OP"},{startsWith:"/api/clinical/operations/vitals",moduleCode:"OP"},{includes:"/hms/ip",moduleCode:"IP"},{includes:"/ip",moduleCode:"IP"},{includes:"/admission",moduleCode:"IP"},{includes:"/discharge",moduleCode:"IP"},{includes:"/bed",moduleCode:"IP"},{includes:"/ward",moduleCode:"IP"},{startsWith:"/api/clinical/operations/rooms",moduleCode:"IP"},{includes:"/hms/er",moduleCode:"ER"},{includes:"/emergency",moduleCode:"ER"},{includes:"/icu",moduleCode:"ICU"},{includes:"/ventilator",moduleCode:"ICU"},{includes:"/ot",moduleCode:"OT"},{startsWith:"/api/clinical/operations/ot-schedules",moduleCode:"OT"},{startsWith:"/clinical-services/ivf",moduleCode:"IVF"},{startsWith:"/api/clinical/ivf",moduleCode:"IVF"},{startsWith:"/clinical-services/laboratory",moduleCode:"LAB"},{startsWith:"/api/clinical/operations/lab",moduleCode:"LAB"},{startsWith:"/clinical-services/radiology",moduleCode:"RADIOLOGY"},{startsWith:"/api/clinical/radiology",moduleCode:"RADIOLOGY"},{startsWith:"/clinical-services/pharmacy",moduleCode:"PHARMACY"},{startsWith:"/api/clinical/pharmacy",moduleCode:"PHARMACY"},{startsWith:"/api/clinical/operations/medicines",moduleCode:"PHARMACY"},{startsWith:"/api/clinical/operations/pharmacy-dispense",moduleCode:"PHARMACY"},{includes:"/inventory",moduleCode:"INVENTORY"},{includes:"/stock",moduleCode:"INVENTORY"},{includes:"/warehouse",moduleCode:"INVENTORY"},{includes:"/asset",moduleCode:"INVENTORY"},{includes:"/procurement",moduleCode:"PROCUREMENT"},{includes:"/purchase",moduleCode:"PROCUREMENT"},{includes:"/grn",moduleCode:"PROCUREMENT"},{startsWith:"/api/clinical/billing",moduleCode:"BILLING"},{includes:"/billing",moduleCode:"BILLING"},{startsWith:"/api/clinical/operations/payments",moduleCode:"BILLING"},{includes:"/insurance",moduleCode:"INSURANCE"},{includes:"/claim",moduleCode:"INSURANCE"},{includes:"/preauth",moduleCode:"INSURANCE"},{includes:"/referral",moduleCode:"REFERRAL"},{startsWith:"/clinical-services/finance",moduleCode:"FINANCE"},{startsWith:"/api/clinical/finance",moduleCode:"FINANCE"},{startsWith:"/clinical-services/hr",moduleCode:"HR"},{startsWith:"/api/clinical/hr",moduleCode:"HR"},{startsWith:"/clinical-services/analytics",moduleCode:"ANALYTICS"},{startsWith:"/api/clinical/analytics",moduleCode:"ANALYTICS"},{startsWith:"/api/clinical/ai",moduleCode:"AI"},{includes:"/ai",moduleCode:"AI"}];e.s(["CLINICAL_MODULE_CODES",0,["PATIENTS","APPOINTMENTS","OP","IP","ER","ICU","OT","IVF","LAB","RADIOLOGY","PHARMACY","INVENTORY","PROCUREMENT","BILLING","INSURANCE","REFERRAL","FINANCE","HR","ANALYTICS","AI"],"CLINICAL_MODULE_LABELS",0,{PATIENTS:"Patients",APPOINTMENTS:"Appointments",OP:"Outpatient / Doctors",IP:"Inpatient",ER:"Emergency",ICU:"ICU",OT:"Operation Theatre",IVF:"IVF & Fertility",LAB:"Laboratory",RADIOLOGY:"Radiology",PHARMACY:"Pharmacy",INVENTORY:"Inventory",PROCUREMENT:"Procurement",BILLING:"Billing",INSURANCE:"Insurance",REFERRAL:"Referral",FINANCE:"Finance",HR:"HR",ANALYTICS:"Analytics",AI:"AI"},"isModuleLicensed",0,function(e,t){return!(e&&Array.isArray(t)&&0!==t.length)||t.includes(e)},"moduleCodeForClinicalPath",0,function(e){let i=e.split("?")[0].split("#")[0].toLowerCase(),a=t.find(e=>!!(e.startsWith&&i.startsWith(e.startsWith)||e.includes&&i.includes(e.includes)));return a?.moduleCode??null}])},780907,e=>e.a(async(t,i)=>{try{var a=e.i(493458),n=e.i(89171),r=e.i(368105),s=e.i(15270),o=e.i(274173),l=e.i(503031),c=t([r,s]);[r,s]=c.then?(await c)():c;let _=e=>{let t=Number(e);return Number.isFinite(t)&&t>0?t:null},C=e=>e&&"object"==typeof e?e:{},E=(...e)=>e.map(e=>String(e||"").trim()).find(Boolean)||"",A=new Set(["tottech_super_admin","clinical_super_admin","organization_admin"]);async function d(e,t){return(await s.prisma.$queryRawUnsafe(`
+      SELECT module_code
+      FROM hospital_module_access
+      WHERE tenant_id = $1
+        AND hospital_id = $2
+        AND COALESCE(enabled, false) = true
+      ORDER BY module_code ASC
+      `,e,t)).map(e=>String(e.module_code||"")).filter(e=>Object.prototype.hasOwnProperty.call(l.CLINICAL_MODULE_LABELS,e))}async function p(e,t){let i=await s.prisma.$queryRawUnsafe(`
+      SELECT COUNT(*)::int AS count
+      FROM hospital_module_access
+      WHERE tenant_id = $1
+        AND hospital_id = $2
+      `,e,t);return Number(i[0]?.count||0)>0}async function u(e){let t=await (0,r.getCurrentUser)();if(!t||!(t?.project==="tottech_clinical_services"||"CLINICAL"===String(t?.projectType||"").trim().toUpperCase()||"CLINICAL"===String(t?.platform_type||"").trim().toUpperCase()||(0,o.isClinicalServicesEmail)(t?.email)))return null;let i=await (0,a.cookies)(),n=_(i.get("active_clinic_id")?.value),l=_(i.get("active_hospital_id")?.value),c=_(i.get("active_branch_id")?.value),p=e?new URL(e.url):null,u=_(p?.searchParams.get("clinic_id")),h=_(p?.searchParams.get("hospital_id")),m=_(p?.searchParams.get("branch_id")),b=(await s.prisma.$queryRawUnsafe(`
+      SELECT
+        cup.tenant_id,
+        cup.clinic_id,
+        COALESCE(cup.hospital_id, c.hospital_id) AS hospital_id,
+        COALESCE(cup.branch_id, c.branch_id) AS branch_id,
+        c.organization_id,
+        ct.tenant_name,
+        h.hospital_name,
+        h.address AS hospital_address,
+        h.phone AS hospital_phone,
+        h.email AS hospital_email,
+        h.license_number AS hospital_license_number,
+        h.branding AS hospital_branding,
+        b.branch_name,
+        b.branding AS branch_branding,
+        COALESCE(o.organization_name, ct.tenant_name, c.clinic_name) AS organization_name,
+        o.branding AS organization_branding,
+        c.clinic_name,
+        c.branding AS clinic_branding,
+        cr.role_key,
+        cr.role_name,
+        cr.permissions
+      FROM clinical_user_profiles cup
+      JOIN clinics c ON c.id = cup.clinic_id
+      LEFT JOIN organizations o ON (
+        o.tenant_id = cup.tenant_id
+        OR o.id = cup.tenant_id
+      )
+        AND COALESCE(o.is_deleted, false) = false
+      LEFT JOIN clinical_tenants ct ON ct.id = cup.tenant_id
+      LEFT JOIN hospitals h ON h.id = COALESCE(cup.hospital_id, c.hospital_id)
+      LEFT JOIN branches b ON b.id = COALESCE(cup.branch_id, c.branch_id)
+      LEFT JOIN clinical_roles cr ON cr.id = cup.clinical_role_id
+      WHERE cup.user_id = $1
+        AND COALESCE(cup.is_deleted, false) = false
+        AND COALESCE(c.is_deleted, false) = false
+        AND ($2::int IS NULL OR cup.clinic_id = $2::int)
+        AND ($3::int IS NULL OR COALESCE(cup.hospital_id, c.hospital_id) = $3::int)
+        AND ($4::int IS NULL OR COALESCE(cup.branch_id, c.branch_id) = $4::int)
+      ORDER BY cup.id ASC
+      LIMIT 1
+      `,t.id??null,u??n,h??l,m??c))[0];if(!b&&l&&t.id&&(b=(await s.prisma.$queryRawUnsafe(`
+        WITH base_profile AS (
+          SELECT
+            cup.tenant_id,
+            cup.clinic_id AS base_clinic_id,
+            COALESCE(cup.hospital_id, c.hospital_id) AS base_hospital_id,
+            COALESCE(cup.branch_id, c.branch_id) AS base_branch_id,
+            c.organization_id,
+            cr.role_key,
+            cr.role_name,
+            cr.permissions
+          FROM clinical_user_profiles cup
+          JOIN clinics c ON c.id = cup.clinic_id
+          LEFT JOIN clinical_roles cr ON cr.id = cup.clinical_role_id
+          WHERE cup.user_id = $1
+            AND COALESCE(cup.is_deleted, false) = false
+            AND COALESCE(c.is_deleted, false) = false
+          ORDER BY cup.id ASC
+          LIMIT 1
+        ),
+        selected_hospital AS (
+          SELECT h.*
+          FROM hospitals h
+          JOIN base_profile bp ON bp.tenant_id = h.tenant_id
+          WHERE h.id = $2
+            AND COALESCE(h.is_deleted, false) = false
+            AND COALESCE(bp.role_key, '') = ANY($3::text[])
+          LIMIT 1
+        ),
+        selected_branch AS (
+          SELECT b.*
+          FROM branches b
+          JOIN selected_hospital h ON h.id = b.hospital_id
+          WHERE b.tenant_id = h.tenant_id
+            AND ($4::int IS NULL OR b.id = $4::int)
+            AND COALESCE(b.is_deleted, false) = false
+          ORDER BY
+            CASE WHEN $4::int IS NOT NULL AND b.id = $4::int THEN 0 ELSE 1 END,
+            b.id ASC
+          LIMIT 1
+        ),
+        selected_clinic AS (
+          SELECT c.*
+          FROM clinics c
+          JOIN selected_hospital h ON h.id = c.hospital_id
+          LEFT JOIN selected_branch b ON b.id = c.branch_id
+          WHERE c.tenant_id = h.tenant_id
+            AND ($5::int IS NULL OR c.id = $5::int)
+            AND (
+              b.id IS NULL
+              OR c.branch_id = b.id
+            )
+            AND COALESCE(c.is_deleted, false) = false
+          ORDER BY
+            CASE WHEN $5::int IS NOT NULL AND c.id = $5::int THEN 0 ELSE 1 END,
+            c.id ASC
+          LIMIT 1
+        )
+        SELECT
+          bp.tenant_id,
+          COALESCE(sc.id, bp.base_clinic_id) AS clinic_id,
+          sh.id AS hospital_id,
+          COALESCE(sb.id, sc.branch_id, bp.base_branch_id) AS branch_id,
+          COALESCE(sc.organization_id, bp.organization_id) AS organization_id,
+          ct.tenant_name,
+          sh.hospital_name,
+          sh.address AS hospital_address,
+          sh.phone AS hospital_phone,
+          sh.email AS hospital_email,
+          sh.license_number AS hospital_license_number,
+          sh.branding AS hospital_branding,
+          sb.branch_name,
+          sb.branding AS branch_branding,
+          COALESCE(o.organization_name, ct.tenant_name, sc.clinic_name, sh.hospital_name) AS organization_name,
+          o.branding AS organization_branding,
+          COALESCE(sc.clinic_name, sh.hospital_name) AS clinic_name,
+          sc.branding AS clinic_branding,
+          bp.role_key,
+          bp.role_name,
+          bp.permissions
+        FROM base_profile bp
+        JOIN selected_hospital sh ON true
+        LEFT JOIN selected_branch sb ON true
+        LEFT JOIN selected_clinic sc ON true
+        LEFT JOIN organizations o ON (
+          o.tenant_id = bp.tenant_id
+          OR o.id = bp.tenant_id
+        )
+          AND COALESCE(o.is_deleted, false) = false
+        LEFT JOIN clinical_tenants ct ON ct.id = bp.tenant_id
+        LIMIT 1
+        `,t.id,l,Array.from(A),c,n))[0]),!b)return null;let N=C(b.organization_branding),g=C(b.hospital_branding),S=C(b.branch_branding),R=C(b.clinic_branding),I={...N,...g,...S,...R},O=E(I.logoUrl,I.logo_url,I.logo,I.hospital_logo,I.image),f=E(I.name,I.hospitalName,I.hospital_name,b.hospital_name,b.branch_name,b.clinic_name,b.organization_name),y=await d(Number(b.tenant_id),Number(b.hospital_id));return{user:t,tenantId:Number(b.tenant_id),hospitalId:Number(b.hospital_id),branchId:Number(b.branch_id),clinicId:Number(b.clinic_id),organizationId:_(b.organization_id),organizationName:String(b.organization_name||""),tenantName:String(b.tenant_name||""),hospitalName:String(b.hospital_name||""),hospitalAddress:String(b.hospital_address||""),hospitalPhone:String(b.hospital_phone||""),hospitalEmail:String(b.hospital_email||""),hospitalLicenseNumber:String(b.hospital_license_number||""),branchName:String(b.branch_name||""),clinicName:String(b.clinic_name||""),roleKey:String(b.role_key||"clinical_user"),roleName:String(b.role_name||"Clinical User"),permissions:b.permissions||{},licensedModules:y,branding:{name:f||"Hospital",logoUrl:O||null,primaryColor:E(I.primaryColor,I.primary_color)||"#04142E",accentColor:E(I.accentColor,I.accent_color)||"#D4AF37",source:O?"hospital":"generated"}}}async function h(e){let t=await u(e);if(!t)return{context:null,response:function(e="Clinical Services login required."){return n.NextResponse.json({error:e},{status:401})}()};if(e){let i=new URL(e.url).pathname,a=(0,l.moduleCodeForClinicalPath)(i);if(a&&!(!await p(t.tenantId,t.hospitalId)||(t.licensedModules||[]).includes(a)))return{context:null,response:n.NextResponse.json({error:"Module Not Licensed",module_code:a,module_name:l.CLINICAL_MODULE_LABELS[a]},{status:403})}}return{context:t,response:null}}async function m(e,t){await s.prisma.$executeRawUnsafe(`
+    INSERT INTO clinical_audit_events (
+      tenant_id,
+      clinic_id,
+      hospital_id,
+      branch_id,
+      user_id,
+      module_name,
+      action,
+      entity_type,
+      entity_id,
+      summary,
+      payload,
+      created_by,
+      updated_by,
+      created_at,
+      updated_at,
+      is_deleted
+    )
+    VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11::jsonb,$5,$5,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,false)
+    `,e.tenantId,e.clinicId,e.hospitalId,e.branchId,e.user.id??null,t.moduleName,t.action,t.entityType??null,t.entityId??null,t.summary??null,JSON.stringify(t.payload??{}))}e.s(["recordClinicalAudit",0,m,"requireClinicalContext",0,h]),i()}catch(e){i(e)}},!1),338140,e=>e.a(async(t,i)=>{try{var a=e.i(15270),n=t([a]);async function r(e){let t=await a.prisma.$queryRawUnsafe(`
+      SELECT endpoint_name, method, path, api_group, module_key, request_schema, response_schema, permission_key, rate_limit_policy, audit_middleware, tenant_middleware
+      FROM clinical_api_catalog_rest_endpoints
+      WHERE tenant_id=$1
+        AND hospital_id=$2
+        AND branch_id=$3
+        AND COALESCE(is_deleted,false)=false
+      ORDER BY api_group, path, method
+      `,e.tenantId,e.hospitalId,e.branchId),i={};for(let e of t){let t=String(e.path||"/"),a=String(e.method||"GET").toLowerCase(),n=!["get","delete"].includes(a);i[t]=i[t]||{},i[t][a]={summary:String(e.endpoint_name||t),tags:[String(e.api_group||"Clinical")],security:[{bearerAuth:[]}],parameters:t.includes("{id}")?[{name:"id",in:"path",required:!0,schema:{type:"string"}}]:[],...n?{requestBody:{required:!0,content:{"application/json":{schema:s(e.request_schema)}}}}:{},responses:{200:{description:"Successful clinical API response.",content:{"application/json":{schema:s(e.response_schema)}}},400:{$ref:"#/components/responses/BadRequest"},401:{$ref:"#/components/responses/Unauthorized"},403:{$ref:"#/components/responses/Forbidden"},429:{$ref:"#/components/responses/RateLimited"}},"x-tenant-isolation":!!e.tenant_middleware,"x-audit-required":!!e.audit_middleware,"x-rate-limit":String(e.rate_limit_policy||"default_100_per_minute"),"x-permission":e.permission_key?String(e.permission_key):null}}return{openapi:"3.1.0",info:{title:"TOTTECH Clinical Services API",version:"1.0.0",description:"Tenant-scoped API catalog generated from Phase 14 REST contracts."},servers:[{url:"/api/v1",description:"TOTTECH Clinical Services API Gateway"}],security:[{bearerAuth:[]}],paths:i,components:{securitySchemes:{bearerAuth:{type:"http",scheme:"bearer",bearerFormat:"JWT"}},responses:{BadRequest:o("Validation failed"),Unauthorized:o("Authentication required"),Forbidden:o("Permission denied"),RateLimited:o("Rate limit exceeded")},schemas:{StandardErrorResponse:{type:"object",required:["success","errorCode","message"],properties:{success:{type:"boolean",const:!1},errorCode:{type:"string"},message:{type:"string"}}}}}}}function s(e){return l(e)?{type:"object",additionalProperties:!0,example:e}:Array.isArray(e)?{type:"array",items:{type:"object"},example:e}:{type:"object",additionalProperties:!0}}function o(e){return{description:e,content:{"application/json":{schema:{$ref:"#/components/schemas/StandardErrorResponse"}}}}}function l(e){return"object"==typeof e&&null!==e&&!Array.isArray(e)}function c(e){return null===e?"null":void 0===e?'""':"number"==typeof e||"boolean"==typeof e?String(e):JSON.stringify(String(e))}[a]=n.then?(await n)():n,e.s(["buildClinicalOpenApiSpec",0,r,"toYaml",0,function e(t,i=0){let a=" ".repeat(i);if(Array.isArray(t))return t.length?t.map(t=>l(t)?`${a}-
+${e(t,i+2)}`:`${a}- ${c(t)}`).join("\n"):"[]";if(l(t)){let n=Object.entries(t);return n.length?n.map(([t,n])=>l(n)||Array.isArray(n)?`${a}${t}:
+${e(n,i+2)}`:`${a}${t}: ${c(n)}`).join("\n"):"{}"}return c(t)}]),i()}catch(e){i(e)}},!1),865180,e=>e.a(async(t,i)=>{try{var a=e.i(89171),n=e.i(780907),r=e.i(338140),s=t([n,r]);async function o(e){let t=await (0,n.requireClinicalContext)(e);if(t.response)return t.response;let i=await (0,r.buildClinicalOpenApiSpec)(t.context),s=Object.values(i.paths).reduce((e,t)=>e+Object.keys(t).length,0);return new a.NextResponse(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TOTTECH Clinical Services API Docs</title>
+    <style>
+      body { margin: 0; font-family: Inter, Arial, sans-serif; background: #f5f8fb; color: #0B1F3A; }
+      main { max-width: 1040px; margin: 0 auto; padding: 48px 20px; }
+      .hero { background: #0B1F3A; color: white; border: 1px solid #D4AF37; border-radius: 8px; padding: 32px; }
+      .eyebrow { color: #D4AF37; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { margin: 10px 0 0; font-size: 42px; line-height: 1.05; }
+      p { font-size: 15px; line-height: 1.7; font-weight: 700; }
+      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 20px; }
+      .card { background: white; border: 1px solid #d8e2ef; border-radius: 8px; padding: 20px; box-shadow: 0 12px 30px rgba(15, 23, 42, .08); }
+      .value { font-size: 36px; font-weight: 900; }
+      a { color: #8a6500; font-weight: 900; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">OpenAPI 3.1</div>
+        <h1>TOTTECH Clinical Services API Gateway</h1>
+        <p>Protected API contract index generated from the Phase 14 catalog for the active tenant, hospital, and branch.</p>
+      </section>
+      <section class="grid">
+        <article class="card">
+          <div class="eyebrow">REST Contracts</div>
+          <div class="value">${s}</div>
+          <p>Generated from the database-backed REST endpoint catalog.</p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">JSON Spec</div>
+          <p><a href="/api/v1/openapi.json">Open /api/v1/openapi.json</a></p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">YAML Spec</div>
+          <p><a href="/api/v1/openapi.yaml">Open /api/v1/openapi.yaml</a></p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Clinical Catalog</div>
+          <p><a href="/clinical-services/api-catalog">Open API Catalog Command Center</a></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>`,{headers:{"content-type":"text/html; charset=utf-8"}})}[n,r]=s.then?(await s)():s,e.s(["GET",0,o]),i()}catch(e){i(e)}},!1),730436,e=>e.a(async(t,i)=>{try{var a=e.i(747909),n=e.i(174017),r=e.i(996250),s=e.i(759756),o=e.i(561916),l=e.i(174677),c=e.i(869741),d=e.i(316795),p=e.i(487718),u=e.i(995169),h=e.i(47587),m=e.i(666012),_=e.i(570101),C=e.i(626937),E=e.i(10372),A=e.i(193695);e.i(52474);var b=e.i(600220),N=e.i(865180),g=t([N]);[N]=g.then?(await g)():g;let R=new a.AppRouteRouteModule({definition:{kind:n.RouteKind.APP_ROUTE,page:"/api/v1/docs/route",pathname:"/api/v1/docs",filename:"route",bundlePath:""},distDir:".next",relativeProjectDir:"",resolvedPagePath:"[project]/app/api/v1/docs/route.ts",nextConfigOutput:"",userland:N,...{}}),{workAsyncStorage:I,workUnitAsyncStorage:O,serverHooks:f}=R;async function S(e,t,i){i.requestMeta&&(0,s.setRequestMeta)(e,i.requestMeta),R.isDev&&(0,s.addRequestMeta)(e,"devRequestTimingInternalsEnd",process.hrtime.bigint());let a="/api/v1/docs/route";a=a.replace(/\/index$/,"")||"/";let r=await R.prepare(e,t,{srcPage:a,multiZoneDraftMode:!1});if(!r)return t.statusCode=400,t.end("Bad Request"),null==i.waitUntil||i.waitUntil.call(i,Promise.resolve()),null;let{buildId:N,deploymentId:g,params:S,nextConfig:I,parsedUrl:O,isDraftMode:f,prerenderManifest:y,routerServerContext:L,isOnDemandRevalidate:T,revalidateOnlyGenerated:v,resolvedPathname:x,clientReferenceManifest:w,serverActionsManifest:P}=r,$=(0,c.normalizeAppPath)(a),U=!!(y.dynamicRoutes[$]||y.routes[x]),D=async()=>((null==L?void 0:L.render404)?await L.render404(e,t,O,!1):t.end("This page could not be found"),null);if(U&&!f){let e=!!y.routes[x],t=y.dynamicRoutes[$];if(t&&!1===t.fallback&&!e){if(I.adapterPath)return await D();throw new A.NoFallbackError}}let M=null;!U||R.isDev||f||(M=x,M="/index"===M?"/":M);let F=!0===R.isDev||!U,W=U&&!F;P&&w&&(0,l.setManifestsSingleton)({page:a,clientReferenceManifest:w,serverActionsManifest:P});let H=e.method||"GET",j=(0,o.getTracer)(),q=j.getActiveScopeSpan(),k=!!(null==L?void 0:L.isWrappedByNextServer),B=!!(0,s.getRequestMeta)(e,"minimalMode"),Y=(0,s.getRequestMeta)(e,"incrementalCache")||await R.getIncrementalCache(e,I,y,B);null==Y||Y.resetRequestCache(),globalThis.__incrementalCache=Y;let z={params:S,previewProps:y.preview,renderOpts:{experimental:{authInterrupts:!!I.experimental.authInterrupts},cacheComponents:!!I.cacheComponents,supportsDynamicResponse:F,incrementalCache:Y,cacheLifeProfiles:I.cacheLife,waitUntil:i.waitUntil,onClose:e=>{t.on("close",e)},onAfterTaskError:void 0,onInstrumentationRequestError:(t,i,a,n)=>R.onRequestError(e,t,a,n,L)},sharedContext:{buildId:N,deploymentId:g}},J=new d.NodeNextRequest(e),G=new d.NodeNextResponse(t),V=p.NextRequestAdapter.fromNodeNextRequest(J,(0,p.signalFromNodeResponse)(t));try{let r,s=async e=>R.handle(V,z).finally(()=>{if(!e)return;e.setAttributes({"http.status_code":t.statusCode,"next.rsc":!1});let i=j.getRootSpanAttributes();if(!i)return;if(i.get("next.span_type")!==u.BaseServerSpan.handleRequest)return void console.warn(`Unexpected root span type '${i.get("next.span_type")}'. Please report this Next.js issue https://github.com/vercel/next.js`);let n=i.get("next.route");if(n){let t=`${H} ${n}`;e.setAttributes({"next.route":n,"http.route":n,"next.span_name":t}),e.updateName(t),r&&r!==e&&(r.setAttribute("http.route",n),r.updateName(t))}else e.updateName(`${H} ${a}`)}),l=async r=>{var o,l;let c=async({previousCacheEntry:n})=>{try{if(!B&&T&&v&&!n)return t.statusCode=404,t.setHeader("x-nextjs-cache","REVALIDATED"),t.end("This page could not be found"),null;let a=await s(r);e.fetchMetrics=z.renderOpts.fetchMetrics;let o=z.renderOpts.pendingWaitUntil;o&&i.waitUntil&&(i.waitUntil(o),o=void 0);let l=z.renderOpts.collectedTags;if(!U)return await (0,m.sendResponse)(J,G,a,z.renderOpts.pendingWaitUntil),null;{let e=await a.blob(),t=(0,_.toNodeOutgoingHttpHeaders)(a.headers);l&&(t[E.NEXT_CACHE_TAGS_HEADER]=l),!t["content-type"]&&e.type&&(t["content-type"]=e.type);let i=void 0!==z.renderOpts.collectedRevalidate&&!(z.renderOpts.collectedRevalidate>=E.INFINITE_CACHE)&&z.renderOpts.collectedRevalidate,n=void 0===z.renderOpts.collectedExpire||z.renderOpts.collectedExpire>=E.INFINITE_CACHE?void 0:z.renderOpts.collectedExpire;return{value:{kind:b.CachedRouteKind.APP_ROUTE,status:a.status,body:Buffer.from(await e.arrayBuffer()),headers:t},cacheControl:{revalidate:i,expire:n}}}}catch(t){throw(null==n?void 0:n.isStale)&&await R.onRequestError(e,t,{routerKind:"App Router",routePath:a,routeType:"route",revalidateReason:(0,h.getRevalidateReason)({isStaticGeneration:W,isOnDemandRevalidate:T})},!1,L),t}},d=await R.handleResponse({req:e,nextConfig:I,cacheKey:M,routeKind:n.RouteKind.APP_ROUTE,isFallback:!1,prerenderManifest:y,isRoutePPREnabled:!1,isOnDemandRevalidate:T,revalidateOnlyGenerated:v,responseGenerator:c,waitUntil:i.waitUntil,isMinimalMode:B});if(!U)return null;if((null==d||null==(o=d.value)?void 0:o.kind)!==b.CachedRouteKind.APP_ROUTE)throw Object.defineProperty(Error(`Invariant: app-route received invalid cache entry ${null==d||null==(l=d.value)?void 0:l.kind}`),"__NEXT_ERROR_CODE",{value:"E701",enumerable:!1,configurable:!0});B||t.setHeader("x-nextjs-cache",T?"REVALIDATED":d.isMiss?"MISS":d.isStale?"STALE":"HIT"),f&&t.setHeader("Cache-Control","private, no-cache, no-store, max-age=0, must-revalidate");let p=(0,_.fromNodeOutgoingHttpHeaders)(d.value.headers);return B&&U||p.delete(E.NEXT_CACHE_TAGS_HEADER),!d.cacheControl||t.getHeader("Cache-Control")||p.get("Cache-Control")||p.set("Cache-Control",(0,C.getCacheControlHeader)(d.cacheControl)),await (0,m.sendResponse)(J,G,new Response(d.value.body,{headers:p,status:d.value.status||200})),null};k&&q?await l(q):(r=j.getActiveScopeSpan(),await j.withPropagatedContext(e.headers,()=>j.trace(u.BaseServerSpan.handleRequest,{spanName:`${H} ${a}`,kind:o.SpanKind.SERVER,attributes:{"http.method":H,"http.target":e.url}},l),void 0,!k))}catch(t){if(t instanceof A.NoFallbackError||await R.onRequestError(e,t,{routerKind:"App Router",routePath:$,routeType:"route",revalidateReason:(0,h.getRevalidateReason)({isStaticGeneration:W,isOnDemandRevalidate:T})},!1,L),U)throw t;return await (0,m.sendResponse)(J,G,new Response(null,{status:500})),null}}e.s(["handler",0,S,"patchFetch",0,function(){return(0,r.patchFetch)({workAsyncStorage:I,workUnitAsyncStorage:O})},"routeModule",0,R,"serverHooks",0,f,"workAsyncStorage",0,I,"workUnitAsyncStorage",0,O]),i()}catch(e){i(e)}},!1)];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__0zynp9b._.js.map

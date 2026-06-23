@@ -1,0 +1,3 @@
+{
+  "/api/clinical/security/access-logs/route": "app/api/clinical/security/access-logs/route.js"
+}

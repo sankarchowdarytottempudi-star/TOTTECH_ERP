@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/student-dna/layout,_N_T_/student-dna/page,_N_T_/student-dna"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/student-dna/__PAGE__",
+    "/student-dna",
+    "/_index",
+    "/_head"
+  ]
+}

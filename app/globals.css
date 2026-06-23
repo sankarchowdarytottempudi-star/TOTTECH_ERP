@@ -1,0 +1,969 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7fb;
+  --foreground: #102033;
+  --tt-ink: #102033;
+  --tt-ink-soft: #38516f;
+  --tt-muted: #64748b;
+  --tt-line: #d9e1ea;
+  --tt-card: #ffffff;
+  --tt-page: #f5f7fb;
+  --tt-accent: #b8842c;
+  --tt-accent-dark: #7a4f12;
+  --tt-accent-soft: #fff4df;
+  --tt-nav: #101a2c;
+  --tt-focus: rgba(184, 132, 44, 0.24);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--tt-page);
+  overflow-x: hidden;
+}
+
+main,
+section,
+article,
+aside,
+header,
+footer,
+div,
+a,
+button {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+button,
+a,
+td,
+th {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.12;
+}
+
+p,
+li,
+td,
+th,
+label,
+input,
+textarea,
+select,
+button {
+  line-height: 1.45;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+}
+.input {
+  min-height: 48px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--tt-line);
+  outline: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--tt-ink);
+  font-size: 15px;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 2px rgba(16, 32, 51, 0.04);
+}
+
+.input:hover {
+  border-color: #c3cfdb;
+}
+
+.input:focus {
+  border-color: var(--tt-accent);
+  box-shadow: 0 0 0 4px var(--tt-focus);
+}
+
+textarea.input {
+  height: 140px;
+  padding-top: 20px;
+}
+
+body {
+  background: var(--tt-page) !important;
+  color: var(--tt-ink) !important;
+}
+
+p,
+span,
+div,
+label,
+td,
+th,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+}
+
+.tt-app-shell {
+  background:
+    linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+  color: var(--tt-ink);
+}
+
+.tt-main {
+  width: 100%;
+  max-width: 100%;
+}
+
+.tt-card {
+  overflow: hidden;
+  border: 1px solid var(--tt-line);
+  border-radius: 8px;
+  background: var(--tt-card);
+  color: var(--tt-ink);
+  box-shadow: 0 10px 30px rgba(16, 32, 51, 0.07);
+}
+
+.tt-card-pad {
+  padding: clamp(16px, 2.2vw, 28px);
+}
+
+.tt-card-title {
+  color: var(--tt-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tt-card-value {
+  color: var(--tt-ink);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.tt-hero {
+  overflow: hidden;
+  border: 1px solid rgba(184, 132, 44, 0.38);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 244, 223, 0.92) 0%, rgba(255, 255, 255, 0.96) 45%, rgba(240, 244, 248, 0.98) 100%);
+  color: var(--tt-ink);
+  box-shadow: 0 18px 50px rgba(16, 32, 51, 0.08);
+}
+
+.finance-hero,
+.finance-hero * {
+  color: #ffffff !important;
+}
+
+.finance-hero-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.46);
+}
+
+.finance-hero-copy {
+  color: #e8edf4 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.36);
+}
+
+.finance-hero-eyebrow,
+.finance-health-label,
+.finance-health-unit {
+  color: #f7d28b !important;
+}
+
+.finance-health-card {
+  background: rgba(3, 11, 22, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.finance-health-value {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.finance-progress-track {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.finance-kpi-icon {
+  border: 1px solid rgba(214, 160, 52, 0.42);
+  box-shadow: 0 10px 24px rgba(3, 11, 22, 0.18);
+}
+
+.finance-kpi-icon > span {
+  color: #f7d28b !important;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 1px 8px rgba(247, 210, 139, 0.45);
+}
+
+.tottech-ai-panel-header,
+.tottech-ai-panel-header * {
+  color: #ffffff !important;
+}
+
+.tottech-ai-panel-title {
+  color: #ffffff !important;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.18);
+}
+
+.tottech-ai-panel-subtitle {
+  color: #f7d28b !important;
+  text-shadow: 0 1px 10px rgba(247, 210, 139, 0.32);
+}
+
+.tottech-ai-message {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.tottech-ai-user-message,
+.tottech-ai-user-message * {
+  background-color: #04122b !important;
+  color: #ffffff !important;
+}
+
+.tottech-ai-user-message {
+  box-shadow: 0 10px 28px rgba(4, 18, 43, 0.22);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.12);
+}
+
+.tottech-ai-assistant-message,
+.tottech-ai-assistant-message * {
+  color: #102033 !important;
+}
+
+.tottech-ai-assistant-message {
+  background-color: #ffffff !important;
+}
+
+.tt-dark-hero {
+  background: #04142e !important;
+  color: #ffffff !important;
+}
+
+.tt-dark-hero,
+.tt-dark-hero * {
+  text-shadow: none;
+}
+
+.tt-dark-hero h1,
+.tt-dark-hero h2,
+.tt-dark-hero h3,
+.tt-dark-hero h4,
+.tt-dark-hero .tt-dark-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.42);
+}
+
+.tt-dark-hero p,
+.tt-dark-hero span,
+.tt-dark-hero div,
+.tt-dark-hero .tt-dark-copy {
+  color: #e8edf4 !important;
+}
+
+.tt-dark-hero .tt-dark-accent,
+.tt-dark-hero [class*="text-amber"],
+.tt-dark-hero [class*="text-yellow"] {
+  color: #f7d28b !important;
+  text-shadow: 0 1px 10px rgba(247, 210, 139, 0.28);
+}
+
+.tt-dark-hero .tt-dark-kpi {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.tt-dark-hero .tt-dark-button,
+.tt-dark-hero .bg-amber-300,
+.tt-dark-hero .bg-amber-300 *,
+.tt-dark-hero .bg-amber-200,
+.tt-dark-hero .bg-amber-200 * {
+  color: #102033 !important;
+  text-shadow: none !important;
+}
+
+.tt-dark-hero .hero-label,
+.tt-dark-hero .tt-hero-label,
+.tt-dark-hero [class*="tracking-wide"],
+.tt-dark-hero [class*="tracking-wider"] {
+  color: #d4af37 !important;
+  letter-spacing: 0.24em !important;
+}
+
+.tt-accent-panel {
+  border: 1px solid rgba(184, 132, 44, 0.28);
+  border-radius: 8px;
+  background: var(--tt-accent-soft);
+  color: var(--tt-accent-dark);
+}
+
+.tt-icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  background: var(--tt-accent-soft);
+  color: var(--tt-accent-dark);
+}
+
+.tt-button,
+.tt-button-secondary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.tt-button {
+  background: var(--tt-ink);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(16, 32, 51, 0.18);
+}
+
+.tt-button-secondary {
+  border: 1px solid var(--tt-line);
+  background: #ffffff;
+  color: var(--tt-ink);
+}
+
+.tt-button:hover,
+.tt-button-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.tt-badge {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid rgba(184, 132, 44, 0.28);
+  background: var(--tt-accent-soft);
+  color: var(--tt-accent-dark);
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.tt-link {
+  color: var(--tt-accent-dark);
+  font-weight: 800;
+}
+
+.tt-muted {
+  color: var(--tt-muted);
+}
+
+[class*="rounded-3xl"],
+[class*="rounded-2xl"] {
+  border-radius: 8px !important;
+}
+
+[class*="grid"] > *,
+[class*="flex"] > * {
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .tt-card-pad {
+    padding: 16px;
+  }
+}
+
+/* Legacy recovery pages used many unrelated highlight colors. Normalize them
+   into the TOTTECH ONE navy/amber system without touching app behavior. */
+.bg-gradient-to-r {
+  background-image: none !important;
+  background-color: var(--tt-ink) !important;
+}
+
+.bg-gradient-to-r.text-white,
+.bg-gradient-to-r.text-white * {
+  color: #ffffff !important;
+}
+
+.bg-gradient-to-r.text-white [class*="text-amber"],
+.bg-gradient-to-r.text-white [class*="text-yellow"] {
+  color: #f7d28b !important;
+}
+
+.bg-slate-950.text-white,
+.bg-slate-950.text-white * {
+  color: #ffffff !important;
+}
+
+.bg-blue-50,
+.bg-green-50,
+.bg-purple-50,
+.bg-orange-50,
+.bg-yellow-50,
+.bg-red-50,
+.bg-pink-50,
+.bg-indigo-50,
+.bg-cyan-50,
+.bg-teal-50,
+.bg-emerald-50,
+.bg-amber-50 {
+  background-color: var(--tt-accent-soft) !important;
+}
+
+.bg-blue-100,
+.bg-green-100,
+.bg-purple-100,
+.bg-orange-100,
+.bg-yellow-100,
+.bg-red-100,
+.bg-pink-100,
+.bg-indigo-100,
+.bg-cyan-100,
+.bg-teal-100,
+.bg-emerald-100,
+.bg-amber-100 {
+  background-color: #f7ead3 !important;
+}
+
+.bg-blue-500,
+.bg-blue-600,
+.bg-blue-700,
+.bg-indigo-500,
+.bg-indigo-600,
+.bg-indigo-700,
+.bg-purple-500,
+.bg-purple-600,
+.bg-purple-700,
+.bg-green-500,
+.bg-green-600,
+.bg-green-700,
+.bg-emerald-500,
+.bg-emerald-600,
+.bg-orange-500,
+.bg-orange-600,
+.bg-red-500,
+.bg-red-600,
+.bg-pink-500,
+.bg-pink-600,
+.bg-cyan-500,
+.bg-cyan-600,
+.bg-teal-500,
+.bg-teal-600,
+.bg-amber-500,
+.bg-amber-600 {
+  background-color: var(--tt-ink) !important;
+}
+
+.text-blue-500,
+.text-blue-600,
+.text-blue-700,
+.text-indigo-500,
+.text-indigo-600,
+.text-indigo-700,
+.text-purple-500,
+.text-purple-600,
+.text-purple-700,
+.text-green-500,
+.text-green-600,
+.text-green-700,
+.text-emerald-500,
+.text-emerald-600,
+.text-orange-500,
+.text-orange-600,
+.text-red-500,
+.text-red-600,
+.text-pink-500,
+.text-pink-600,
+.text-cyan-500,
+.text-cyan-600,
+.text-teal-500,
+.text-teal-600,
+.text-amber-500,
+.text-amber-600,
+.text-amber-700 {
+  color: var(--tt-accent-dark) !important;
+}
+
+.border-blue-200,
+.border-green-200,
+.border-purple-200,
+.border-orange-200,
+.border-yellow-200,
+.border-red-200,
+.border-indigo-200,
+.border-amber-200 {
+  border-color: rgba(184, 132, 44, 0.32) !important;
+}
+
+.text-5xl {
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+}
+
+.text-4xl {
+  font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
+}
+
+.text-3xl {
+  font-size: clamp(1.5rem, 3.4vw, 1.875rem) !important;
+}
+
+/* Dark section markers and recovered icon tiles used nearly-black boxes with
+   unreadable navy strokes. Keep the premium black shell, but make the glyphs
+   visibly gold everywhere. */
+.bg-slate-950 > svg,
+.bg-slate-950 > .lucide,
+.bg-black > svg,
+.bg-black > .lucide,
+.bg-slate-900 > svg,
+.bg-slate-900 > .lucide,
+[class*="bg-[#04142E]"] > svg,
+[class*="bg-[#04142E]"] > .lucide,
+[class*="bg-[#0B1F3A]"] > svg,
+[class*="bg-[#0B1F3A]"] > .lucide {
+  color: #d6a034 !important;
+  stroke: #d6a034 !important;
+}
+
+.bg-slate-950 > span:only-child,
+.bg-black > span:only-child,
+.bg-slate-900 > span:only-child,
+[class*="bg-[#04142E]"] > span:only-child,
+[class*="bg-[#0B1F3A]"] > span:only-child {
+  color: #d6a034 !important;
+}
+
+/* Responsive navigation and content hardening. These rules are intentionally
+   shared by school ERP and clinical services so recovered pages inherit sane
+   mobile behavior without changing their business logic. */
+.tt-lock-scroll {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+.tt-clinical-shell {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.tt-clinical-header {
+  height: 56px;
+  min-height: 56px;
+}
+
+.tt-clinical-content {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  width: 100%;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .tt-clinical-header {
+    height: 64px;
+    min-height: 64px;
+  }
+
+  .tt-clinical-content {
+    width: calc(100vw - 280px);
+    flex-basis: calc(100vw - 280px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tt-clinical-content {
+    width: calc(100vw - 320px);
+    flex-basis: calc(100vw - 320px);
+  }
+}
+
+.tt-clinical-content > :where([class*="mx-auto"], [class*="max-w-"]) {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 16px !important;
+}
+
+.tt-clinical-content :where(.overflow-x-auto) {
+  max-width: 100%;
+}
+
+.tt-clinical-content :where(table) {
+  width: 100%;
+}
+
+.tt-clinical-dark-hero {
+  background: #04142e !important;
+  border-color: rgba(212, 175, 55, 0.58) !important;
+  color: #ffffff !important;
+}
+
+.tt-clinical-dark-hero :where(h1, h2, h3, h4, .hero-title) {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.36);
+}
+
+.tt-clinical-dark-hero :where(p, a, span, small, li) {
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 1 !important;
+}
+
+.tt-clinical-dark-hero :where([class*="uppercase"], .section-label) {
+  color: #d4af37 !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 10px rgba(212, 175, 55, 0.22);
+}
+
+.tt-clinical-dark-hero :where(small, [class*="text-xs"]:not([class*="uppercase"])) {
+  color: rgba(255, 255, 255, 0.75) !important;
+  opacity: 1 !important;
+}
+
+.tt-clinical-dark-hero :where(svg, .lucide) {
+  color: #d4af37 !important;
+  stroke: #d4af37 !important;
+}
+
+.tt-clinical-dark-hero :where(
+  [class*="bg-white"],
+  [class*="bg-slate-50"],
+  [class*="bg-teal-50"],
+  [class*="bg-amber-50"]
+) {
+  color: #102033 !important;
+  text-shadow: none !important;
+}
+
+.tt-clinical-dark-hero [class*="bg-white"],
+.tt-clinical-dark-hero [class*="bg-white"] *,
+.tt-clinical-dark-hero [class*="bg-slate-50"],
+.tt-clinical-dark-hero [class*="bg-slate-50"] *,
+.tt-clinical-dark-hero [class*="bg-teal-50"],
+.tt-clinical-dark-hero [class*="bg-teal-50"] *,
+.tt-clinical-dark-hero [class*="bg-amber-50"],
+.tt-clinical-dark-hero [class*="bg-amber-50"] * {
+  color: #102033 !important;
+  text-shadow: none !important;
+}
+
+.tt-clinical-dark-hero :where(
+  [class*="bg-white"],
+  [class*="bg-slate-50"],
+  [class*="bg-teal-50"],
+  [class*="bg-amber-50"]
+) :where(h1, h2, h3, h4, p, span, small, a, div, li) {
+  color: #102033 !important;
+  text-shadow: none !important;
+}
+
+.tt-clinical-dark-hero :where(
+  [class*="bg-white"],
+  [class*="bg-slate-50"],
+  [class*="bg-teal-50"],
+  [class*="bg-amber-50"]
+) :where([class*="uppercase"], .section-label) {
+  color: #735300 !important;
+}
+
+.tt-clinical-dark-hero [class*="bg-white"] [class*="uppercase"],
+.tt-clinical-dark-hero [class*="bg-slate-50"] [class*="uppercase"],
+.tt-clinical-dark-hero [class*="bg-teal-50"] [class*="uppercase"],
+.tt-clinical-dark-hero [class*="bg-amber-50"] [class*="uppercase"] {
+  color: #735300 !important;
+}
+
+.tt-clinical-dark-hero :where(
+  [class*="bg-white"],
+  [class*="bg-slate-50"],
+  [class*="bg-teal-50"],
+  [class*="bg-amber-50"]
+) :where(svg, .lucide) {
+  color: #735300 !important;
+  stroke: #735300 !important;
+}
+
+.tt-clinical-dark-hero [class*="bg-white"] :where(svg, .lucide),
+.tt-clinical-dark-hero [class*="bg-slate-50"] :where(svg, .lucide),
+.tt-clinical-dark-hero [class*="bg-teal-50"] :where(svg, .lucide),
+.tt-clinical-dark-hero [class*="bg-amber-50"] :where(svg, .lucide) {
+  color: #735300 !important;
+  stroke: #735300 !important;
+}
+
+@media (min-width: 1280px) {
+  .tt-clinical-content :where(
+    .xl\:grid-cols-3,
+    .xl\:grid-cols-4,
+    .xl\:grid-cols-5,
+    .xl\:grid-cols-6
+  ) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .tt-clinical-content > :where([class*="mx-auto"], [class*="max-w-"]) {
+    padding: 12px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .tt-clinical-content > :where([class*="mx-auto"], [class*="max-w-"]) {
+    padding: 8px !important;
+  }
+}
+
+main {
+  container-type: inline-size;
+}
+
+main :where(.tt-card, section, article, form, fieldset) {
+  max-width: 100%;
+}
+
+main :where(button, [role="button"], input, select, textarea, .tt-button, .tt-button-secondary) {
+  min-height: 44px;
+}
+
+main :where(input, select, textarea) {
+  max-width: 100%;
+  font-size: 16px;
+}
+
+main :where(button, a, select, input, textarea) {
+  touch-action: manipulation;
+}
+
+main :where([role="dialog"], .modal, .dialog, [data-modal]) {
+  max-height: min(92vh, 760px);
+  max-width: min(94vw, 920px);
+  overflow: auto;
+}
+
+main :where(canvas, svg, .recharts-wrapper, .recharts-responsive-container) {
+  max-width: 100% !important;
+}
+
+main :where(.recharts-wrapper, .recharts-surface) {
+  overflow: visible;
+}
+
+main :where(table) {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+}
+
+main :where(th, td) {
+  min-width: 0;
+  vertical-align: top;
+}
+
+main :where(a:has(.tt-card), a:has(.tt-hero), a:has(article), a:has(section)) {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+main :where(.tt-card, .tt-hero, [class*="shadow"]) {
+  background-clip: padding-box;
+}
+
+@media (max-width: 1023px) {
+  .tt-main {
+    padding-inline: clamp(12px, 3vw, 24px) !important;
+  }
+
+  main :where(.grid) {
+    grid-auto-flow: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .tt-app-shell {
+    min-height: 100dvh;
+  }
+
+  .tt-main {
+    padding-top: 16px !important;
+    padding-bottom: 116px !important;
+  }
+
+  main :where(h1) {
+    font-size: clamp(1.75rem, 9vw, 2.25rem) !important;
+  }
+
+  main :where(h2) {
+    font-size: clamp(1.35rem, 7vw, 1.75rem) !important;
+  }
+
+  main :where(.tt-card, .tt-hero, article, section) {
+    border-radius: 8px !important;
+  }
+
+  main :where(.tt-card-pad) {
+    padding: 16px !important;
+  }
+
+  main :where(form, fieldset) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px;
+  }
+
+  main :where(.overflow-x-auto) {
+    overflow-x: visible !important;
+  }
+
+  main :where(table) {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  main :where(thead) {
+    display: none;
+  }
+
+  main :where(tbody) {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+  }
+
+  main :where(tr) {
+    display: grid;
+    width: 100%;
+    gap: 8px;
+    border: 1px solid var(--tt-line);
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 12px;
+    box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+  }
+
+  main :where(td) {
+    display: flex;
+    min-height: 34px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--tt-ink);
+    font-size: 0.92rem;
+  }
+
+  main :where(td)::before {
+    content: attr(data-label);
+    min-width: 34%;
+    color: var(--tt-muted);
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  main :where(td:not([data-label]))::before {
+    content: "";
+    display: none;
+  }
+
+  main :where(td > *) {
+    max-width: 100%;
+  }
+
+  main :where([class*="min-w-["]) {
+    min-width: 0 !important;
+  }
+
+  main :where([class*="w-["]) {
+    max-width: 100% !important;
+  }
+
+  main :where([role="dialog"], .modal, .dialog, [data-modal]) {
+    inset: 0 !important;
+    height: 100dvh;
+    max-height: 100dvh;
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0 !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .tt-main {
+    padding-inline: 12px !important;
+  }
+
+  main :where(.tt-button, .tt-button-secondary, button) {
+    padding-inline: 12px;
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "generatedAt": "2026-06-06T02:36:49.270Z",
+  "baseUrl": "https://erp.tottechsolutions.com",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "isMobile": true
+  },
+  "results": [
+    {
+      "name": "dashboard",
+      "route": "/dashboard",
+      "url": "https://erp.tottechsolutions.com/dashboard",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/dashboard",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/dashboard.png",
+      "elapsedMs": 2331,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Dashboard Recovered dashboard index for admin, principal, teacher, and parent workspaces. Admin Principal Teacher Parent Home Students Analytics Reports AI"
+    },
+    {
+      "name": "students",
+      "route": "/students/list",
+      "url": "https://erp.tottechsolutions.com/students/list",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/students/list",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/students.png",
+      "elapsedMs": 19626,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Students Student Management Center + Add Student Lokesh Varma Admission ADM1000 CLASS - SECTION - ACADEMIC YEAR 2025-2026 ENROLLMENT ENR1000 9229163969 View Edit Delete Sindhu Kumar Admission ADM999 CLASS - SECTION - ACADEMIC YEAR 2025-2026 ENROLLMENT ENR999 9579204696 View Edit Delete Sravani Kumar Admission ADM998 CLASS - SECTION - ACADEMIC YEAR 2025-2026 ENROLLMENT ENR998 9577259591 View Edit Delete Deepika Rao Admission ADM997 CLASS - SECTION - ACADEMIC YEAR 2025-2026 ENROLLMENT ENR997 9918833677 View Edit Delete Sai Kiran Varma Admission ADM996 CLASS"
+    },
+    {
+      "name": "teachers",
+      "route": "/teachers",
+      "url": "https://erp.tottechsolutions.com/teachers",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/teachers",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/teachers.png",
+      "elapsedMs": 3402,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Teachers Faculty Management Center Add Teacher Anitha Reddy EMP50 DEPARTMENT Social DESIGNATION Teacher ACADEMIC YEAR 2025-2026 CLASS - SECTION - EMAIL teacher50@school.com 9135355100 View Edit Delete Srinivas Reddy EMP49 DEPARTMENT Social DESIGNATION Teacher ACADEMIC YEAR 2025-2026 CLASS - SECTION - EMAIL teacher49@school.com 9902221914 View Edit Delete Srinivas Kumar EMP48 DEPARTMENT Science DESIGNATION Teacher ACADEMIC YEAR 2025-2026 CLASS - SECTION - EMAIL teacher48@school.com 9403565938 View Edit Delete Haritha Kumar EMP47 DEPARTMENT Hindi DESIGNATIO"
+    },
+    {
+      "name": "attendance-students",
+      "route": "/attendance/students",
+      "url": "https://erp.tottechsolutions.com/attendance/students",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/attendance/students",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/attendance-students.png",
+      "elapsedMs": 2155,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya ATTENDANCE OPERATIONS Student Attendance Select a class and section, mark each student as present, absent, or late, add remarks, then save the full day in one action. Save Attendance ATTENDANCE DATE CLASS Select Class 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 SECTION Select Section A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B ROSTER 0 Select class / Select section PRESENT 0 Ready for class ABSENT 0 Needs follow-up LATE 0 Track arrival Bulk Attendance Controls Mark everyone first,"
+    },
+    {
+      "name": "attendance-calendar",
+      "route": "/attendance/calendar",
+      "url": "https://erp.tottechsolutions.com/attendance/calendar",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/attendance/calendar",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/attendance-calendar.png",
+      "elapsedMs": 2253,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya ATTENDANCE CALENDAR Class Attendance Calendar Review each day by class and section, then open a day to see who was present, absent, or late. Take Attendance MONTH CLASS Select Class 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 SECTION Select Section A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B CONTEXT Select class Select section PRESENT 0 Month total ABSENT 0 Month total LATE 0 Month total Select class and section Choose both filters to load daily attendance counts. Home Students An"
+    },
+    {
+      "name": "academics",
+      "route": "/academics",
+      "url": "https://erp.tottechsolutions.com/academics",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/academics",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/academics.png",
+      "elapsedMs": 2534,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Academics Manage the full academic journey: classes, sections, subjects, exams, question papers, homework, and marks. Open Marks Entry Classes Create school classes and keep every academic workflow tied to the school. Sections Create sections under classes for student, attendance, dining, and marks filters. Subjects Maintain subject master data used by exams, homework, papers, and timetables. Timetable Plan class schedules and teacher workload by academic year. Exams Create exams and exam types before scheduling papers and entering marks. Exam Schedule Ma"
+    },
+    {
+      "name": "homework",
+      "route": "/academics/homework",
+      "url": "https://erp.tottechsolutions.com/academics/homework",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/academics/homework",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/homework.png",
+      "elapsedMs": 2198,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Homework Assign homework by class, section, subject, and teacher. Assign Homework Class Select Class 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Section Select Section A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B Subject Select Subject Computer Science Social English Science Mathematics Teacher Optional Anitha Reddy Anitha Kumar Anitha Reddy Anitha Naidu Anitha Rao Anitha Rao Anitha Reddy Anitha Naidu Anitha Rao Haritha Kumar Haritha Kumar Haritha Kumar Haritha Naidu Prasad Naidu P"
+    },
+    {
+      "name": "exams",
+      "route": "/academics/exams",
+      "url": "https://erp.tottechsolutions.com/academics/exams",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/academics/exams",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/exams.png",
+      "elapsedMs": 2131,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Exams Create academic exams and reusable exam types for schedule, papers, and marks entry. Create Exam Exam Name Exam Type Select Type Unit Test Weekly Test Monthly Test Quarterly Exam Half Yearly Annual Exam Board Exam Start Date End Date Create Exam Exam Type Type Name Description Add Type Quarterly Exam QUARTERLY SCHEDULES 0 PAPERS 0 START 5/30/2026 END 5/30/2026 Unit Test 2 UNIT_TEST SCHEDULES 0 PAPERS 0 START 5/30/2026 END 5/30/2026 Unit Test 1 UNIT_TEST SCHEDULES 0 PAPERS 0 START 5/30/2026 END 5/30/2026 Home Students Analytics Reports AI"
+    },
+    {
+      "name": "question-papers",
+      "route": "/academics/question-papers",
+      "url": "https://erp.tottechsolutions.com/academics/question-papers",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/academics/question-papers",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/question-papers.png",
+      "elapsedMs": 2258,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Question Paper Builder Build papers question by question, then use them in exam schedules and marks entry. Paper Details Paper Name Exam Optional Quarterly Exam Unit Test 2 Unit Test 1 Exam Type Optional Unit Test Weekly Test Monthly Test Quarterly Exam Half Yearly Annual Exam Board Exam Exam Date Class Select Class 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Section Select Section A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B Subject Select Subject Computer Science Social English S"
+    },
+    {
+      "name": "marks-entry",
+      "route": "/academics/marks-entry",
+      "url": "https://erp.tottechsolutions.com/academics/marks-entry",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/academics/marks-entry",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/marks-entry.png",
+      "elapsedMs": 2185,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Marks Entry Select a scheduled exam, load the class-section roster, then enter question-wise marks for each student. Scheduled Exams Exam schedules connect exams, classes, sections, subjects, papers, and marks entry. 1 schedules Quarterly Exam 1 / A / Mathematics DATE 6/1/2026 PAPER Quarterly Mathematics Students Select an exam schedule Select a schedule to load students. Question Evaluation Select a student to enter marks Select a scheduled exam to load its paper. Summary Academic-year aware result EXAM - STUDENT - TOTAL 0 / 0 PERCENTAGE 0.00% GRADE F MI"
+    },
+    {
+      "name": "finance",
+      "route": "/finance",
+      "url": "https://erp.tottechsolutions.com/finance",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/finance",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/finance.png",
+      "elapsedMs": 2339,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya 💰 Finance Intelligence Center Revenue, Collections & Recovery COLLECTION HEALTH 91 TOTAL FEES ₹26500 💰 View Details → COLLECTED ₹25000 ✅ View Details → PENDING ₹1500 ⚠️ View Details → INVOICES 4 📄 View Details → 📊 Collection Summary Total Fees ₹26500 Collected ₹25000 Pending ₹1500 🤖 AI Finance Insights ✅ Fee collection is healthy ⚠ Follow up on pending payments 📧 Send automatic reminders 📄 Generate invoices monthly Home Students Analytics Reports AI"
+    },
+    {
+      "name": "finance-invoices",
+      "route": "/finance/invoices",
+      "url": "https://erp.tottechsolutions.com/finance/invoices",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/finance/invoices",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/finance-invoices.png",
+      "elapsedMs": 2171,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Invoices Generate student, class, and section invoices with fee structures and installment parts. Generate Invoice Invoice For One Student Class / Section Class Select Class 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Section All Sections A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B Due Date Search Student Student Select Student Bhavya Kumar - ADM979 Bhavya Kumar - ADM958 Bhavya Murthy - ADM945 Bhavya Murthy - ADM937 Bhavya Kumar - ADM935 Bhavya Varma - ADM923 Bhavya Naidu - ADM920"
+    },
+    {
+      "name": "dining",
+      "route": "/dining",
+      "url": "https://erp.tottechsolutions.com/dining",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/dining",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/dining.png",
+      "elapsedMs": 2182,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Dining Operations Meal plans, meal attendance, and weekly menus for the selected school year. Meal Plan Plan Name Meal BREAKFAST LUNCH SNACKS DINNER Price Add Meal Plan Meal Attendance Class All Classes 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Section All Sections A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B Search Student Student Select Student Bhavya Kumar Bhavya Kumar Bhavya Murthy Bhavya Murthy Bhavya Kumar Bhavya Varma Bhavya Naidu Bhavya Naidu Bhavya Kumar Bhavya Varma Bha"
+    },
+    {
+      "name": "transport",
+      "route": "/transport",
+      "url": "https://erp.tottechsolutions.com/transport",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/transport",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/transport.png",
+      "elapsedMs": 2251,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Transport Operations Vehicles, routes, and student transport assignments. Add Vehicle Vehicle Number Vehicle Type Capacity Driver Name Driver Phone Add Vehicle Create Route Route Name Vehicle Number Driver Name Driver Phone Create Route Assign Transport Assign To Student Teacher / Staff Class All Classes 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Section All Sections A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B Search Person Student Select Student Bhavya Kumar Bhavya Kumar Bhavya "
+    },
+    {
+      "name": "hostel",
+      "route": "/hostel",
+      "url": "https://erp.tottechsolutions.com/hostel",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/hostel",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/hostel.png",
+      "elapsedMs": 2252,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Hostel Operations Create hostels, view existing hostels, and assign hostel accommodation by class, section, and student. Create Hostel Hostel Name Hostel Type BOYS GIRLS STAFF GENERAL Warden Name Warden Phone Create Hostel Assign Hostel Hostel Select Hostel test (test) Boys Hostel (Boys) Class Select Class 1 1 10 10 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Section Select Section A A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B A A A B B B Student Select Student Bhavya Kumar - ADM979 Bhavya Kumar - ADM958"
+    },
+    {
+      "name": "parent-portal",
+      "route": "/parent-portal",
+      "url": "https://erp.tottechsolutions.com/parent-portal",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/parent-portal",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/parent-portal.png",
+      "elapsedMs": 2054,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya 👨‍👩‍👧 Parent Portal Child-Centric Experience Attendance 94% Average Marks 82 Pending Fees ₹0 Risk Score LOW 🤖 AI Guidance Child attendance is excellent. Mathematics performance improved. Encourage daily reading habits. Home Students Analytics Reports AI"
+    },
+    {
+      "name": "war-room",
+      "route": "/war-room",
+      "url": "https://erp.tottechsolutions.com/war-room",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/war-room",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/war-room.png",
+      "elapsedMs": 2179,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya 👨‍💼 Principal AI Copilot Strategic school intelligence engine Which students are at risk? Which teachers need support? What should I focus on this week? Show school improvement plan 🚀 TOTTech War Room Real-Time School Command Center Overall Health 60% Students 1003 Teachers 51 Revenue ₹0 Academic Intelligence 📚 Student Health: 85% 🎓 Promotion Readiness: High ⚠ At-Risk Students: 0 🏆 Top Performers: Available Faculty Intelligence 👨‍🏫 Teacher Health: 82% 🔥 Burnout Risk: Low ⭐ Faculty Performance: Stable 📈 Leadership Pipeline: Active Financial Intel"
+    },
+    {
+      "name": "automation-operations",
+      "route": "/operations",
+      "url": "https://erp.tottechsolutions.com/operations",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/operations",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/automation-operations.png",
+      "elapsedMs": 2068,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Operations Center Production recovery, auditability, and platform health. Health Database restore, Prisma schema, event ledger, and service checks. Audit Recovered audit logs plus reconstructed event ledger records. Backups Backup records and manual backup requests for recovery operations. Home Students Analytics Reports AI"
+    },
+    {
+      "name": "governance",
+      "route": "/settings/roles",
+      "url": "https://erp.tottechsolutions.com/settings/roles",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/settings/roles",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/governance.png",
+      "elapsedMs": 2083,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Roles & Permissions Manage User Access Levels ID Role Name Description 1 SUPER_ADMIN Full System Access 2 SCHOOL_ADMIN School Administrator 3 PRINCIPAL Principal 4 VICE_PRINCIPAL Vice Principal 5 ACCOUNTANT Fee & Finance 6 TEACHER Teacher Access 7 HOSTEL_WARDEN Hostel Management 8 MESS_MANAGER Dining Management 9 LIBRARIAN Library 10 STORE_MANAGER Inventory 11 PARENT Parent Portal 12 STUDENT Student Portal Home Students Analytics Reports AI"
+    },
+    {
+      "name": "tottech-ai",
+      "route": "/ai-school-copilot",
+      "url": "https://erp.tottechsolutions.com/ai-school-copilot",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/ai-school-copilot",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/tottech-ai.png",
+      "elapsedMs": 2096,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya TOTTECH AI GATEWAY TO INNOVATION ERP Approval Safe Grounded Ask me about your school, students, teachers, attendance, finance, AP government orders, CBSE/NCERT updates, or request an operation. If a request changes ERP data, I will prepare a preview first and wait for approval. 4:36:34 AM KNOWLEDGE Which students need attention this week? Create student name Ravi Kumar, admission_number: ADM2001, phone: 9876543210 Create route name: North Campus Route, vehicle_number: AP39AB1234, driver_name: Ravi Create dining plan plan_name: Monthly Lunch Plan, meal_typ"
+    },
+    {
+      "name": "ai-command-center",
+      "route": "/ai-command-center",
+      "url": "https://erp.tottechsolutions.com/ai-command-center",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/ai-command-center",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/ai-command-center.png",
+      "elapsedMs": 2115,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya TOTTECH AI GATEWAY TO INNOVATION ERP Approval Safe Grounded Ask me about your school, students, teachers, attendance, finance, AP government orders, CBSE/NCERT updates, or request an operation. If a request changes ERP data, I will prepare a preview first and wait for approval. 4:36:34 AM KNOWLEDGE Which students need attention this week? Create student name Ravi Kumar, admission_number: ADM2001, phone: 9876543210 Create route name: North Campus Route, vehicle_number: AP39AB1234, driver_name: Ravi Create dining plan plan_name: Monthly Lunch Plan, meal_typ"
+    },
+    {
+      "name": "schoolgpt",
+      "route": "/ai-school-copilot",
+      "url": "https://erp.tottechsolutions.com/ai-school-copilot",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/ai-school-copilot",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/schoolgpt.png",
+      "elapsedMs": 2079,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya TOTTECH AI GATEWAY TO INNOVATION ERP Approval Safe Grounded Ask me about your school, students, teachers, attendance, finance, AP government orders, CBSE/NCERT updates, or request an operation. If a request changes ERP data, I will prepare a preview first and wait for approval. 4:36:34 AM KNOWLEDGE Which students need attention this week? Create student name Ravi Kumar, admission_number: ADM2001, phone: 9876543210 Create route name: North Campus Route, vehicle_number: AP39AB1234, driver_name: Ravi Create dining plan plan_name: Monthly Lunch Plan, meal_typ"
+    },
+    {
+      "name": "notifications",
+      "route": "/communication",
+      "url": "https://erp.tottechsolutions.com/communication",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/communication",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/notifications.png",
+      "elapsedMs": 2038,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya Communication Center WhatsApp Email SMS Notifications Home Students Analytics Reports AI"
+    },
+    {
+      "name": "user-management",
+      "route": "/settings/users",
+      "url": "https://erp.tottechsolutions.com/settings/users",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/settings/users",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/user-management.png",
+      "elapsedMs": 2210,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya User Management Manage users, permissions and school access. Total Users 2 Teachers 0 Principals 1 Active Users 2 Create User TEACHER PRINCIPAL ACCOUNTANT HOSTEL_ADMIN TRANSPORT_ADMIN PARENT Select School GR Junior College Kakatheeya Create User All Users T tvkrao tvkrao@gmail.com PRINCIPAL Active School Kakatheeya Edit Reset Password S Sankar Admin admin@erp.com SUPER_ADMIN Active School Kakatheeya Edit Reset Password Home Students Analytics Reports AI"
+    },
+    {
+      "name": "reports",
+      "route": "/reports",
+      "url": "https://erp.tottechsolutions.com/reports",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/reports",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/reports.png",
+      "elapsedMs": 2234,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya EXECUTIVE EVIDENCE CENTER Reports Center Generate, review and track school reports from ERP records, attendance, finance, academics and operational evidence. Open Principal Analytics GENERATED REPORTS 0 Report export records STUDENTS 1003 Reportable student records TEACHERS 51 Reportable teacher records ATTENDANCE 211 Attendance evidence Report Catalog These reports create auditable export records backed by the reports API. Refresh Reports EXECUTIVE Principal Daily Command New School health, students, teachers, attendance, fees and action summary. Last ge"
+    },
+    {
+      "name": "principal-analytics",
+      "route": "/principal-analytics",
+      "url": "https://erp.tottechsolutions.com/principal-analytics",
+      "status": 200,
+      "finalUrl": "https://erp.tottechsolutions.com/principal-analytics",
+      "title": "TOTTECH ONE",
+      "screenshot": "/opt/tottech-one/mobile-experience-proof-audit/screenshots/production-web-mobile/principal-analytics.png",
+      "elapsedMs": 2241,
+      "textSample": "☰ ✕ TOTTECH ONE GATEWAY TO LEARNING WORKSPACE School Team Protected Dashboard Communication Ask TOTTECH AI GATEWAY TO INNOVATION TOTTECH ONE Kakatheeya Academic Year 2026-2027 2025-2026 2025-2026 Select School GR Junior College Kakatheeya EXECUTIVE WORKSPACE Principal Analytics School health, academics, finance, attendance and operational evidence in one principal view. CAMPUS HEALTH 50% STUDENTS 1003 Active student records TEACHERS 51 Faculty records ATTENDANCE 0 Attendance records MARKS ENTRIES 0 Exam scoring evidence Academic Intelligence Class, section, subject and assessment readiness. Open Academics CLASSES 20 SECTIONS 61 SUBJECTS 5 Academic Year Integrity HEALTHY 0 students and 0 teachers missing academic-year context. What Needs Attention PENDING FEE EXPOSURE ₹1,500 Review ACADEMIC"
+    }
+  ]
+}

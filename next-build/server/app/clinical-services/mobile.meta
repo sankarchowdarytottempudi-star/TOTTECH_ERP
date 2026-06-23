@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/mobile/layout,_N_T_/clinical-services/mobile/page,_N_T_/clinical-services/mobile"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/mobile/__PAGE__",
+    "/clinical-services/mobile",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

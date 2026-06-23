@@ -1,0 +1,11 @@
+{
+  "brand": "TOTTECH AI",
+  "tagline": "Gateway To Innovation",
+  "intendedPublicPath": "/brand/tottech-ai/logo.png",
+  "sourceStatus": "installed_from_user_provided_png",
+  "sourceOfTruth": "user_provided_logo",
+  "createdAt": "2026-06-05",
+  "installedAt": "2026-06-06",
+  "sourcePath": "/opt/tottech-one/public/images/TOTTECH AI.png",
+  "notes": "Use this gold gateway logo wherever TOTTECH AI appears in web and mobile AI buttons."
+}

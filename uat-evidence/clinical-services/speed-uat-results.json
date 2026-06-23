@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Question 1 - Receptionist patient registration",
+    "targetSeconds": 120,
+    "elapsedMs": 2405,
+    "elapsedSeconds": 2.4,
+    "status": "PASS",
+    "detail": {
+      "patientId": 508,
+      "minimumFields": [
+        "first_name",
+        "last_name",
+        "gender",
+        "date_of_birth",
+        "phone"
+      ],
+      "simplificationVerdict": "Fast path is acceptable. Keep advanced fields optional/collapsed."
+    }
+  },
+  {
+    "name": "Question 2 - Doctor consultation completion",
+    "targetSeconds": 180,
+    "elapsedMs": 628,
+    "elapsedSeconds": 0.63,
+    "status": "PASS",
+    "detail": {
+      "appointmentId": 110,
+      "medicalRecordId": 4,
+      "labOrderId": 64,
+      "pharmacyQueueId": 3,
+      "simplificationVerdict": "Fast path is acceptable if doctor UI keeps diagnosis, prescription, and lab order on one screen."
+    }
+  },
+  {
+    "name": "Question 3 - Lab technician report release",
+    "targetSeconds": 60,
+    "elapsedMs": 809,
+    "elapsedSeconds": 0.81,
+    "status": "PASS",
+    "detail": {
+      "labOrderId": 64,
+      "resultId": 60,
+      "simplificationVerdict": "Fast path is acceptable. Keep one-click sample collected and one-click release buttons."
+    }
+  },
+  {
+    "name": "Question 4 - Pharmacist medicine dispense",
+    "targetSeconds": 60,
+    "elapsedMs": 2672,
+    "elapsedSeconds": 2.67,
+    "status": "PASS",
+    "detail": {
+      "queueId": 3,
+      "dispenseStatus": "COMPLETED",
+      "simplificationVerdict": "Fast path is acceptable. Pharmacy screen should default quantity from prescription and require only confirm/collect payment."
+    }
+  },
+  {
+    "name": "Question 5 - Hospital admin doctor creation",
+    "targetSeconds": 120,
+    "elapsedMs": 1013,
+    "elapsedSeconds": 1.01,
+    "status": "PASS",
+    "detail": {
+      "userId": 188,
+      "profileId": 87,
+      "simplificationVerdict": "Fast path is acceptable. Keep credentialing and advanced doctor profile fields as a second step."
+    }
+  }
+]

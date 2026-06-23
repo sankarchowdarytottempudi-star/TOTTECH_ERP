@@ -1,0 +1,3 @@
+{
+  "/api/tottech-ai/actions/[id]/execute/route": "app/api/tottech-ai/actions/[id]/execute/route.js"
+}

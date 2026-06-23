@@ -1,0 +1,8 @@
+{
+  "url": "http://127.0.0.1:3000/clinical-services/platform-hospitals",
+  "listShowsHospital": true,
+  "detailsShowsHospital": true,
+  "editFormPrefilled": true,
+  "consoleMessages": [],
+  "failedRequests": []
+}

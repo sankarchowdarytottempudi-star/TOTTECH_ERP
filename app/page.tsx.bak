@@ -1,0 +1,380 @@
+"use client";
+
+import DashboardChart from "@/components/DashboardChart";
+import { useEffect, useState } from "react";
+import Layout from "@/components/Layout";
+import Link from "next/link";
+
+export default function Home() {
+  const [stats, setStats] = useState<any>({
+    students: 0,
+    teachers: 0,
+    schools: 0,
+    classes: 0,
+    subjects: 0,
+    sections: 0,
+    questionBank: 0,
+    questionPapers: 0,
+    examSchedule: 0,
+    marksEntries: 0,
+    attendance: 0,
+    campusHealth: 0,
+  });
+
+  useEffect(() => {
+    loadDashboard();
+  }, []);
+
+  const loadDashboard = async () => {
+    try {
+      const response = await fetch("/api/dashboard");
+      const data = await response.json();
+      setStats(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const cards = [
+    {
+      title: "Students",
+      value: stats.students,
+      icon: "🎓",
+      href: "/students/list",
+      color: "from-blue-500 to-blue-700",
+    },
+    {
+      title: "Teachers",
+      value: stats.teachers,
+      icon: "👨‍🏫",
+      href: "/teachers",
+      color: "from-purple-500 to-purple-700",
+    },
+    {
+      title: "Schools",
+      value: stats.schools,
+      icon: "🏫",
+      href: "/schools/list",
+      color: "from-orange-500 to-orange-700",
+    },
+    {
+      title: "Classes",
+      value: stats.classes,
+      icon: "📚",
+      href: "/academics/classes",
+      color: "from-green-500 to-green-700",
+    },
+    {
+      title: "Subjects",
+      value: stats.subjects,
+      icon: "📖",
+      href: "/academics/subjects",
+      color: "from-pink-500 to-pink-700",
+    },
+    {
+      title: "Sections",
+      value: stats.sections,
+      icon: "🗂️",
+      href: "/academics/sections",
+      color: "from-cyan-500 to-cyan-700",
+    },
+    {
+      title: "Question Bank",
+      value: stats.questionBank,
+      icon: "❓",
+      href: "/academics/question-bank",
+      color: "from-indigo-500 to-indigo-700",
+    },
+    {
+      title: "Question Papers",
+      value: stats.questionPapers,
+      icon: "📝",
+      href: "/academics/question-papers",
+      color: "from-red-500 to-red-700",
+    },
+    {
+      title: "Exam Schedule",
+      value: stats.examSchedule,
+      icon: "📅",
+      href: "/academics/exam-schedule",
+      color: "from-yellow-500 to-yellow-700",
+    },
+    {
+      title: "Marks Entry",
+      value: stats.marksEntries,
+      icon: "📊",
+      href: "/academics/marks-entry",
+      color: "from-emerald-500 to-emerald-700",
+    },
+    {
+      title: "Attendance",
+      value: stats.attendance,
+      icon: "✅",
+      href: "/attendance",
+      color: "from-teal-500 to-teal-700",
+    },
+    {
+      title: "Finance",
+      value: "₹",
+      icon: "💰",
+      href: "/finance",
+      color: "from-amber-500 to-amber-700",
+    },
+  ];
+
+  return (
+    <Layout>
+
+      <div className="space-y-8">
+
+        {/* HERO */}
+
+        <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 rounded-3xl p-10 text-white shadow-2xl">
+
+          <div className="flex justify-between items-center">
+
+            <div>
+
+              <h1
+  className="
+    text-3xl
+    md:text-5xl
+    lg:text-6xl
+    font-black
+  "
+>
+                TOTTech ERP
+              </h1>
+
+              <p className="text-xl text-blue-100 mt-3">
+                Multi School AI Powered Education Operating System
+              </p>
+
+            </div>
+
+            <div className="text-center">
+
+              <div className="text-sm uppercase tracking-widest text-gray-300">
+                Campus Health
+              </div>
+
+              <div
+  className="
+    text-4xl
+    md:text-6xl
+    lg:text-7xl
+    font-black
+  "
+>
+                {stats.campusHealth || 87}
+              </div>
+
+              <div className="text-green-300">
+                Healthy Campus
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* DASHBOARD CARDS */}
+
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-6">
+
+          {cards.map((card) => (
+
+            <Link
+              key={card.title}
+              href={card.href}
+            >
+
+              <div
+                className={`
+                  bg-gradient-to-r
+                  ${card.color}
+                  rounded-3xl
+                  p-6
+                  text-white
+                  shadow-xl
+                  hover:scale-105
+                  transition-all
+                  cursor-pointer
+                `}
+              >
+
+                <div className="flex justify-between">
+
+                  <div>
+
+                    <div className="text-white/80">
+                      {card.title}
+                    </div>
+
+                    <div
+  className="
+    text-3xl
+    md:text-5xl
+    font-black
+    mt-3
+  "
+>
+                      {card.value}
+                    </div>
+
+                  </div>
+
+                  <div
+  className="
+    text-3xl
+    md:text-5xl
+  "
+>
+                    {card.icon}
+                  </div>
+
+                </div>
+
+              </div>
+
+            </Link>
+
+          ))}
+
+        </div>
+
+        {/* SECOND ROW */}
+        
+        <div className="mt-8">
+  <DashboardChart />
+</div>
+        
+        <div className="grid lg:grid-cols-3 gap-6">
+
+          {/* AI INSIGHTS */}
+
+          <div className="bg-white rounded-3xl shadow p-8">
+
+            <h2 className="text-2xl font-bold mb-6">
+              🧠 AI Insights
+            </h2>
+
+            <div className="space-y-4">
+
+              <Link
+                href="/ai-command-center"
+                className="block bg-red-50 p-4 rounded-xl"
+              >
+                12 Students Need Attention
+              </Link>
+
+              <Link
+                href="/attendance"
+                className="block bg-yellow-50 p-4 rounded-xl"
+              >
+                Attendance Declining In Class 8A
+              </Link>
+
+              <Link
+                href="/academics/report-cards"
+                className="block bg-green-50 p-4 rounded-xl"
+              >
+                Science Performance Improved
+              </Link>
+
+            </div>
+
+          </div>
+
+          {/* ACADEMICS */}
+
+          <div className="bg-white rounded-3xl shadow p-8">
+
+            <h2 className="text-2xl font-bold mb-6">
+              📚 Academic Overview
+            </h2>
+
+            <div className="space-y-4">
+
+              <div>
+                Question Bank:
+                <strong className="ml-2">
+                  {stats.questionBank}
+                </strong>
+              </div>
+
+              <div>
+                Question Papers:
+                <strong className="ml-2">
+                  {stats.questionPapers}
+                </strong>
+              </div>
+
+              <div>
+                Exams:
+                <strong className="ml-2">
+                  {stats.examSchedule}
+                </strong>
+              </div>
+
+              <div>
+                Marks Entries:
+                <strong className="ml-2">
+                  {stats.marksEntries}
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* QUICK ACCESS */}
+
+          <div className="bg-white rounded-3xl shadow p-8">
+
+            <h2 className="text-2xl font-bold mb-6">
+              🚀 Quick Access
+            </h2>
+
+            <div className="space-y-3">
+
+              <Link
+                href="/command-center"
+                className="block bg-blue-50 p-4 rounded-xl"
+              >
+                🚀 Command Center
+              </Link>
+
+              <Link
+                href="/students/admission"
+                className="block bg-green-50 p-4 rounded-xl"
+              >
+                🎓 New Admission
+              </Link>
+
+              <Link
+                href="/finance"
+                className="block bg-yellow-50 p-4 rounded-xl"
+              >
+                💰 Finance Dashboard
+              </Link>
+
+              <Link
+                href="/ai-command-center"
+                className="block bg-purple-50 p-4 rounded-xl"
+              >
+                🤖 AI Command Center
+              </Link>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </Layout>
+  );
+}

@@ -1,0 +1,3 @@
+{
+  "/api/finance/invoices/[id]/resend/route": "app/api/finance/invoices/[id]/resend/route.js"
+}

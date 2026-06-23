@@ -1,0 +1,11 @@
+{
+  "brand": "TOTTECH ONE",
+  "tagline": "Gateway To Learning",
+  "logo": "/images/logo.png",
+  "name": "/images/name.png",
+  "sourceStatus": "installed_from_user_provided_png",
+  "sourceOfTruth": "user_provided_logo",
+  "createdAt": "2026-06-05",
+  "updatedAt": "2026-06-06",
+  "notes": "Use /images/logo.png as the application logo and /images/name.png directly below it for application name branding."
+}

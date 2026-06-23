@@ -1,0 +1,3 @@
+{
+  "/api/clinical/security/role-permission-audit/route": "app/api/clinical/security/role-permission-audit/route.js"
+}

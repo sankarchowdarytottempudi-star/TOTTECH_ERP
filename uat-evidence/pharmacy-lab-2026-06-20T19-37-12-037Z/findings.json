@@ -1,0 +1,20 @@
+[
+  {
+    "area": "login",
+    "status": "PASS",
+    "details": "Clinical Services super admin login succeeded."
+  },
+  {
+    "area": "pharmacy-medicines",
+    "status": "PASS",
+    "details": {
+      "medicine_code": "MED-1781984264302",
+      "brand_name": "UAT Brand UAT MED-1781984233973"
+    }
+  },
+  {
+    "area": "exception",
+    "status": "FAIL",
+    "details": "locator.fill: Error: strict mode violation: getByLabel(/Total/i) resolved to 2 elements:\n    1) <input value=\"500\" type=\"number\" class=\"mt-2 w-full rounded-[8px] border border-slate-300 px-3 py-3 text-sm font-semibold outline-none focus:border-teal-600\"/> aka getByRole('spinbutton', { name: 'Subtotal' })\n    2) <input value=\"\" type=\"number\" class=\"mt-2 w-full rounded-[8px] border border-slate-300 px-3 py-3 text-sm font-semibold outline-none focus:border-teal-600\"/> aka getByRole('spinbutton', { name: 'Total', exact: true })\n\nCall log:\n\u001b[2m  - waiting for getByLabel(/Total/i)\u001b[22m\n\n    at createPharmacySale (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:137:35)\n    at async main (/opt/tottech-one/scripts/pharmacy-lab-uat.mjs:197:27)"
+  }
+]

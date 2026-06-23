@@ -1,0 +1,3 @@
+{
+  "/api/clinical/interoperability/fhir/[resource]/route": "app/api/clinical/interoperability/fhir/[resource]/route.js"
+}

@@ -1,0 +1,3 @@
+{
+  "/api/clinical/ivf/[module]/route": "app/api/clinical/ivf/[module]/route.js"
+}

@@ -1,0 +1,3 @@
+{
+  "/api/schools/[id]/command-center/route": "app/api/schools/[id]/command-center/route.js"
+}

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/administration/layout,_N_T_/administration/audit-trail/layout,_N_T_/administration/audit-trail/page,_N_T_/administration/audit-trail"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/administration/audit-trail/__PAGE__",
+    "/administration/audit-trail",
+    "/administration",
+    "/_index",
+    "/_head"
+  ]
+}

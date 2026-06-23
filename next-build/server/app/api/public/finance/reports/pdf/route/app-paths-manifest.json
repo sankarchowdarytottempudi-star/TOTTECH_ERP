@@ -1,0 +1,3 @@
+{
+  "/api/public/finance/reports/pdf/route": "app/api/public/finance/reports/pdf/route.js"
+}

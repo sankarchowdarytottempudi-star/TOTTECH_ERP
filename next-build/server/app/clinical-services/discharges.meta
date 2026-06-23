@@ -1,0 +1,18 @@
+{
+  "status": 307,
+  "headers": {
+    "location": "/clinical-services/hms/discharges",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/discharges/layout,_N_T_/clinical-services/discharges/page,_N_T_/clinical-services/discharges"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/discharges/__PAGE__",
+    "/clinical-services/discharges",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

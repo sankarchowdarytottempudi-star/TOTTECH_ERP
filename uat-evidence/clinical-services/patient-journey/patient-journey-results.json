@@ -1,0 +1,1295 @@
+{
+  "generatedAt": "2026-06-10T08:51:23.526Z",
+  "baseUrl": "https://erp.tottechsolutions.com",
+  "scope": {
+    "tenant_id": 13,
+    "hospital_id": 13,
+    "branch_id": 13,
+    "clinic_id": 10,
+    "hospital_name": "TOTTECH Multi-Speciality Hospital",
+    "branch_name": "Vijayawada Main Branch",
+    "clinic_name": "TOTTECH Clinical Services OPD"
+  },
+  "journey": {
+    "patientId": 526,
+    "patientName": "Journey Patient E2E-1781081397344",
+    "appointmentId": 127,
+    "labOrderId": 81,
+    "invoiceId": 207,
+    "paymentId": 197
+  },
+  "steps": [
+    {
+      "name": "Register Patient",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": null,
+        "timelineCounts": {
+          "clinical_timeline": 1,
+          "workflow_events": 0,
+          "patient_timeline_events": 0
+        },
+        "billingCounts": {
+          "invoices": 0,
+          "invoice_items": 0,
+          "billed_total": "0",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": null,
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/patients/526",
+        "Patient row created."
+      ]
+    },
+    {
+      "name": "Appointment",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "BOOKED",
+          "queue_status": "WAITING",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 2,
+          "workflow_events": 1,
+          "patient_timeline_events": 0
+        },
+        "billingCounts": {
+          "invoices": 0,
+          "invoice_items": 0,
+          "billed_total": "0",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": null,
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/appointments/127",
+        "Appointment status is BOOKED/WAITING."
+      ]
+    },
+    {
+      "name": "Check-In",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "CHECKED_IN",
+          "queue_status": "WAITING_FOR_VITALS",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 3,
+          "workflow_events": 2,
+          "patient_timeline_events": 0
+        },
+        "billingCounts": {
+          "invoices": 0,
+          "invoice_items": 0,
+          "billed_total": "0",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": null,
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/appointments/127",
+        "Queue status is WAITING_FOR_VITALS."
+      ]
+    },
+    {
+      "name": "Vitals",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "VITALS_COMPLETED",
+          "queue_status": "WAITING_FOR_DOCTOR",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 4,
+          "workflow_events": 3,
+          "patient_timeline_events": 0
+        },
+        "billingCounts": {
+          "invoices": 0,
+          "invoice_items": 0,
+          "billed_total": "0",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": null,
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/doctors/consultation/127",
+        "Appointment status is VITALS_COMPLETED; queue status is WAITING_FOR_DOCTOR."
+      ]
+    },
+    {
+      "name": "Doctor Consultation",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 1,
+        "invoices": 1,
+        "invoiceItems": 1,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 5,
+          "workflow_events": 3,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "ORDERED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/doctors/consultation/127",
+        "Queue status is LAB_ORDERED."
+      ]
+    },
+    {
+      "name": "Lab Order",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "WORKING",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 1,
+        "invoices": 1,
+        "invoiceItems": 1,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 5,
+          "workflow_events": 3,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "ORDERED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/doctors/consultation/127",
+        "Lab order status is ORDERED.",
+        "Automatic lab billing item should be created when the doctor orders the lab."
+      ]
+    },
+    {
+      "name": "Sample Collection",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 6,
+          "workflow_events": 4,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "COLLECTED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/laboratory",
+        "Lab order status is COLLECTED."
+      ]
+    },
+    {
+      "name": "Lab Processing",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 7,
+          "workflow_events": 5,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "PROCESSING",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": null,
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/laboratory",
+        "Lab order status is PROCESSING."
+      ]
+    },
+    {
+      "name": "Result Entry",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 8,
+          "workflow_events": 6,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RESULT_ENTERED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "ENTERED",
+          "status": "ENTERED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/laboratory",
+        "Lab result status is ENTERED; order is RESULT_ENTERED."
+      ]
+    },
+    {
+      "name": "Result Validation",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 9,
+          "workflow_events": 7,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "VALIDATED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "VALIDATED",
+          "status": "VALIDATED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/laboratory",
+        "Lab result status is VALIDATED; order is VALIDATED."
+      ]
+    },
+    {
+      "name": "Result Approval",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_ORDERED",
+          "queue_status": "LAB_ORDERED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 10,
+          "workflow_events": 8,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "APPROVED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "APPROVED",
+          "status": "APPROVED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/laboratory",
+        "Lab result status is APPROVED; order is APPROVED."
+      ]
+    },
+    {
+      "name": "Result Release",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_COMPLETED",
+          "queue_status": "WAITING_FOR_DOCTOR_REVIEW",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 11,
+          "workflow_events": 9,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/laboratory",
+        "Lab result status is RELEASED; order is RELEASED; queue is WAITING_FOR_DOCTOR_REVIEW."
+      ]
+    },
+    {
+      "name": "Doctor Review",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "NOT_APPLICABLE",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 0,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "LAB_COMPLETED",
+          "queue_status": "WAITING_FOR_DOCTOR_REVIEW",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 11,
+          "workflow_events": 9,
+          "patient_timeline_events": 1
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 1,
+          "billed_total": "450.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": null,
+        "pharmacyQueue": null,
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/doctors/consultation/127",
+        "Doctor consultation API and UI both show released lab result values for review."
+      ]
+    },
+    {
+      "name": "Prescription",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 2,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 1,
+        "invoices": 0,
+        "invoiceItems": 1,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "CONSULTATION_COMPLETED",
+          "queue_status": "AWAITING_PHARMACY",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 13,
+          "workflow_events": 10,
+          "patient_timeline_events": 2
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 2,
+          "billed_total": "950.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": {
+          "id": 19,
+          "prescription_uid": "RX-1781081451896",
+          "pharmacy_status": "PENDING"
+        },
+        "pharmacyQueue": {
+          "id": 19,
+          "status": "PENDING",
+          "queue_number": "RXQ-1781081451960"
+        },
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/doctors/consultation/127",
+        "Prescription RX-1781081451896; pharmacy queue PENDING."
+      ]
+    },
+    {
+      "name": "Pharmacy",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 1,
+        "workflowEvents": 1,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 1,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "CONSULTATION_COMPLETED",
+          "queue_status": "AWAITING_PHARMACY",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 14,
+          "workflow_events": 11,
+          "patient_timeline_events": 2
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 3,
+          "billed_total": "1418.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": {
+          "id": 19,
+          "prescription_uid": "RX-1781081451896",
+          "pharmacy_status": "COMPLETED"
+        },
+        "pharmacyQueue": {
+          "id": 19,
+          "status": "COMPLETED",
+          "queue_number": "RXQ-1781081451960"
+        },
+        "invoice": null,
+        "invoiceId": null
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/pharmacy",
+        "Pharmacy queue is COMPLETED."
+      ]
+    },
+    {
+      "name": "Billing",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "NOT_APPLICABLE",
+      "billing": "WORKING",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 0,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 0,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "CONSULTATION_COMPLETED",
+          "queue_status": "AWAITING_PHARMACY",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 14,
+          "workflow_events": 11,
+          "patient_timeline_events": 2
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 3,
+          "billed_total": "1418.00",
+          "payments": 0,
+          "paid_total": "0"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": {
+          "id": 19,
+          "prescription_uid": "RX-1781081451896",
+          "pharmacy_status": "COMPLETED"
+        },
+        "pharmacyQueue": {
+          "id": 19,
+          "status": "COMPLETED",
+          "queue_number": "RXQ-1781081451960"
+        },
+        "invoice": {
+          "id": 207,
+          "invoice_number": "INV-1781081423676-2010",
+          "status": "OPEN",
+          "total": "1418.00",
+          "paid_amount": "0.00",
+          "balance_amount": "1418.00"
+        },
+        "invoiceId": 207
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/billing-revenue",
+        "Workflow invoice INV-1781081423676-2010 status is OPEN.",
+        "Invoice and itemized charges were created automatically by workflow orchestration."
+      ]
+    },
+    {
+      "name": "Payment",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "WORKING",
+      "timeline": "WORKING",
+      "billing": "WORKING",
+      "documents": "NOT_APPLICABLE",
+      "delta": {
+        "clinicalTimeline": 0,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 1,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 1,
+        "documents": 0
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "COMPLETED",
+          "queue_status": "COMPLETED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 14,
+          "workflow_events": 11,
+          "patient_timeline_events": 3
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 3,
+          "billed_total": "1418.00",
+          "payments": 1,
+          "paid_total": "1418.00"
+        },
+        "documentCount": {
+          "documents": 0
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": {
+          "id": 19,
+          "prescription_uid": "RX-1781081451896",
+          "pharmacy_status": "COMPLETED"
+        },
+        "pharmacyQueue": {
+          "id": 19,
+          "status": "COMPLETED",
+          "queue_number": "RXQ-1781081451960"
+        },
+        "invoice": {
+          "id": 207,
+          "invoice_number": "INV-1781081423676-2010",
+          "status": "PAID",
+          "total": "1418.00",
+          "paid_amount": "1418.00",
+          "balance_amount": "0.00"
+        },
+        "invoiceId": 207
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/billing-revenue",
+        "Appointment status is COMPLETED; queue is COMPLETED.",
+        "Payment API posted payment without DB fallback: 197."
+      ]
+    },
+    {
+      "name": "Documents and Timeline Review",
+      "database": "WORKING",
+      "ui": "WORKING",
+      "status": "NOT_CHECKED",
+      "timeline": "WORKING",
+      "billing": "NOT_APPLICABLE",
+      "documents": "WORKING",
+      "delta": {
+        "clinicalTimeline": 0,
+        "workflowEvents": 0,
+        "patientTimelineEvents": 4,
+        "invoices": 0,
+        "invoiceItems": 0,
+        "payments": 0,
+        "documents": 4
+      },
+      "snapshot": {
+        "patient": {
+          "id": 526,
+          "patient_uid": "PAT-1781081398424",
+          "uhid": "UHID-1781081398424",
+          "first_name": "Journey",
+          "last_name": "Patient E2E-1781081397344",
+          "created_at": "2026-06-10T08:49:58.434Z"
+        },
+        "appointment": {
+          "id": 127,
+          "status": "COMPLETED",
+          "queue_status": "COMPLETED",
+          "appointment_uid": "APT-1781081405334"
+        },
+        "timelineCounts": {
+          "clinical_timeline": 14,
+          "workflow_events": 11,
+          "patient_timeline_events": 7
+        },
+        "billingCounts": {
+          "invoices": 1,
+          "invoice_items": 3,
+          "billed_total": "1418.00",
+          "payments": 1,
+          "paid_total": "1418.00"
+        },
+        "documentCount": {
+          "documents": 4
+        },
+        "labOrder": {
+          "id": 81,
+          "status": "RELEASED",
+          "order_type": "Complete Blood Count",
+          "order_uid": "LAB-1781081423648-1"
+        },
+        "labResult": {
+          "id": 76,
+          "result_status": "RELEASED",
+          "status": "RELEASED",
+          "result_uid": "LABR-1781081434091"
+        },
+        "prescription": {
+          "id": 19,
+          "prescription_uid": "RX-1781081451896",
+          "pharmacy_status": "COMPLETED"
+        },
+        "pharmacyQueue": {
+          "id": 19,
+          "status": "COMPLETED",
+          "queue_number": "RXQ-1781081451960"
+        },
+        "invoice": {
+          "id": 207,
+          "invoice_number": "INV-1781081423676-2010",
+          "status": "PAID",
+          "total": "1418.00",
+          "paid_amount": "1418.00",
+          "balance_amount": "0.00"
+        },
+        "invoiceId": 207
+      },
+      "notes": [
+        "UI loaded and scrolled: /clinical-services/patients/526/timeline",
+        "Invoice PDF OK, Lab PDF OK, Receipt PDF OK, Prescription PDF OK."
+      ]
+    }
+  ],
+  "defects": [],
+  "artifacts": {
+    "screenshots": [
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/01-register-patient.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/02-appointment.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/03-check-in.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/04-vitals.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/05-doctor-consultation-and-lab-order.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/07-sample-collection.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/08-lab-processing.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/09-result-entry.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/10-result-validation.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/11-result-approval.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/12-result-release.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/13-doctor-review.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/14-prescription.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/15-pharmacy.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/16-billing.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/17-payment.png",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/screenshots/18-final-patient-timeline.png"
+    ],
+    "videos": [
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/videos/page@8b3b773fbc95710bc53e6cc1d13a5969.webm"
+    ],
+    "documents": [
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/documents/E2E-1781081397344-invoice.pdf",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/documents/E2E-1781081397344-lab-report.pdf",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/documents/E2E-1781081397344-payment-receipt.pdf",
+      "/opt/tottech-one/uat-evidence/clinical-services/patient-journey/documents/E2E-1781081397344-prescription.pdf"
+    ]
+  }
+}

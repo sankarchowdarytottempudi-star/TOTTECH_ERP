@@ -1,0 +1,6 @@
+module.exports=[589578,a=>{a.v({className:"geist_a71539c9-module__T19VSG__className",variable:"geist_a71539c9-module__T19VSG__variable"})},435214,a=>{a.v({className:"geist_mono_8d43a2aa-module__8Li5zG__className",variable:"geist_mono_8d43a2aa-module__8Li5zG__variable"})},233290,a=>{"use strict";var b=a.i(907997),c=a.i(589578);let d={className:c.default.className,style:{fontFamily:"'Geist', 'Geist Fallback'",fontStyle:"normal"}};null!=c.default.variable&&(d.variable=c.default.variable);var e=a.i(435214);let f={className:e.default.className,style:{fontFamily:"'Geist Mono', 'Geist Mono Fallback'",fontStyle:"normal"}};null!=e.default.variable&&(f.variable=e.default.variable),a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"en",className:`
+        ${d.variable}
+        ${f.variable}
+      `,children:(0,b.jsx)("body",{className:" min-h-screen bg-slate-100 ",children:a})})},"metadata",0,{title:"TOTTECH ONE",description:"Gateway To Learning - AI Powered Education Operating System",manifest:"/manifest.json",appleWebApp:{capable:!0,statusBarStyle:"default",title:"TOTTECH ONE"},icons:{icon:"/images/logo.png",apple:"/images/logo.png"}}],233290)},70864,a=>{a.n(a.i(233290))}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__0k~tbvx._.js.map

@@ -1,0 +1,31 @@
+# Node
+node_modules/
+mobile/node_modules/
+
+# NextJS
+.next/
+out/
+
+# Coverage
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Android
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/build/
+mobile/android/app/.cxx/
+
+# Mobile Artifacts
+*.apk
+*.aab
+*.so
+
+# Cache
+.cache/
+tmp/
+dist/
+build/

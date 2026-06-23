@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/academics/layout,_N_T_/academics/question-bank/layout,_N_T_/academics/question-bank/page,_N_T_/academics/question-bank"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/academics/question-bank/__PAGE__",
+    "/academics/question-bank",
+    "/academics",
+    "/_index",
+    "/_head"
+  ]
+}

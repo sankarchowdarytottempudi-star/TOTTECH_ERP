@@ -1,0 +1,188 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/node_modules_next_dist_esm_build_templates_edge-wrapper_0a9gg_0.js",
+        "server/edge/chunks/[root-of-the-server]__0_lzsr-._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_09_s2fq.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "entrypoint": "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_09_s2fq.js",
+      "matchers": [
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/(/?index|/?index\\.json|/?index(?:\\.rsc|\\.segments/.+\\.segment\\.rsc))?",
+          "originalSource": "/"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/clinical-services/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/clinical-services/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/students/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/students/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/teachers/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/teachers/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/schools/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/schools/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/academics/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/academics/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/attendance/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/attendance/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/fees/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/fees/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/finance/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/finance/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/settings/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/settings/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/platform/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/platform/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/war-room/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/war-room/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/transport/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/transport/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/hostel/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/hostel/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/dining/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/dining/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/exams/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/exams/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/operations/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/operations/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/reports/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/reports/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/principal-analytics/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/principal-analytics/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/analytics/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/analytics/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/ai-command-center/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/ai-command-center/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/ai-school-copilot/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/ai-school-copilot/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/student-intelligence/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/student-intelligence/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/faculty-intelligence/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/faculty-intelligence/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/school-brain/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/school-brain/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/parent/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/parent/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/imports/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/imports/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/clinical/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/clinical/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/tottech-ai/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/tottech-ai/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/ai/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/ai/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/users/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/users/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/students/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/students/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/teachers/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/teachers/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/finance/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/finance/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/reports/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/reports/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/reports-center/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/reports-center/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/attendance/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/attendance/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/transport/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/transport/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/hostels/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/hostels/:path*"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/api/dining/:path*{(\\.json|\\.rsc|\\.segments/.+\\.segment\\.rsc)}?",
+          "originalSource": "/api/dining/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "CSv2Sb4VOsqUQlhmpmHes",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "dQU8bCfWYr//I8n8jY8DBIMArFtWnSSfUovDppsypUk=",
+        "__NEXT_PREVIEW_MODE_ID": "4935096ba106ab30dd3dfc5498bea2a9",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c213468b6321dfd9c8190f41ddb10449ba44afce9e18d212d61f70a5fc01fc6d",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "ac4f87e7b73c36c32855c7f0b675add448b810a7b20eafe7cf2d9f4a10f4aed4"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}

@@ -1,0 +1,3 @@
+{
+  "/api/clinical/production-readiness/route": "app/api/clinical/production-readiness/route.js"
+}

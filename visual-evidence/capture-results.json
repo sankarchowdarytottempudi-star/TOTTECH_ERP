@@ -1,0 +1,128 @@
+[
+  {
+    "name": "school-dashboard",
+    "url": "/",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/"
+  },
+  {
+    "name": "schools-list",
+    "url": "/schools/list",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/schools/list"
+  },
+  {
+    "name": "students-list",
+    "url": "/students/list",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/students/list"
+  },
+  {
+    "name": "teachers",
+    "url": "/teachers",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/teachers"
+  },
+  {
+    "name": "academics-classes",
+    "url": "/academics/classes",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/academics/classes"
+  },
+  {
+    "name": "finance-dashboard",
+    "url": "/finance",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/finance"
+  },
+  {
+    "name": "reports-center",
+    "url": "/reports",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/reports"
+  },
+  {
+    "name": "dining",
+    "url": "/dining",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/dining"
+  },
+  {
+    "name": "transport",
+    "url": "/transport",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/transport"
+  },
+  {
+    "name": "hostel",
+    "url": "/hostel",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/hostel"
+  },
+  {
+    "name": "tottech-ai",
+    "url": "/ai-school-copilot",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/ai-school-copilot"
+  },
+  {
+    "name": "clinical-dashboard",
+    "url": "/clinical-services",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services"
+  },
+  {
+    "name": "clinical-patients",
+    "url": "/clinical-services/patients",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/patients"
+  },
+  {
+    "name": "clinical-hms",
+    "url": "/clinical-services/hms",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/hms"
+  },
+  {
+    "name": "clinical-ivf",
+    "url": "/clinical-services/ivf",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/ivf"
+  },
+  {
+    "name": "clinical-finance",
+    "url": "/clinical-services/finance",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/finance"
+  },
+  {
+    "name": "clinical-pharmacy",
+    "url": "/clinical-services/pharmacy",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/pharmacy"
+  },
+  {
+    "name": "clinical-operational-masters",
+    "url": "/clinical-services/operational-masters",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/operational-masters"
+  },
+  {
+    "name": "clinical-security",
+    "url": "/clinical-services/security",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/security"
+  },
+  {
+    "name": "clinical-analytics",
+    "url": "/clinical-services/analytics",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/analytics"
+  },
+  {
+    "name": "clinical-ai",
+    "url": "/clinical-services/ai",
+    "status": 200,
+    "finalUrl": "https://erp.tottechsolutions.com/clinical-services/ai"
+  }
+]

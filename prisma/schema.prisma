@@ -1,0 +1,3338 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model ai_student_analysis {
+  id                     Int       @id @default(autoincrement())
+  school_id              Int?
+  student_id             Int?
+  subject_id             Int?
+  weakness_area          String?
+  improvement_suggestion String?
+  predicted_score        Decimal?  @db.Decimal(5, 2)
+  risk_level             String?   @db.VarChar(50)
+  created_at             DateTime? @default(now()) @db.Timestamp(6)
+  schools                schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  subjects               subjects? @relation(fields: [subject_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model attendance {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  student_id      Int?
+  attendance_date DateTime  @db.Date
+  status          String?   @db.VarChar(20)
+  remarks         String?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  schools         schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model audit_logs {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  user_id        Int?
+  action_type    String?   @db.VarChar(100)
+  action_details String?
+  ip_address     String?   @db.VarChar(100)
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  schools        schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users          users?    @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model classes {
+  id               Int        @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  class_name       String     @db.VarChar(100)
+  class_teacher_id Int?
+  created_by       Int?
+  created_at       DateTime?  @default(now()) @db.Timestamp(6)
+  teachers         teachers?  @relation(fields: [class_teacher_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  schools          schools?   @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  fees             fees[]
+  sections         sections[]
+}
+
+model exams {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  exam_name        String?   @db.VarChar(255)
+  exam_type        String?   @db.VarChar(100)
+  start_date       DateTime? @db.Date
+  end_date         DateTime? @db.Date
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  schools    schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  marks      marks[]
+  student_backlogs student_backlogs[]
+}
+
+model fee_payments {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  student_id       Int?
+  fee_id           Int?
+  paid_amount      Decimal?  @db.Decimal(12, 2)
+  payment_date     DateTime? @db.Date
+  payment_mode     String?   @db.VarChar(50)
+  transaction_id   String?   @db.VarChar(255)
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  fees           fees?     @relation(fields: [fee_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  schools        schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model fees {
+  id               Int            @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  class_id         Int?
+  fee_type         String?        @db.VarChar(100)
+  amount           Decimal?       @db.Decimal(12, 2)
+  due_date         DateTime?      @db.Date
+  created_by       Int?
+  created_at       DateTime?      @default(now()) @db.Timestamp(6)
+  fee_payments fee_payments[]
+  classes      classes?       @relation(fields: [class_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  schools      schools?       @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model hostel_rooms {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  room_number      String?   @db.VarChar(50)
+  hostel_name      String?   @db.VarChar(255)
+  capacity         Int?
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  schools     schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model marks {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  student_id     Int?
+  subject_id     Int?
+  exam_id        Int?
+  total_marks    Decimal?  @db.Decimal(5, 2)
+  obtained_marks Decimal?  @db.Decimal(5, 2)
+  grade          String?   @db.VarChar(10)
+  remarks        String?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  exams          exams?    @relation(fields: [exam_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  schools        schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  subjects       subjects? @relation(fields: [subject_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model notifications {
+  id                Int       @id @default(autoincrement())
+  school_id         Int?
+  student_id        Int?
+  notification_type String?   @db.VarChar(100)
+  channel           String?   @db.VarChar(30)
+  recipient_phone   String?   @db.VarChar(50)
+  message           String?
+  sent_status       Boolean?  @default(false)
+  delivery_status   String?   @default("PENDING") @db.VarChar(50)
+  opened_at         DateTime? @db.Timestamp(6)
+  read_at           DateTime? @db.Timestamp(6)
+  failed_at         DateTime? @db.Timestamp(6)
+  metadata          Json?     @default("{}")
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  schools           schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model schools {
+  id                  Int                   @id @default(autoincrement())
+  school_name         String                @db.VarChar(255)
+  school_code         String                @unique @db.VarChar(50)
+  email               String?               @db.VarChar(255)
+  phone               String?               @db.VarChar(20)
+  address             String?
+  logo_url            String?
+  school_logo         String?
+  favicon_url         String?
+  school_favicon      String?
+  primary_color       String?               @default("#04142E") @db.VarChar(30)
+  secondary_color     String?               @default("#D4AF37") @db.VarChar(30)
+  city                String?               @db.VarChar(120)
+  state               String?               @db.VarChar(120)
+  country             String?               @default("India") @db.VarChar(120)
+  postal_code         String?               @db.VarChar(30)
+  website             String?
+  principal_name      String?               @db.VarChar(255)
+  principal_contact   String?               @db.VarChar(50)
+  owner_name          String?               @db.VarChar(255)
+  owner_contact       String?               @db.VarChar(50)
+  subscription_plan   String?               @default("BASIC") @db.VarChar(50)
+  subscription_status String?               @default("ACTIVE") @db.VarChar(50)
+  max_students        Int?                  @default(500)
+  is_active           Boolean?              @default(true)
+  branding            Json?                 @default("{}")
+  ai_branding_name    String?               @db.VarChar(255)
+  report_branding     Json?                 @default("{}")
+  certificate_branding Json?                @default("{}")
+  recognition_number  String?               @db.VarChar(120)
+  recognition_authority String?             @db.VarChar(255)
+  recognition_start_date DateTime?           @db.Date
+  recognition_expiry_date DateTime?          @db.Date
+  affiliation_number  String?               @db.VarChar(120)
+  affiliation_authority String?             @db.VarChar(255)
+  affiliation_start_date DateTime?           @db.Date
+  affiliation_expiry_date DateTime?          @db.Date
+  settings            Json?                 @default("{}")
+  created_by          Int?
+  created_at          DateTime?             @default(now()) @db.Timestamp(6)
+  updated_by          Int?
+  updated_at          DateTime?             @db.Timestamp(6)
+  ai_student_analysis ai_student_analysis[]
+  attendance          attendance[]
+  audit_logs          audit_logs[]
+  classes             classes[]
+  exams               exams[]
+  fee_payments        fee_payments[]
+  fees                fees[]
+  hostel_rooms        hostel_rooms[]
+  marks               marks[]
+  notifications       notifications[]
+  sections            sections[]
+  subjects            subjects[]
+  teachers            teachers[]
+  student_learning_gaps student_learning_gaps[]
+  student_backlogs    student_backlogs[]
+  teacher_teaching_gaps teacher_teaching_gaps[]
+  transport_routes    transport_routes[]
+  users               users[]
+  user_school_access  user_school_access[]
+  user_module_access  user_module_access[]
+  school_module_access school_module_access[]
+  hr_staff_master    hr_staff_master[]
+  hr_leave_categories hr_leave_categories[]
+  hr_leave_allocations hr_leave_allocations[]
+  hr_lop_entries     hr_lop_entries[]
+  hr_leave_requests  hr_leave_requests[]
+  hr_salary_structures hr_salary_structures[]
+  hr_salary_assignments hr_salary_assignments[]
+  hr_salary_history  hr_salary_history[]
+  hr_increment_requests hr_increment_requests[]
+  hr_payroll_runs    hr_payroll_runs[]
+  hr_pay_slips       hr_pay_slips[]
+  hr_pf_ledgers      hr_pf_ledgers[]
+  hr_approval_center hr_approval_center[]
+  hr_event_ledger    hr_event_ledger[]
+}
+
+model sections {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  class_id         Int?
+  section_name     String?   @db.VarChar(50)
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  classes      classes?  @relation(fields: [class_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  schools      schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model students {
+  id                 Int       @id @default(autoincrement())
+  enrollment_number  String?   @db.VarChar(100)
+  admission_number   String?   @db.VarChar(100)
+  name               String?   @db.VarChar(255)
+  first_name         String?   @db.VarChar(100)
+  middle_name        String?   @db.VarChar(100)
+  last_name          String?   @db.VarChar(100)
+  gender             String?   @db.VarChar(20)
+  dob                DateTime? @db.Date
+  phone              String?   @db.VarChar(20)
+  email              String?   @db.VarChar(255)
+  address            String?
+  admission_date     DateTime? @db.Date
+  religion           String?   @db.VarChar(100)
+  caste              String?   @db.VarChar(100)
+  blood_group        String?   @db.VarChar(20)
+  father_name        String?   @db.VarChar(255)
+  mother_name        String?   @db.VarChar(255)
+  father_phone       String?   @db.VarChar(20)
+  mother_phone       String?   @db.VarChar(20)
+  father_alternative_mobile String? @db.VarChar(20)
+  mother_alternative_mobile String? @db.VarChar(20)
+  guardian_alternative_mobile String? @db.VarChar(20)
+  emergency_contact_number String? @db.VarChar(20)
+  emergency_contact_name String? @db.VarChar(255)
+  emergency_relationship String? @db.VarChar(100)
+  father_occupation  String?   @db.VarChar(255)
+  mother_occupation  String?   @db.VarChar(255)
+  roll_number        String?   @db.VarChar(100)
+  section_id         Int?
+  session_id         Int?
+  is_active          Boolean?  @default(true)
+  city               String?   @db.VarChar(100)
+  state              String?   @db.VarChar(100)
+  country            String?   @db.VarChar(100)
+  medium             String?   @db.VarChar(100)
+  house              String?   @db.VarChar(100)
+  category           String?   @db.VarChar(100)
+  birth_place        String?   @db.VarChar(255)
+  mother_tongue      String?   @db.VarChar(100)
+  school_name        String?   @db.VarChar(255)
+  school_address     String?
+  school_class       String?   @db.VarChar(100)
+  pass_out_year      String?   @db.VarChar(20)
+  pan                String?   @db.VarChar(100)
+  student_type       String?   @db.VarChar(50)
+  note               String?
+  survey             String?   @db.VarChar(255)
+  pen                String?   @db.VarChar(255)
+  apaar              String?   @db.VarChar(255)
+  father_id_number   String?   @db.VarChar(255)
+  mother_id_number   String?   @db.VarChar(255)
+  is_suspended       Boolean?  @default(false)
+  suspend_start_date DateTime? @db.Date
+  suspend_end_date   DateTime? @db.Date
+  suspend_message    String?
+  uid                String?   @db.VarChar(255)
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+  updated_at         DateTime? @default(now()) @db.Timestamp(6)
+  school_id          Int?
+  academic_year_id   Int?
+  academic_year      String?   @db.VarChar(50)
+  has_previous_school Boolean? @default(false)
+  has_backlogs       Boolean?  @default(false)
+  previous_school_name String? @db.VarChar(255)
+  previous_school_address String?
+  previous_school_details String?
+  previous_board     String?   @db.VarChar(255)
+  previous_class_studied String? @db.VarChar(100)
+  previous_academic_year String? @db.VarChar(50)
+  previous_academic_performance String? @db.VarChar(80)
+  previous_school_percentage Decimal? @db.Decimal(5, 2)
+  previous_school_grade String? @db.VarChar(20)
+  previous_school_tc_number String? @db.VarChar(120)
+  previous_school_leaving_date DateTime? @db.Date
+  previous_school_reason_for_leaving String?
+  has_academic_gap   Boolean?  @default(false)
+  academic_gap_from_year String? @db.VarChar(50)
+  academic_gap_to_year String? @db.VarChar(50)
+  academic_gap_duration String? @db.VarChar(100)
+  academic_gap_reason String?
+  current_class_id   Int?
+  current_section_id Int?
+  created_by         Int?
+  transport_required Boolean?  @default(false)
+  transport_route_id Int?
+  hostel_required    Boolean?  @default(false)
+  hostel_room_id     Int?
+  photo_url          String?
+  student_username   String?   @db.VarChar(255)
+  parent_username    String?   @db.VarChar(255)
+  guardian_username  String?   @db.VarChar(255)
+  student_status     String?   @default("ACTIVE") @db.VarChar(40)
+  status_updated_at  DateTime? @db.Timestamp(6)
+  status_reason      String?
+  learning_gaps      student_learning_gaps[]
+  student_backlogs   student_backlogs[]
+}
+
+model subjects {
+  id                  Int                   @id @default(autoincrement())
+  school_id           Int?
+  academic_year_id    Int?
+  subject_name        String?               @db.VarChar(255)
+  subject_code        String?               @db.VarChar(100)
+  description         String?
+  status              String?               @default("ACTIVE") @db.VarChar(30)
+  created_by          Int?
+  created_at          DateTime?             @default(now()) @db.Timestamp(6)
+  ai_student_analysis ai_student_analysis[]
+  marks               marks[]
+  student_backlogs    student_backlogs[]
+  schools             schools?              @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, status], map: "idx_subjects_school_year_status")
+}
+
+model teachers {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  user_id          Int?
+  staff_id         Int?      @unique
+  employee_id      String?   @unique @db.VarChar(100)
+  staff_type       String?   @default("Teaching") @db.VarChar(20)
+  qualification    String?   @db.VarChar(255)
+  experience_years Int?
+  joining_date     DateTime? @db.Date
+  salary           Decimal?  @db.Decimal(12, 2)
+  department       String?   @db.VarChar(255)
+  subject_specialization String? @db.Text
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  first_name       String?   @db.VarChar(100)
+  last_name        String?   @db.VarChar(100)
+  gender           String?   @db.VarChar(20)
+  phone            String?   @db.VarChar(20)
+  whatsapp_number  String?   @db.VarChar(20)
+  alternative_mobile String? @db.VarChar(20)
+  emergency_contact_number String? @db.VarChar(20)
+  emergency_contact_person String? @db.VarChar(255)
+  relationship     String?   @db.VarChar(100)
+  email            String?   @db.VarChar(255)
+  designation      String?   @db.VarChar(100)
+  address          String?
+  current_address  Json?
+  permanent_address Json?
+  employment_history Json?
+  salary_history    Json?
+  classes_handling Json?     @default("[]")
+  sections_handling Json?     @default("[]")
+  documents         Json?
+  qualifications    Json?
+  certifications    Json?
+  teacher_notes     Json?
+  performance_notes Json?
+  is_active        Boolean?  @default(true)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  classes          classes[]
+  schools          schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users            users?    @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff_record     hr_staff_master? @relation("TeacherStaffLink")
+  teaching_gaps    teacher_teaching_gaps[]
+}
+
+model student_learning_gaps {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  student_id       Int?
+  academic_year_id Int?
+  gap_category     String?   @db.VarChar(100)
+  subject          String?   @db.VarChar(255)
+  description      String?
+  severity         String?   @db.VarChar(50)
+  identified_by    Int?
+  identified_date  DateTime? @db.Date
+  action_plan      String?
+  target_date      DateTime? @db.Date
+  status           String?   @default("OPEN") @db.VarChar(40)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  schools          schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  students         students? @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users            users?    @relation("student_gap_identified_by", fields: [identified_by], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model teacher_teaching_gaps {
+  id                    Int       @id @default(autoincrement())
+  school_id             Int?
+  teacher_id            Int?
+  academic_year_id      Int?
+  gap_category          String?   @db.VarChar(100)
+  description           String?
+  severity              String?   @db.VarChar(50)
+  training_recommendation String?
+  target_date           DateTime? @db.Date
+  status                String?   @default("OPEN") @db.VarChar(40)
+  created_at            DateTime? @default(now()) @db.Timestamp(6)
+  updated_at            DateTime? @default(now()) @db.Timestamp(6)
+  schools               schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  teachers              teachers? @relation(fields: [teacher_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model transport_routes {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  route_name     String?   @db.VarChar(255)
+  vehicle_number String?   @db.VarChar(100)
+  driver_name    String?   @db.VarChar(255)
+  driver_phone   String?   @db.VarChar(20)
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  schools        schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model users {
+  id            Int          @id @default(autoincrement())
+  school_id     Int?
+  username      String?      @db.VarChar(120)
+  full_name     String       @db.VarChar(255)
+  email         String       @unique @db.VarChar(255)
+  phone         String?      @db.VarChar(20)
+  password_hash String
+  platform_type String       @default("EDUCATIONAL") @db.VarChar(40)
+  role          String       @db.VarChar(50)
+  status        String       @default("ACTIVE") @db.VarChar(40)
+  is_active     Boolean?     @default(true)
+  is_deleted    Boolean?     @default(false)
+  deleted_at    DateTime?    @db.Timestamp(6)
+  deleted_by    Int?
+  locked_at     DateTime?    @db.Timestamp(6)
+  locked_by     Int?
+  archived_at   DateTime?    @db.Timestamp(6)
+  archived_by   Int?
+  whatsapp_number String?    @db.VarChar(20)
+  alternative_mobile String? @db.VarChar(20)
+  emergency_contact_number String? @db.VarChar(20)
+  preferred_language String? @default("en") @db.VarChar(10)
+  last_login    DateTime?    @db.Timestamp(6)
+  created_at    DateTime?    @default(now()) @db.Timestamp(6)
+  updated_at    DateTime?    @db.Timestamp(6)
+  audit_logs    audit_logs[]
+  teachers      teachers[]
+  identified_student_gaps student_learning_gaps[] @relation("student_gap_identified_by")
+  schools       schools?     @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  user_school_access user_school_access[]
+  user_module_access user_module_access[]
+}
+
+model user_school_access {
+  id         Int       @id @default(autoincrement())
+  user_id    Int
+  school_id  Int
+  is_primary Boolean?  @default(false)
+  is_active  Boolean?  @default(true)
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+  created_by Int?
+  schools    schools   @relation(fields: [school_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([user_id, school_id], map: "uq_user_school_access_user_school")
+  @@index([user_id, is_active], map: "idx_user_school_access_user_active")
+  @@index([school_id, is_active], map: "idx_user_school_access_school_active")
+}
+
+model module_master {
+  id           Int      @id @default(autoincrement())
+  module_key   String   @unique @db.VarChar(100)
+  module_name  String   @db.VarChar(255)
+  category     String?  @db.VarChar(80)
+  sort_order   Int?     @default(0)
+  is_active    Boolean? @default(true)
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+  updated_at   DateTime? @default(now()) @db.Timestamp(6)
+  user_module_access user_module_access[]
+}
+
+model user_module_access {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  school_id  Int
+  module_id  Int
+  created_by Int?
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+  updated_at DateTime? @default(now()) @db.Timestamp(6)
+  is_active  Boolean?  @default(true)
+  module_master module_master @relation(fields: [module_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  schools    schools   @relation(fields: [school_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([user_id, school_id, module_id], map: "uq_user_module_access_scope")
+  @@index([user_id, school_id, is_active], map: "idx_user_module_access_user_school")
+  @@index([school_id, module_id, is_active], map: "idx_user_module_access_school_module")
+}
+
+model school_module_access {
+  id         Int       @id @default(autoincrement())
+  school_id  Int
+  module_key String    @db.VarChar(80)
+  enabled    Boolean   @default(false)
+  enabled_by Int?
+  enabled_at DateTime? @db.Timestamp(6)
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+  updated_at DateTime? @default(now()) @db.Timestamp(6)
+  schools    schools   @relation(fields: [school_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([school_id, module_key], map: "school_module_access_school_id_module_key_key")
+  @@index([school_id], map: "idx_school_module_access_school")
+  @@index([school_id, module_key], map: "idx_school_module_access_school_module")
+  @@index([module_key, enabled], map: "idx_school_module_access_enabled")
+}
+
+model user_login_history {
+  id            Int       @id @default(autoincrement())
+  user_id       Int?
+  school_id     Int?
+  platform_type String?   @db.VarChar(40)
+  status        String    @db.VarChar(80)
+  ip_address    String?   @db.VarChar(100)
+  user_agent    String?
+  reason        String?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([user_id, created_at], map: "idx_user_login_history_user")
+  @@index([school_id, created_at], map: "idx_user_login_history_school")
+  @@index([status, created_at], map: "idx_user_login_history_status")
+}
+
+model hospital_subscriptions {
+  id          Int       @id @default(autoincrement())
+  tenant_id   Int
+  hospital_id Int
+  plan_name   String    @default("ENTERPRISE") @db.VarChar(120)
+  start_date  DateTime? @db.Date
+  end_date    DateTime? @db.Date
+  status      String    @default("ACTIVE") @db.VarChar(80)
+  created_by  Int?
+  updated_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted  Boolean?  @default(false)
+
+  @@index([tenant_id, hospital_id, status], map: "idx_hospital_subscriptions_scope")
+}
+
+model hospital_module_access {
+  id          Int       @id @default(autoincrement())
+  tenant_id   Int
+  hospital_id Int
+  module_code String    @db.VarChar(80)
+  enabled     Boolean?  @default(true)
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  enabled_by  Int?
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_by  Int?
+
+  @@unique([tenant_id, hospital_id, module_code], map: "uq_hospital_module_access_scope")
+  @@index([tenant_id, hospital_id, enabled], map: "idx_hospital_module_access_enabled")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model teachers_backup {
+  id               Int?
+  school_id        Int?
+  employee_id      String?   @db.VarChar(50)
+  first_name       String?   @db.VarChar(100)
+  last_name        String?   @db.VarChar(100)
+  gender           String?   @db.VarChar(20)
+  phone            String?   @db.VarChar(20)
+  email            String?   @db.VarChar(255)
+  qualification    String?   @db.VarChar(255)
+  experience_years Int?
+  joining_date     DateTime? @db.Date
+  department       String?   @db.VarChar(100)
+  designation      String?   @db.VarChar(100)
+  salary           Decimal?  @db.Decimal(12, 2)
+  address          String?
+  is_active        Boolean?
+  created_at       DateTime? @db.Timestamp(6)
+
+  @@ignore
+}
+
+model attendance_master {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  class_id        Int?
+  section_id      Int?
+  student_id      Int?
+  attendance_date DateTime? @db.Date
+  status          String?   @db.VarChar(20)
+  remarks         String?
+  created_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model teacher_attendance {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  teacher_id      Int?
+  attendance_date DateTime? @db.Date
+  status          String?   @db.VarChar(20)
+  remarks         String?
+  created_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model fee_categories {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  class_id         Int?
+  section_id       Int?
+  fee_name         String    @db.VarChar(255)
+  fee_code         String?   @db.VarChar(50)
+  amount           Decimal?  @default(0) @db.Decimal(12, 2)
+  frequency        String?   @db.VarChar(50)
+  billing_cycle    String?   @db.VarChar(50)
+  description      String?
+  metadata         Json?
+  is_active        Boolean?  @default(true)
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model invoices {
+  id             Int       @id @default(autoincrement())
+  invoice_number String?   @unique @db.VarChar(100)
+  school_id      Int?
+  academic_year_id Int?
+  class_id       Int?
+  section_id     Int?
+  student_id     Int?
+  invoice_date   DateTime? @db.Date
+  due_date       DateTime? @db.Date
+  total_amount   Decimal?  @db.Decimal(12, 2)
+  paid_amount    Decimal?  @default(0) @db.Decimal(12, 2)
+  balance_amount Decimal?  @db.Decimal(12, 2)
+  status         String?   @db.VarChar(50)
+  billing_scope  String?   @db.VarChar(50)
+  billing_period String?   @db.VarChar(50)
+  installment_count Int?
+  source         String?   @db.VarChar(100)
+  metadata       Json?
+  created_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model payment_receipts {
+  id             Int       @id @default(autoincrement())
+  receipt_number String?   @unique @db.VarChar(100)
+  school_id      Int?
+  academic_year_id Int?
+  payment_id     Int?
+  receipt_date   DateTime? @db.Date
+  amount         Decimal?  @db.Decimal(12, 2)
+  created_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model payments {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  class_id         Int?
+  section_id       Int?
+  invoice_id       Int?
+  student_id       Int?
+  payment_date     DateTime? @db.Date
+  payment_method   String?   @db.VarChar(50)
+  amount           Decimal?  @db.Decimal(12, 2)
+  reference_number String?   @db.VarChar(255)
+  receipt_number   String?   @db.VarChar(100)
+  received_by      Int?
+  remarks          String?
+  metadata         Json?
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model permissions {
+  id          Int     @id @default(autoincrement())
+  module_name String? @db.VarChar(100)
+  action_name String? @db.VarChar(100)
+}
+
+model role_permissions {
+  id            Int  @id @default(autoincrement())
+  role_id       Int?
+  permission_id Int?
+}
+
+model roles {
+  id          Int     @id @default(autoincrement())
+  role_name   String? @unique @db.VarChar(100)
+  description String?
+}
+
+model student_fee_assignments {
+  id              Int       @id @default(autoincrement())
+  student_id      Int?
+  fee_category_id Int?
+  assigned_amount Decimal?  @db.Decimal(12, 2)
+  discount_amount Decimal?  @default(0) @db.Decimal(12, 2)
+  academic_year   String?   @db.VarChar(20)
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model exam_types {
+  id          Int       @id @default(autoincrement())
+  exam_name   String?   @db.VarChar(100)
+  description String?
+  is_active   Boolean?  @default(true)
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model question_bank {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  class_id         Int?
+  section_id       Int?
+  subject_id       Int?
+  chapter_name     String?   @db.VarChar(255)
+  topic_name       String?   @db.VarChar(255)
+  learning_outcome String?   @db.VarChar(255)
+  difficulty_level String?   @db.VarChar(50)
+  bloom_level      String?   @db.VarChar(100)
+  question_type    String?   @db.VarChar(50)
+  question_text    String?
+  answer_text      String?
+  ideal_answer     String?
+  rubric           String?
+  keywords         String?
+  max_marks        Int?
+  metadata         Json?     @default("{}")
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, academic_year_id, subject_id, class_id, section_id], map: "idx_question_bank_scope")
+}
+
+model question_paper_questions {
+  id                Int      @id @default(autoincrement())
+  question_paper_id Int?
+  question_id       Int?
+  display_order     Int?
+  section_name      String?  @db.VarChar(100)
+  question_marks    Int?
+  is_optional       Boolean? @default(false)
+}
+
+model question_papers {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  exam_id          Int?
+  exam_type_id     Int?
+  class_id         Int?
+  section_id       Int?
+  subject_id       Int?
+  paper_name       String?   @db.VarChar(255)
+  total_marks      Int?
+  duration_minutes Int?
+  instructions     String?
+  exam_date        DateTime? @db.Date
+  metadata         Json?
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model answer_evaluation_uploads {
+  id                    Int       @id @default(autoincrement())
+  school_id             Int?
+  academic_year_id      Int?
+  exam_schedule_id      Int?
+  question_paper_id     Int?
+  class_id              Int?
+  section_id            Int?
+  student_id            Int?
+  uploaded_by           Int?
+  original_file_name    String?   @db.VarChar(255)
+  stored_file_name      String?   @db.VarChar(255)
+  file_path             String?
+  mime_type             String?   @db.VarChar(120)
+  page_count            Int?
+  ocr_text              String?
+  extracted_answers     Json?     @default("[]")
+  ai_evaluation         Json?     @default("{}")
+  ai_summary            Json?     @default("{}")
+  teacher_review_status String?   @default("PENDING") @db.VarChar(40)
+  teacher_reviewed_by   Int?
+  teacher_reviewed_at   DateTime? @db.Timestamp(6)
+  teacher_comments      String?
+  created_at            DateTime? @default(now()) @db.Timestamp(6)
+  updated_at            DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, academic_year_id, exam_schedule_id, class_id, section_id, student_id], map: "idx_answer_eval_scope")
+  @@index([question_paper_id, teacher_review_status, created_at], map: "idx_answer_eval_review")
+}
+
+model student_exam_analysis {
+  id                 Int       @id @default(autoincrement())
+  student_id         Int?
+  question_paper_id  Int?
+  strengths          String?
+  weaknesses         String?
+  ai_recommendations String?
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model student_exam_answers {
+  id                 Int       @id @default(autoincrement())
+  student_id         Int?
+  question_paper_id  Int?
+  question_id        Int?
+  obtained_marks     Decimal?  @db.Decimal(5, 2)
+  evaluator_comments String?
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model exam_schedule {
+  id                     Int       @id @default(autoincrement())
+  school_id              Int?
+  academic_year_id       Int?
+  exam_id                Int?
+  exam_type_id           Int?
+  question_paper_id      Int?
+  class_id               Int?
+  section_id             Int?
+  subject_id             Int?
+  exam_date              DateTime? @db.Date
+  start_time             DateTime? @db.Time(6)
+  end_time               DateTime? @db.Time(6)
+  room_no                String?   @db.VarChar(50)
+  invigilator_teacher_id Int?
+  status                 String?   @default("SCHEDULED") @db.VarChar(50)
+  metadata               Json?
+  created_by             Int?
+  created_at             DateTime? @default(now()) @db.Timestamp(6)
+  updated_at             DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model student_marks_entry {
+  id                Int       @id @default(autoincrement())
+  school_id         Int?
+  academic_year_id  Int?
+  class_id          Int?
+  section_id        Int?
+  student_id        Int?
+  exam_schedule_id  Int?
+  question_paper_id Int?
+  question_id       Int?
+  obtained_marks    Decimal?  @db.Decimal(5, 2)
+  max_marks         Decimal?  @db.Decimal(5, 2)
+  grade             String?   @db.VarChar(20)
+  remarks           String?
+  student_answer_text String?
+  ai_suggested_marks Decimal?  @db.Decimal(5, 2)
+  ai_exact_match_score Decimal? @db.Decimal(5, 2)
+  ai_concept_match_score Decimal? @db.Decimal(5, 2)
+  ai_keyword_match_score Decimal? @db.Decimal(5, 2)
+  ai_semantic_similarity_score Decimal? @db.Decimal(5, 2)
+  ai_completeness_score Decimal? @db.Decimal(5, 2)
+  ai_grammar_score Decimal? @db.Decimal(5, 2)
+  ai_writing_quality_score Decimal? @db.Decimal(5, 2)
+  ai_logical_flow_score Decimal? @db.Decimal(5, 2)
+  ai_critical_thinking_score Decimal? @db.Decimal(5, 2)
+  ai_quality_label String?   @db.VarChar(40)
+  ai_understanding_level String? @db.VarChar(20)
+  ai_confidence_percent Decimal? @db.Decimal(5, 2)
+  ai_reasoning       String?
+  ai_misconceptions  Json?     @default("[]")
+  teacher_review_status String? @default("PENDING") @db.VarChar(40)
+  teacher_reviewed_by Int?
+  teacher_reviewed_at DateTime? @db.Timestamp(6)
+  created_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([student_id, exam_schedule_id, question_id], map: "uq_student_question")
+}
+
+model school_profile {
+  id             Int       @id @default(autoincrement())
+  school_name    String?   @db.VarChar(255)
+  school_code    String?   @db.VarChar(100)
+  principal_name String?   @db.VarChar(255)
+  email          String?   @db.VarChar(255)
+  phone          String?   @db.VarChar(50)
+  website        String?   @db.VarChar(255)
+  address        String?
+  city           String?   @db.VarChar(100)
+  state          String?   @db.VarChar(100)
+  country        String?   @db.VarChar(100)
+  academic_year  String?   @db.VarChar(50)
+  logo_url       String?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model smtp_settings {
+  id           Int     @id @default(autoincrement())
+  host         String? @db.VarChar(255)
+  port         Int?
+  username     String? @db.VarChar(255)
+  password     String? @db.VarChar(255)
+  sender_email String? @db.VarChar(255)
+  sender_name  String? @db.VarChar(255)
+}
+
+model ai_settings {
+  id                    Int      @id @default(autoincrement())
+  enable_ai             Boolean? @default(true)
+  enable_parent_advice  Boolean? @default(true)
+  enable_teacher_advice Boolean? @default(true)
+  passing_percentage    Int?     @default(35)
+}
+
+model communication_logs {
+  id           Int       @id @default(autoincrement())
+  student_id   Int?
+  message_type String?   @db.VarChar(50)
+  recipient    String?   @db.VarChar(255)
+  message      String?
+  status       String?   @db.VarChar(50)
+  sent_at      DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model hostel_students {
+  id           Int       @id @default(autoincrement())
+  student_id   Int?
+  room_number  String?   @db.VarChar(50)
+  bed_number   String?   @db.VarChar(50)
+  joining_date DateTime? @db.Date
+  status       String?   @default("ACTIVE") @db.VarChar(50)
+}
+
+model hostel_wardens {
+  id    Int     @id @default(autoincrement())
+  name  String? @db.VarChar(255)
+  phone String? @db.VarChar(50)
+  email String? @db.VarChar(255)
+}
+
+model transport_assignments {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  assigned_to_type String?   @db.VarChar(50)
+  student_id       Int?
+  teacher_id       Int?
+  staff_id         Int?
+  route_id         Int?
+  pickup_point     String?   @db.VarChar(255)
+  drop_point       String?   @db.VarChar(255)
+  status           String?   @default("ACTIVE") @db.VarChar(50)
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model academic_years {
+  id            Int       @id @default(autoincrement())
+  school_id     Int?
+  academic_year String?   @db.VarChar(50)
+  start_date    DateTime? @db.Date
+  end_date      DateTime? @db.Date
+  is_current    Boolean?  @default(false)
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+  hr_staff_master    hr_staff_master[]
+  hr_leave_allocations hr_leave_allocations[]
+  hr_lop_entries     hr_lop_entries[]
+  hr_leave_requests  hr_leave_requests[]
+  hr_salary_structures hr_salary_structures[]
+  hr_salary_assignments hr_salary_assignments[]
+  hr_salary_history  hr_salary_history[]
+  hr_increment_requests hr_increment_requests[]
+  hr_payroll_runs    hr_payroll_runs[]
+  hr_pay_slips       hr_pay_slips[]
+  hr_pf_ledgers      hr_pf_ledgers[]
+  hr_approval_center hr_approval_center[]
+  hr_event_ledger    hr_event_ledger[]
+  student_backlogs   student_backlogs[]
+}
+
+model transport_stops {
+  id         Int       @id @default(autoincrement())
+  school_id  Int?
+  stop_name  String?   @db.VarChar(255)
+  stop_time  String?   @db.VarChar(50)
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model transport_vehicles {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  academic_year_id Int?
+  vehicle_number String?   @db.VarChar(100)
+  vehicle_type   String?   @db.VarChar(100)
+  capacity       Int?
+  driver_name    String?   @db.VarChar(255)
+  driver_phone   String?   @db.VarChar(20)
+  created_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model hostel_allocations {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  student_id      Int?
+  hostel_id       Int?
+  room_id         Int?
+  bed_number      String?   @db.VarChar(20)
+  allocation_date DateTime? @db.Date
+  created_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model hostels {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  hostel_name      String?   @db.VarChar(255)
+  hostel_type      String?   @db.VarChar(50)
+  warden_name      String?   @db.VarChar(255)
+  warden_phone     String?   @db.VarChar(20)
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model student_promotions {
+  id            Int       @id @default(autoincrement())
+  school_id     Int?
+  student_id    Int?
+  from_class_id Int?
+  to_class_id   Int?
+  academic_year String?   @db.VarChar(50)
+  promoted_by   String?   @db.VarChar(255)
+  promoted_on   DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model student_academic_history {
+  id                Int       @id @default(autoincrement())
+  student_id        Int
+  school_id         Int?
+  academic_year_id  Int?
+  class_id          Int?
+  section_id        Int?
+  promotion_status  String?   @db.VarChar(80)
+  promoted_on       DateTime? @default(now()) @db.Timestamp(6)
+  created_by        Int?
+  metadata          Json?     @default("{}")
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, student_id], map: "idx_student_academic_history_school_student")
+  @@index([student_id, academic_year_id], map: "idx_student_academic_history_student_year")
+  @@index([promotion_status, promoted_on], map: "idx_student_academic_history_status")
+}
+
+model student_backlogs {
+  id               Int       @id @default(autoincrement())
+  student_id       Int
+  school_id        Int?
+  academic_year_id Int?
+  subject_id       Int?
+  exam_id          Int?
+  backlog_status   String?   @default("PENDING") @db.VarChar(30)
+  backlog_reason   String?
+  cleared_date     DateTime? @db.Date
+  remarks          String?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  students         students  @relation(fields: [student_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  schools          schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years   academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  subjects         subjects? @relation(fields: [subject_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  exams            exams?    @relation(fields: [exam_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([student_id, backlog_status], map: "idx_student_backlogs_student_status")
+  @@index([school_id, backlog_status], map: "idx_student_backlogs_school_status")
+  @@index([academic_year_id, backlog_status], map: "idx_student_backlogs_year_status")
+  @@index([subject_id, backlog_status], map: "idx_student_backlogs_subject_status")
+  @@index([exam_id, backlog_status], map: "idx_student_backlogs_exam_status")
+}
+
+model hr_staff_master {
+  id                   Int       @id @default(autoincrement())
+  school_id            Int?
+  academic_year_id     Int?
+  teacher_id           Int?      @unique
+  employee_id          String    @unique @db.VarChar(120)
+  employee_number      String?   @db.VarChar(120)
+  staff_type           String?   @default("Teaching") @db.VarChar(30)
+  staff_category       String?   @db.VarChar(120)
+  sub_category         String?   @db.VarChar(120)
+  first_name           String?   @db.VarChar(120)
+  last_name            String?   @db.VarChar(120)
+  department           String?   @db.VarChar(255)
+  designation          String?   @db.VarChar(255)
+  class_assignment     String?   @db.VarChar(255)
+  section_assignment   String?   @db.VarChar(255)
+  subject_assignment   String?   @db.VarChar(255)
+  assignment_type      String?   @db.VarChar(80)
+  is_class_teacher     Boolean?  @default(false)
+  teaching_experience  String?   @db.VarChar(255)
+  qualification        String?   @db.VarChar(255)
+  teacher_gap_history  String?
+  experience_years     Decimal?  @db.Decimal(6, 2)
+  experience_gap       String?   @db.VarChar(255)
+  previous_school      String?   @db.VarChar(255)
+  previous_organization String?  @db.VarChar(255)
+  reporting_manager    String?   @db.VarChar(255)
+  work_location        String?   @db.VarChar(255)
+  joining_date         DateTime? @db.Date
+  mobile               String?   @db.VarChar(20)
+  alternate_mobile     String?   @db.VarChar(20)
+  whatsapp_number      String?   @db.VarChar(20)
+  email                String?   @db.VarChar(255)
+  address              String?
+  current_address      Json?     @default("{}")
+  permanent_address    Json?     @default("{}")
+  pf_number            String?   @db.VarChar(50)
+  uan_number           String?   @db.VarChar(50)
+  pf_joining_date      DateTime? @db.Date
+  pf_status            String?   @db.VarChar(50)
+  pf_applicable        Boolean?  @default(true)
+  eps_applicable       Boolean?  @default(true)
+  pf_exit_date         DateTime? @db.Date
+  basic_salary         Decimal?  @db.Decimal(12, 2)
+  da                   Decimal?  @db.Decimal(12, 2)
+  pf_wage              Decimal?  @db.Decimal(12, 2)
+  voluntary_pf_percent Decimal?  @db.Decimal(5, 2)
+  employer_pf_percent  Decimal?  @db.Decimal(5, 2)
+  salary_details       String?
+  bank_details         Json?     @default("{}")
+  pan                  String?   @db.VarChar(30)
+  aadhaar              String?   @db.VarChar(30)
+  salary_structure_id  Int?
+  documents            Json?     @default("{}")
+  notes                Json?     @default("{}")
+  is_active            Boolean?  @default(true)
+  created_by           Int?
+  updated_by           Int?
+  created_at           DateTime? @default(now()) @db.Timestamp(6)
+  updated_at           DateTime? @default(now()) @db.Timestamp(6)
+  schools              schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years       academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  teacher              teachers? @relation("TeacherStaffLink", fields: [teacher_id], references: [id], onDelete: SetNull, onUpdate: NoAction)
+  salary_structure      hr_salary_structures? @relation(fields: [salary_structure_id], references: [id], onDelete: SetNull, onUpdate: NoAction)
+  leave_requests       hr_leave_requests[]
+  leave_allocations    hr_leave_allocations[]
+  lop_entries          hr_lop_entries[]
+  salary_assignments   hr_salary_assignments[]
+  salary_history_entries hr_salary_history[]
+  increment_requests   hr_increment_requests[]
+  payslips             hr_pay_slips[]
+  pf_ledgers           hr_pf_ledgers[]
+
+  @@index([school_id, academic_year_id], map: "idx_hr_staff_school_year")
+  @@index([department, designation], map: "idx_hr_staff_department_designation")
+  @@index([mobile], map: "idx_hr_staff_mobile")
+}
+
+model hr_pf_ledgers {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  staff_id         Int?
+  payroll_run_id   Int?
+  payroll_batch    String?   @db.VarChar(120)
+  payroll_month    Int?
+  payroll_year     Int?
+  uan_number       String?   @db.VarChar(50)
+  pf_member_id     String?   @db.VarChar(50)
+  pf_applicable    Boolean?  @default(true)
+  eps_applicable   Boolean?  @default(true)
+  basic_salary     Decimal?  @db.Decimal(12, 2)
+  da               Decimal?  @db.Decimal(12, 2)
+  pf_wage          Decimal?  @db.Decimal(12, 2)
+  employee_pf      Decimal?  @db.Decimal(12, 2)
+  employer_pf      Decimal?  @db.Decimal(12, 2)
+  eps              Decimal?  @db.Decimal(12, 2)
+  edli             Decimal?  @db.Decimal(12, 2)
+  filed_status     String?   @default("PENDING") @db.VarChar(40)
+  filed_at         DateTime? @db.Timestamp(6)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  schools          schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years   academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff            hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  payroll_run      hr_payroll_runs? @relation(fields: [payroll_run_id], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, payroll_year, payroll_month], map: "idx_hr_pf_ledgers_scope")
+  @@index([school_id, uan_number], map: "idx_hr_pf_ledgers_uan")
+}
+
+model hr_leave_categories {
+  id                    Int       @id @default(autoincrement())
+  school_id             Int?
+  category_name         String    @db.VarChar(120)
+  category_code         String?   @db.VarChar(50)
+  leaves_per_year       Decimal?  @db.Decimal(6, 2)
+  carry_forward_allowed Boolean?  @default(false)
+  max_consecutive_days  Int?      @default(3)
+  requires_approval     Boolean?  @default(true)
+  is_active             Boolean?  @default(true)
+  created_by            Int?
+  updated_by            Int?
+  created_at            DateTime? @default(now()) @db.Timestamp(6)
+  updated_at            DateTime? @default(now()) @db.Timestamp(6)
+  schools               schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  leave_requests        hr_leave_requests[]
+  leave_allocations     hr_leave_allocations[]
+
+  @@unique([school_id, category_name], map: "uq_hr_leave_categories_name")
+}
+
+model hr_leave_allocations {
+  id                Int       @id @default(autoincrement())
+  school_id         Int?
+  academic_year_id   Int?
+  staff_id          Int?
+  leave_category_id Int?
+  department        String?   @db.VarChar(255)
+  designation       String?   @db.VarChar(255)
+  allocated_days    Decimal?  @db.Decimal(6, 2)
+  carry_forward     Boolean?  @default(false)
+  is_active        Boolean?  @default(true)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  schools          schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years   academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff            hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  leave_category   hr_leave_categories? @relation(fields: [leave_category_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([school_id, academic_year_id, staff_id, leave_category_id], map: "uq_hr_leave_allocation_scope")
+}
+
+model hr_leave_requests {
+  id                Int       @id @default(autoincrement())
+  school_id         Int?
+  academic_year_id   Int?
+  staff_id          Int?
+  leave_category_id Int?
+  from_date         DateTime  @db.Date
+  to_date           DateTime  @db.Date
+  days_requested    Decimal?  @db.Decimal(6, 2)
+  reason            String?
+  attachment        Json?     @default("{}")
+  status            String?   @default("PENDING") @db.VarChar(40)
+  approved_by       Int?
+  approved_at       DateTime? @db.Timestamp(6)
+  rejection_reason  String?
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+  schools           schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years    academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff             hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  leave_category    hr_leave_categories? @relation(fields: [leave_category_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, status], map: "idx_hr_leave_requests_scope")
+}
+
+model hr_lop_entries {
+  id                Int       @id @default(autoincrement())
+  school_id         Int?
+  academic_year_id   Int?
+  staff_id          Int?
+  attendance_date   DateTime? @db.Date
+  days_lost         Decimal?  @db.Decimal(6, 2)
+  amount            Decimal?  @db.Decimal(12, 2)
+  reason            String?   @db.VarChar(255)
+  source            String?   @db.VarChar(80)
+  status            String?   @default("GENERATED") @db.VarChar(40)
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+  schools           schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years    academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff             hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, staff_id], map: "idx_hr_lop_entries_scope")
+}
+
+model hr_salary_structures {
+  id                  Int       @id @default(autoincrement())
+  school_id           Int?
+  academic_year_id    Int?
+  structure_name      String    @db.VarChar(255)
+  basic               Decimal?  @db.Decimal(12, 2)
+  hra                 Decimal?  @db.Decimal(12, 2)
+  da                  Decimal?  @db.Decimal(12, 2)
+  special_allowance   Decimal?  @db.Decimal(12, 2)
+  transport_allowance Decimal?  @db.Decimal(12, 2)
+  medical_allowance   Decimal?  @db.Decimal(12, 2)
+  other_allowances    Decimal?  @db.Decimal(12, 2)
+  pf                  Decimal?  @db.Decimal(12, 2)
+  esi                 Decimal?  @db.Decimal(12, 2)
+  professional_tax    Decimal?  @db.Decimal(12, 2)
+  income_tax          Decimal?  @db.Decimal(12, 2)
+  other_deductions    Decimal?  @db.Decimal(12, 2)
+  gross_salary        Decimal?  @db.Decimal(12, 2)
+  net_salary          Decimal?  @db.Decimal(12, 2)
+  metadata            Json?     @default("{}")
+  is_active           Boolean?  @default(true)
+  created_by          Int?
+  updated_by          Int?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+  schools             schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years      academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff               hr_staff_master[]
+  salary_assignments   hr_salary_assignments[]
+  salary_history       hr_salary_history[]
+
+  @@index([school_id, academic_year_id, is_active], map: "idx_hr_salary_structures_scope")
+}
+
+model hr_salary_assignments {
+  id                 Int       @id @default(autoincrement())
+  school_id          Int?
+  academic_year_id   Int?
+  staff_id           Int?
+  salary_structure_id Int?
+  effective_from     DateTime? @db.Date
+  effective_to       DateTime? @db.Date
+  current_salary     Decimal?  @db.Decimal(12, 2)
+  status             String?   @default("ACTIVE") @db.VarChar(40)
+  created_by         Int?
+  updated_by         Int?
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+  updated_at         DateTime? @default(now()) @db.Timestamp(6)
+  schools            schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years     academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff              hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  salary_structure    hr_salary_structures? @relation(fields: [salary_structure_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, staff_id], map: "idx_hr_salary_assignments_scope")
+}
+
+model hr_salary_history {
+  id                 Int       @id @default(autoincrement())
+  school_id          Int?
+  academic_year_id   Int?
+  staff_id           Int?
+  salary_structure_id Int?
+  old_salary        Decimal?  @db.Decimal(12, 2)
+  new_salary        Decimal?  @db.Decimal(12, 2)
+  change_reason     String?
+  revised_by        Int?
+  revised_at        DateTime? @default(now()) @db.Timestamp(6)
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  schools           schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years    academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff             hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  salary_structure  hr_salary_structures? @relation(fields: [salary_structure_id], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, staff_id], map: "idx_hr_salary_history_scope")
+}
+
+model hr_increment_requests {
+  id                     Int       @id @default(autoincrement())
+  school_id              Int?
+  academic_year_id       Int?
+  staff_id               Int?
+  current_salary         Decimal?  @db.Decimal(12, 2)
+  requested_salary       Decimal?  @db.Decimal(12, 2)
+  requested_percentage   Decimal?  @db.Decimal(12, 2)
+  requested_amount       Decimal?  @db.Decimal(12, 2)
+  owner_adjustment_percentage Decimal? @db.Decimal(12, 2)
+  owner_adjustment_amount Decimal? @db.Decimal(12, 2)
+  final_salary           Decimal?  @db.Decimal(12, 2)
+  reason                 String?
+  status                 String?   @default("PENDING") @db.VarChar(40)
+  requested_by           Int?
+  approved_by            Int?
+  approved_at            DateTime? @db.Timestamp(6)
+  created_at             DateTime? @default(now()) @db.Timestamp(6)
+  updated_at             DateTime? @default(now()) @db.Timestamp(6)
+  schools                schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years         academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  staff                  hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, status], map: "idx_hr_increment_requests_scope")
+}
+
+model hr_payroll_runs {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  payroll_month    Int?
+  payroll_year     Int?
+  total_staff      Int?      @default(0)
+  total_gross      Decimal?  @db.Decimal(12, 2)
+  total_deductions Decimal?  @db.Decimal(12, 2)
+  total_net        Decimal?  @db.Decimal(12, 2)
+  status           String?   @default("DRAFT") @db.VarChar(40)
+  generated_by     Int?
+  approved_by      Int?
+  approved_at      DateTime? @db.Timestamp(6)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  schools          schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years   academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  payslips         hr_pay_slips[]
+  pf_ledgers       hr_pf_ledgers[]
+
+  @@index([school_id, academic_year_id, payroll_year, payroll_month], map: "idx_hr_payroll_runs_scope")
+}
+
+model hr_pay_slips {
+  id                 Int       @id @default(autoincrement())
+  school_id          Int?
+  academic_year_id   Int?
+  payroll_run_id     Int?
+  staff_id           Int?
+  payroll_month     Int?
+  payroll_year      Int?
+  gross_salary      Decimal?  @db.Decimal(12, 2)
+  total_deductions  Decimal?  @db.Decimal(12, 2)
+  net_salary        Decimal?  @db.Decimal(12, 2)
+  pdf_url           String?
+  status            String?   @default("GENERATED") @db.VarChar(40)
+  created_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+  schools           schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years    academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  payroll_run       hr_payroll_runs? @relation(fields: [payroll_run_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  staff             hr_staff_master? @relation(fields: [staff_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, payroll_year, payroll_month], map: "idx_hr_payslips_scope")
+}
+
+model hr_approval_center {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  module_key      String    @db.VarChar(80)
+  record_id       Int?
+  record_label    String?   @db.VarChar(255)
+  requested_by    Int?
+  approved_by     Int?
+  status          String?   @default("PENDING") @db.VarChar(40)
+  remarks         String?
+  metadata        Json?     @default("{}")
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+  schools         schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years  academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, module_key, status], map: "idx_hr_approval_center_scope")
+}
+
+model hr_event_ledger {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  module_key      String?   @db.VarChar(80)
+  entity_type     String?   @db.VarChar(100)
+  entity_id       Int?
+  action_type     String?   @db.VarChar(100)
+  action_by       Int?
+  before_state    Json?     @default("{}")
+  after_state     Json?     @default("{}")
+  remarks         String?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  schools         schools?  @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  academic_years  academic_years? @relation(fields: [academic_year_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([school_id, academic_year_id, module_key, created_at], map: "idx_hr_event_ledger_scope")
+}
+
+model student_documents {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  student_id       Int
+  document_type    String    @db.VarChar(80)
+  document_number  String    @db.VarChar(120)
+  title            String    @db.VarChar(255)
+  file_url         String?
+  issued_on        DateTime? @db.Date
+  metadata         Json?     @default("{}")
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+
+  @@unique([school_id, document_number], map: "uq_student_documents_school_number")
+  @@index([student_id, document_type], map: "idx_student_documents_student_type")
+  @@index([school_id, academic_year_id], map: "idx_student_documents_school_year")
+}
+
+model admission_leads {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  parent_name      String?   @db.VarChar(255)
+  student_name     String?   @db.VarChar(255)
+  phone            String?   @db.VarChar(20)
+  email            String?   @db.VarChar(255)
+  interested_class String?   @db.VarChar(50)
+  status           String?   @db.VarChar(50)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model lead_followups {
+  id            Int       @id @default(autoincrement())
+  lead_id       Int?
+  followup_date DateTime? @db.Date
+  remarks       String?
+  status        String?   @db.VarChar(50)
+}
+
+model concession_requests {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  student_id      Int?
+  invoice_id      Int?
+  fee_category_id Int?
+  academic_year   String?   @db.VarChar(50)
+  requested_amount Decimal? @db.Decimal(12, 2)
+  approved_amount Decimal?  @db.Decimal(12, 2)
+  reason          String?
+  status          String?   @default("PENDING") @db.VarChar(50)
+  requested_by    Int?
+  created_by      Int?
+  reviewed_by     Int?
+  requested_at    DateTime? @default(now()) @db.Timestamp(6)
+  reviewed_at     DateTime? @db.Timestamp(6)
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  metadata        Json?
+
+  @@index([school_id, student_id])
+  @@index([status])
+}
+
+model concession_audit_logs {
+  id                    Int       @id @default(autoincrement())
+  concession_request_id Int?
+  school_id             Int?
+  actor_user_id         Int?
+  action                String?   @db.VarChar(100)
+  previous_status       String?   @db.VarChar(50)
+  new_status            String?   @db.VarChar(50)
+  comments              String?
+  metadata              Json?
+  created_at            DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([concession_request_id])
+  @@index([school_id])
+}
+
+model event_ledger {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  academic_year_id Int?
+  user_id          Int?
+  created_by       Int?
+  actor_role       String?   @db.VarChar(100)
+  module_name      String    @db.VarChar(100)
+  event_type       String    @db.VarChar(100)
+  action           String?   @db.VarChar(100)
+  entity_type      String?   @db.VarChar(100)
+  entity_id        Int?
+  entity_uid       String?   @db.VarChar(255)
+  severity         String?   @default("INFO") @db.VarChar(50)
+  summary          String?
+  payload          Json?
+  metadata         Json?
+  occurred_at      DateTime? @default(now()) @db.Timestamp(6)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, module_name])
+  @@index([entity_type, entity_id])
+  @@index([occurred_at])
+}
+
+model student_timelines {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  student_id       Int
+  event_id         Int?
+  academic_year_id Int?
+  title            String    @db.VarChar(255)
+  description      String?
+  source_module    String?   @db.VarChar(100)
+  visibility       String?   @default("SCHOOL") @db.VarChar(50)
+  metadata         Json?
+  occurred_at      DateTime? @default(now()) @db.Timestamp(6)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, student_id])
+  @@index([event_id])
+}
+
+model teacher_timelines {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  teacher_id       Int
+  event_id         Int?
+  academic_year_id Int?
+  title            String    @db.VarChar(255)
+  description      String?
+  source_module    String?   @db.VarChar(100)
+  visibility       String?   @default("SCHOOL") @db.VarChar(50)
+  metadata         Json?
+  occurred_at      DateTime? @default(now()) @db.Timestamp(6)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, teacher_id])
+  @@index([event_id])
+}
+
+model class_timelines {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  class_id         Int
+  section_id       Int?
+  event_id         Int?
+  academic_year_id Int?
+  title            String    @db.VarChar(255)
+  description      String?
+  source_module    String?   @db.VarChar(100)
+  visibility       String?   @default("SCHOOL") @db.VarChar(50)
+  metadata         Json?
+  occurred_at      DateTime? @default(now()) @db.Timestamp(6)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, class_id])
+  @@index([event_id])
+}
+
+model school_timelines {
+  id               Int       @id @default(autoincrement())
+  school_id        Int
+  event_id         Int?
+  academic_year_id Int?
+  title            String    @db.VarChar(255)
+  description      String?
+  source_module    String?   @db.VarChar(100)
+  visibility       String?   @default("SCHOOL") @db.VarChar(50)
+  metadata         Json?
+  occurred_at      DateTime? @default(now()) @db.Timestamp(6)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id])
+  @@index([event_id])
+}
+
+model dining_attendance {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  class_id        Int?
+  section_id      Int?
+  student_id      Int?
+  teacher_id      Int?
+  staff_id        Int?
+  meal_type       String    @db.VarChar(50)
+  attendance_date DateTime  @db.Date
+  status          String?   @default("PRESENT") @db.VarChar(50)
+  recorded_by     Int?
+  recorded_at     DateTime? @default(now()) @db.Timestamp(6)
+  source          String?   @db.VarChar(100)
+  remarks         String?
+  event_id        Int?
+  metadata        Json?
+  created_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, student_id, meal_type, attendance_date], map: "uq_dining_student_meal_date")
+  @@index([school_id, attendance_date])
+}
+
+model hostel_attendance {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  student_id      Int?
+  hostel_id       Int?
+  room_id         Int?
+  attendance_date DateTime  @db.Date
+  status          String?   @default("PRESENT") @db.VarChar(50)
+  recorded_by     Int?
+  remarks         String?
+  event_id        Int?
+  metadata        Json?
+  created_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, student_id, attendance_date], map: "uq_hostel_student_date")
+  @@index([school_id, attendance_date])
+}
+
+model transport_attendance {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  academic_year_id Int?
+  student_id      Int?
+  route_id        Int?
+  vehicle_id      Int?
+  trip_type       String    @db.VarChar(50)
+  attendance_date DateTime  @db.Date
+  status          String?   @default("PRESENT") @db.VarChar(50)
+  pickup_point    String?   @db.VarChar(255)
+  drop_point      String?   @db.VarChar(255)
+  recorded_by     Int?
+  remarks         String?
+  event_id        Int?
+  metadata        Json?
+  created_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, student_id, trip_type, attendance_date], map: "uq_transport_student_trip_date")
+  @@index([school_id, attendance_date])
+}
+
+model governance_settings {
+  id          Int       @id @default(autoincrement())
+  school_id   Int?
+  setting_key String    @db.VarChar(150)
+  setting_value Json?
+  description String?
+  updated_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, setting_key], map: "uq_governance_setting_scope")
+}
+
+model feature_flags {
+  id                 Int       @id @default(autoincrement())
+  school_id          Int?
+  module_name        String?   @db.VarChar(100)
+  flag_key           String    @db.VarChar(150)
+  enabled            Boolean?  @default(false)
+  rollout_percentage Int?      @default(100)
+  config             Json?
+  created_by         Int?
+  updated_by         Int?
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+  updated_at         DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, flag_key], map: "uq_feature_flag_scope")
+  @@index([module_name])
+}
+
+model menu_permissions {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  menu_key       String    @db.VarChar(150)
+  label          String    @db.VarChar(255)
+  path           String?   @db.VarChar(255)
+  parent_key     String?   @db.VarChar(150)
+  module_name    String?   @db.VarChar(100)
+  permission_key String?   @db.VarChar(150)
+  sort_order     Int?      @default(0)
+  is_enabled     Boolean?  @default(true)
+  config         Json?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, menu_key], map: "uq_menu_permission_scope")
+}
+
+model page_permissions {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  page_path      String    @db.VarChar(255)
+  module_name    String?   @db.VarChar(100)
+  permission_key String?   @db.VarChar(150)
+  is_public      Boolean?  @default(false)
+  is_enabled     Boolean?  @default(true)
+  config         Json?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, page_path], map: "uq_page_permission_scope")
+}
+
+model module_permissions {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  module_key     String    @db.VarChar(150)
+  module_name    String    @db.VarChar(255)
+  action_key     String    @db.VarChar(100)
+  permission_key String    @db.VarChar(150)
+  is_enabled     Boolean?  @default(true)
+  config         Json?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, module_key, action_key], map: "uq_module_permission_scope")
+}
+
+model ai_providers {
+  id                        Int       @id @default(autoincrement())
+  provider_key              String    @unique @db.VarChar(100)
+  display_name              String    @db.VarChar(255)
+  provider_type             String    @db.VarChar(100)
+  base_url                  String?   @db.VarChar(500)
+  encrypted_credentials_ref String?
+  is_enabled                Boolean?  @default(false)
+  priority                  Int?      @default(100)
+  config                    Json?
+  created_by                Int?
+  created_at                DateTime? @default(now()) @db.Timestamp(6)
+  updated_at                DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model ai_models {
+  id                  Int       @id @default(autoincrement())
+  provider_key        String    @db.VarChar(100)
+  model_key           String    @db.VarChar(150)
+  display_name        String    @db.VarChar(255)
+  capability          String?   @db.VarChar(100)
+  context_window      Int?
+  input_cost_per_1k   Decimal?  @db.Decimal(12, 6)
+  output_cost_per_1k  Decimal?  @db.Decimal(12, 6)
+  default_temperature Decimal?  @db.Decimal(4, 2)
+  max_tokens          Int?
+  is_enabled          Boolean?  @default(false)
+  config              Json?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([provider_key, model_key], map: "uq_ai_provider_model")
+  @@index([provider_key])
+}
+
+model ai_policy_profiles {
+  id                  Int       @id @default(autoincrement())
+  school_id           Int?
+  profile_key         String    @db.VarChar(150)
+  display_name        String    @db.VarChar(255)
+  is_default          Boolean?  @default(false)
+  grounding_required  Boolean?  @default(true)
+  fallback_enabled    Boolean?  @default(true)
+  allowed_modules     Json?
+  allowed_role_ids    Json?
+  max_tokens          Int?
+  temperature         Decimal?  @db.Decimal(4, 2)
+  pii_policy          String?   @default("STRICT") @db.VarChar(50)
+  config              Json?
+  created_by          Int?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, profile_key], map: "uq_ai_policy_profile_scope")
+}
+
+model ai_school_limits {
+  id                  Int       @id @default(autoincrement())
+  school_id           Int
+  policy_profile_id   Int?
+  daily_request_limit Int?
+  monthly_token_limit Int?
+  monthly_cost_limit  Decimal?  @db.Decimal(12, 2)
+  is_enabled          Boolean?  @default(true)
+  reset_at            DateTime? @db.Timestamp(6)
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id], map: "uq_ai_school_limit")
+}
+
+model ai_usage_logs {
+  id                 Int       @id @default(autoincrement())
+  request_id         String?   @unique @db.VarChar(150)
+  school_id          Int?
+  user_id            Int?
+  module_name        String?   @db.VarChar(100)
+  provider_key       String?   @db.VarChar(100)
+  model_key          String?   @db.VarChar(150)
+  policy_profile_id  Int?
+  prompt_hash        String?   @db.VarChar(128)
+  prompt_excerpt     String?
+  response_excerpt   String?
+  input_tokens       Int?      @default(0)
+  output_tokens      Int?      @default(0)
+  estimated_cost     Decimal?  @default(0) @db.Decimal(12, 6)
+  latency_ms         Int?
+  success            Boolean?  @default(true)
+  fallback_used      Boolean?  @default(false)
+  grounding_sources  Json?
+  error_code         String?   @db.VarChar(100)
+  error_message      String?
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+  academic_year_id   Int?
+
+  @@index([school_id, module_name])
+  @@index([provider_key, model_key])
+  @@index([created_at])
+}
+
+model ai_health_checks {
+  id            Int       @id @default(autoincrement())
+  provider_key  String    @db.VarChar(100)
+  model_key     String?   @db.VarChar(150)
+  status        String    @db.VarChar(50)
+  latency_ms    Int?
+  error_code    String?   @db.VarChar(100)
+  error_message String?
+  metadata      Json?
+  checked_at    DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([provider_key, checked_at])
+}
+
+model ai_role_access {
+  id                Int       @id @default(autoincrement())
+  role_id           Int
+  policy_profile_id Int?
+  module_name       String?   @db.VarChar(100)
+  can_use           Boolean?  @default(false)
+  can_manage        Boolean?  @default(false)
+  config            Json?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([role_id, module_name], map: "uq_ai_role_module_access")
+  @@index([policy_profile_id])
+}
+
+model ai_provider_credentials {
+  id                        Int       @id @default(autoincrement())
+  provider_key              String    @db.VarChar(100)
+  credential_label          String?   @db.VarChar(150)
+  encrypted_credentials_ref String
+  rotation_status           String?   @default("NEEDS_CONFIGURATION") @db.VarChar(100)
+  created_by                Int?
+  created_at                DateTime? @default(now()) @db.Timestamp(6)
+  updated_at                DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([provider_key])
+}
+
+model ai_provider_fallbacks {
+  id                    Int       @id @default(autoincrement())
+  provider_key          String    @db.VarChar(100)
+  fallback_provider_key String    @db.VarChar(100)
+  priority              Int?      @default(100)
+  is_enabled            Boolean?  @default(true)
+  config                Json?
+  created_at            DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([provider_key, fallback_provider_key], map: "uq_ai_provider_fallback")
+}
+
+model ai_rate_limits {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  role_id          Int?
+  provider_key     String?   @db.VarChar(100)
+  requests_per_day Int?
+  tokens_per_day   Int?
+  is_enabled       Boolean?  @default(true)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, role_id])
+}
+
+model ai_cost_budgets {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  provider_key    String?   @db.VarChar(100)
+  period          String    @db.VarChar(50)
+  budget_amount   Decimal?  @default(0) @db.Decimal(12, 2)
+  spent_amount    Decimal?  @default(0) @db.Decimal(12, 2)
+  alert_threshold Decimal?  @default(80) @db.Decimal(5, 2)
+  is_enabled      Boolean?  @default(true)
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, period])
+}
+
+model ai_prompt_templates {
+  id            Int       @id @default(autoincrement())
+  template_key  String    @unique @db.VarChar(150)
+  module_name   String?   @db.VarChar(100)
+  system_prompt String?
+  user_prompt   String?
+  is_enabled    Boolean?  @default(true)
+  created_by    Int?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+  updated_at    DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model ai_grounding_sources {
+  id            Int       @id @default(autoincrement())
+  source_key    String    @unique @db.VarChar(150)
+  module_name   String?   @db.VarChar(100)
+  table_name    String?   @db.VarChar(150)
+  source_policy Json?
+  is_enabled    Boolean?  @default(true)
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model ai_knowledge_sources {
+  id           Int       @id @default(autoincrement())
+  source_key   String    @unique @db.VarChar(150)
+  source_type  String    @db.VarChar(50)
+  display_name String    @db.VarChar(255)
+  priority     Int       @default(100)
+  base_url     String?   @db.VarChar(500)
+  is_official  Boolean?  @default(false)
+  is_enabled   Boolean?  @default(true)
+  config       Json?
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+  updated_at   DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([source_type, priority])
+  @@index([is_enabled])
+}
+
+model ai_knowledge_queries {
+  id             Int       @id @default(autoincrement())
+  request_id     String    @unique @db.VarChar(150)
+  school_id      Int?
+  user_id        Int?
+  prompt_hash    String?   @db.VarChar(128)
+  prompt_excerpt String?
+  answer_excerpt String?
+  source_trace   Json?
+  priority_trace Json?
+  provider_key   String?   @db.VarChar(100)
+  latency_ms     Int?
+  success        Boolean?  @default(true)
+  error_message  String?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, created_at])
+  @@index([user_id, created_at])
+}
+
+model ai_knowledge_base {
+  id                  Int       @id @default(autoincrement())
+  school_id           Int?
+  academic_year       String?   @db.VarChar(50)
+  question            String
+  normalized_question String
+  question_hash       String    @db.VarChar(128)
+  answer              String
+  summary             String?
+  keywords            Json?
+  sources             Json?
+  embedding           Json?
+  confidence          Decimal?  @default(0.70) @db.Decimal(5, 2)
+  mode                String?   @default("default") @db.VarChar(50)
+  retrieved_at        DateTime? @default(now()) @db.Timestamp(6)
+  last_verified       DateTime? @default(now()) @db.Timestamp(6)
+  usage_count         Int?      @default(0)
+  created_by          Int?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, question_hash], map: "uq_ai_knowledge_base_school_question")
+  @@index([question_hash])
+  @@index([school_id, academic_year])
+  @@index([last_verified])
+}
+
+model education_knowledge_documents {
+  id               Int       @id @default(autoincrement())
+  school_id        Int?
+  title            String    @db.VarChar(255)
+  category         String    @db.VarChar(100)
+  domain           String?   @db.VarChar(120)
+  source           String?   @db.VarChar(255)
+  source_url       String?   @db.VarChar(500)
+  publication_date DateTime? @db.Date
+  content          String
+  keywords         Json      @default("[]")
+  citations        Json      @default("[]")
+  confidence_score Decimal   @default(0.80) @db.Decimal(5, 2)
+  is_active        Boolean   @default(true)
+  created_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, category, is_active], map: "idx_education_knowledge_scope")
+}
+
+model education_ai_retrievals {
+  id               Int       @id @default(autoincrement())
+  request_id       String    @db.VarChar(150)
+  school_id        Int?
+  user_id          Int?
+  question_type    String    @db.VarChar(80)
+  prompt_excerpt   String?
+  document_ids     Json      @default("[]")
+  erp_tables       Json      @default("[]")
+  confidence_score Decimal   @default(0.70) @db.Decimal(5, 2)
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([request_id], map: "idx_education_ai_retrievals_request")
+  @@index([school_id, created_at], map: "idx_education_ai_retrievals_school")
+}
+
+model ai_action_requests {
+  id                 Int       @id @default(autoincrement())
+  request_id         String    @unique @db.VarChar(150)
+  school_id          Int?
+  academic_year_id   Int?
+  requested_by       Int?
+  module_name        String    @db.VarChar(100)
+  action_type        String    @db.VarChar(120)
+  target_entity_type String?   @db.VarChar(100)
+  status             String    @default("PENDING_APPROVAL") @db.VarChar(50)
+  risk_level         String?   @default("MEDIUM") @db.VarChar(50)
+  prompt             String?
+  normalized_payload Json?
+  preview            Json?
+  validation_errors  Json?
+  approval_policy    Json?
+  approved_by        Int?
+  approved_at        DateTime? @db.Timestamp(6)
+  rejected_by        Int?
+  rejected_at        DateTime? @db.Timestamp(6)
+  executed_by        Int?
+  executed_at        DateTime? @db.Timestamp(6)
+  execution_result   Json?
+  failure_reason     String?
+  event_id           Int?
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+  updated_at         DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, status])
+  @@index([action_type, status])
+  @@index([requested_by, created_at])
+}
+
+model ai_action_approvals {
+  id                Int       @id @default(autoincrement())
+  action_request_id Int
+  user_id           Int?
+  decision          String    @db.VarChar(50)
+  comments          String?
+  metadata          Json?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([action_request_id])
+  @@index([user_id, created_at])
+}
+
+model ai_observability_events {
+  id                Int       @id @default(autoincrement())
+  request_id        String?   @db.VarChar(150)
+  school_id         Int?
+  user_id           Int?
+  layer             String    @db.VarChar(50)
+  event_type        String    @db.VarChar(100)
+  provider_key      String?   @db.VarChar(100)
+  source_type       String?   @db.VarChar(50)
+  action_request_id Int?
+  latency_ms        Int?
+  estimated_cost    Decimal?  @default(0) @db.Decimal(12, 6)
+  success           Boolean?  @default(true)
+  payload           Json?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, layer, created_at])
+  @@index([action_request_id])
+  @@index([request_id])
+}
+
+model tenants {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  tenant_code     String    @unique @db.VarChar(100)
+  tenant_name     String    @db.VarChar(255)
+  lifecycle_state String?   @default("ACTIVE") @db.VarChar(50)
+  region          String?   @db.VarChar(100)
+  metadata        Json?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model subscription_plans {
+  id                  Int       @id @default(autoincrement())
+  plan_key            String    @unique @db.VarChar(100)
+  display_name        String    @db.VarChar(255)
+  monthly_price       Decimal?  @default(0) @db.Decimal(12, 2)
+  max_students        Int?
+  max_staff           Int?
+  ai_token_limit      Int?
+  whatsapp_limit      Int?
+  storage_gb_limit    Decimal?  @db.Decimal(12, 2)
+  features            Json?
+  is_active           Boolean?  @default(true)
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model school_subscriptions {
+  id             Int       @id @default(autoincrement())
+  school_id      Int
+  plan_id        Int?
+  status         String?   @default("ACTIVE") @db.VarChar(50)
+  start_date     DateTime? @db.Date
+  end_date       DateTime? @db.Date
+  renewal_date   DateTime? @db.Date
+  billing_cycle  String?   @default("MONTHLY") @db.VarChar(50)
+  metadata       Json?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, status])
+}
+
+model usage_metering {
+  id           Int       @id @default(autoincrement())
+  school_id    Int?
+  meter_key    String    @db.VarChar(100)
+  period_start DateTime  @db.Date
+  period_end   DateTime  @db.Date
+  quantity     Decimal?  @default(0) @db.Decimal(14, 4)
+  unit         String?   @db.VarChar(50)
+  metadata     Json?
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, meter_key, period_start, period_end], map: "uq_usage_meter_period")
+}
+
+model whatsapp_metering {
+  id           Int       @id @default(autoincrement())
+  school_id    Int?
+  period_start DateTime  @db.Date
+  period_end   DateTime  @db.Date
+  messages_sent Int?     @default(0)
+  estimated_cost Decimal? @default(0) @db.Decimal(12, 4)
+  metadata     Json?
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, period_start, period_end], map: "uq_whatsapp_meter_period")
+}
+
+model storage_metering {
+  id            Int       @id @default(autoincrement())
+  school_id     Int?
+  period_start  DateTime  @db.Date
+  period_end    DateTime  @db.Date
+  used_gb        Decimal?  @default(0) @db.Decimal(12, 4)
+  file_count     Int?      @default(0)
+  metadata       Json?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, period_start, period_end], map: "uq_storage_meter_period")
+}
+
+model revenue_analytics {
+  id             Int       @id @default(autoincrement())
+  school_id      Int?
+  period_start   DateTime  @db.Date
+  period_end     DateTime  @db.Date
+  revenue_amount Decimal?  @default(0) @db.Decimal(14, 2)
+  source          String?  @db.VarChar(100)
+  metadata        Json?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, period_start])
+}
+
+model profit_analytics {
+  id            Int       @id @default(autoincrement())
+  school_id     Int?
+  period_start  DateTime  @db.Date
+  period_end    DateTime  @db.Date
+  revenue_amount Decimal? @default(0) @db.Decimal(14, 2)
+  cost_amount   Decimal?  @default(0) @db.Decimal(14, 2)
+  profit_amount Decimal?  @default(0) @db.Decimal(14, 2)
+  metadata      Json?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, period_start])
+}
+
+model school_lifecycle_events {
+  id          Int       @id @default(autoincrement())
+  school_id   Int?
+  event_type  String    @db.VarChar(100)
+  status      String?   @db.VarChar(50)
+  actor_user_id Int?
+  notes       String?
+  metadata    Json?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, event_type])
+}
+
+model billing_automations {
+  id            Int       @id @default(autoincrement())
+  school_id     Int?
+  automation_key String   @db.VarChar(150)
+  schedule_cron String?   @db.VarChar(100)
+  is_enabled    Boolean?  @default(true)
+  last_run_at   DateTime? @db.Timestamp(6)
+  next_run_at   DateTime? @db.Timestamp(6)
+  config        Json?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, automation_key], map: "uq_billing_automation_scope")
+}
+
+model renewals {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  subscription_id Int?
+  renewal_date    DateTime? @db.Date
+  status          String?   @default("PENDING") @db.VarChar(50)
+  amount          Decimal?  @db.Decimal(12, 2)
+  metadata        Json?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, status])
+}
+
+model customer_onboarding {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  onboarding_key  String?   @db.VarChar(150)
+  stage           String?   @db.VarChar(100)
+  status          String?   @default("OPEN") @db.VarChar(50)
+  assigned_to     Int?
+  checklist       Json?
+  metadata        Json?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, status])
+}
+
+model automation_rules {
+  id          Int       @id @default(autoincrement())
+  school_id   Int?
+  rule_key    String    @db.VarChar(150)
+  module_name String?   @db.VarChar(100)
+  trigger     String    @db.VarChar(150)
+  action      String    @db.VarChar(150)
+  is_enabled  Boolean?  @default(false)
+  config      Json?
+  created_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, rule_key], map: "uq_automation_rule_scope")
+}
+
+model automation_runs {
+  id              Int       @id @default(autoincrement())
+  school_id       Int?
+  automation_rule_id Int?
+  status          String?   @default("QUEUED") @db.VarChar(50)
+  started_at      DateTime? @db.Timestamp(6)
+  finished_at     DateTime? @db.Timestamp(6)
+  result          Json?
+  error_message   String?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, status])
+}
+
+model change_impact_reports {
+  id                       Int       @id @default(autoincrement())
+  change_key               String    @db.VarChar(150)
+  title                    String    @db.VarChar(255)
+  affected_modules         Json?
+  affected_apis            Json?
+  affected_mobile_screens  Json?
+  affected_reports         Json?
+  affected_rbac_permissions Json?
+  affected_timelines       Json?
+  affected_ai_grounding    Json?
+  risk_level               String?   @default("MEDIUM") @db.VarChar(50)
+  created_by               Int?
+  created_at               DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([change_key])
+}
+
+model import_jobs {
+  id          Int       @id @default(autoincrement())
+  school_id   Int?
+  module_name String?   @db.VarChar(100)
+  status      String?   @default("PENDING") @db.VarChar(50)
+  file_name   String?   @db.VarChar(255)
+  total_rows  Int?      @default(0)
+  success_rows Int?     @default(0)
+  failed_rows Int?      @default(0)
+  error_summary String?
+  metadata    Json?
+  created_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, module_name])
+}
+
+model report_exports {
+  id          Int       @id @default(autoincrement())
+  school_id   Int?
+  report_key  String    @db.VarChar(150)
+  format      String?   @db.VarChar(50)
+  status      String?   @default("READY") @db.VarChar(50)
+  file_url    String?
+  filter_json Json?
+  created_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([school_id, report_key])
+}
+
+model branding_settings {
+  id          Int       @id @default(autoincrement())
+  school_id   Int?
+  brand_key   String    @db.VarChar(150)
+  brand_value Json?
+  updated_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([school_id, brand_key], map: "uq_branding_setting_scope")
+}
+
+model notification_registrations {
+  id            Int       @id @default(autoincrement())
+  school_id     Int?
+  user_id       Int?
+  device_token  String    @db.VarChar(500)
+  platform      String?   @db.VarChar(50)
+  is_active     Boolean?  @default(true)
+  metadata      Json?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+  updated_at    DateTime? @default(now()) @db.Timestamp(6)
+
+  @@unique([device_token])
+  @@index([school_id, user_id])
+}
+
+model operation_health_checks {
+  id          Int       @id @default(autoincrement())
+  check_key   String    @db.VarChar(150)
+  status      String    @db.VarChar(50)
+  latency_ms  Int?
+  details     Json?
+  checked_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([check_key, checked_at])
+}
+
+model operation_backups {
+  id          Int       @id @default(autoincrement())
+  backup_key  String    @db.VarChar(150)
+  status      String?   @default("UNKNOWN") @db.VarChar(50)
+  file_path   String?
+  size_bytes  BigInt?
+  checksum    String?   @db.VarChar(255)
+  metadata    Json?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([status, created_at])
+}
+
+model clinical_tenants {
+  id                  Int       @id @default(autoincrement())
+  tenant_name         String    @db.VarChar(255)
+  tenant_code         String    @unique @db.VarChar(80)
+  subscription_plan   String?   @default("ENTERPRISE") @db.VarChar(120)
+  subscription_status String?   @default("ACTIVE") @db.VarChar(80)
+  deployment_model    String?   @default("MULTI_TENANT_SAAS") @db.VarChar(120)
+  hosting_provider    String?   @default("CONTABO") @db.VarChar(120)
+  data_region         String?   @default("India") @db.VarChar(120)
+  settings            Json?
+  created_by          Int?
+  updated_by          Int?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted          Boolean?  @default(false)
+}
+
+model hospitals {
+  id             Int       @id @default(autoincrement())
+  tenant_id      Int
+  hospital_name  String    @db.VarChar(255)
+  hospital_code  String    @db.VarChar(80)
+  legal_name     String?   @db.VarChar(255)
+  license_number String?   @db.VarChar(150)
+  nabh_details   Json?
+  gst_number     String?   @db.VarChar(80)
+  email          String?   @db.VarChar(255)
+  phone          String?   @db.VarChar(40)
+  address        String?
+  city           String?   @db.VarChar(120)
+  state          String?   @db.VarChar(120)
+  country        String?   @default("India") @db.VarChar(120)
+  status         String?   @default("ACTIVE") @db.VarChar(80)
+  branding       Json?
+  settings       Json?
+  created_by     Int?
+  updated_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted     Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_code])
+  @@index([tenant_id, status, is_deleted])
+}
+
+model branches {
+  id           Int       @id @default(autoincrement())
+  tenant_id    Int
+  hospital_id  Int
+  branch_name  String    @db.VarChar(255)
+  branch_code  String    @db.VarChar(80)
+  branch_type  String?   @default("IVF_CENTER") @db.VarChar(120)
+  contact_name String?   @db.VarChar(255)
+  email        String?   @db.VarChar(255)
+  phone        String?   @db.VarChar(40)
+  address      String?
+  city         String?   @db.VarChar(120)
+  state        String?   @db.VarChar(120)
+  country      String?   @default("India") @db.VarChar(120)
+  latitude     Decimal?  @db.Decimal(11, 8)
+  longitude    Decimal?  @db.Decimal(11, 8)
+  status       String?   @default("ACTIVE") @db.VarChar(80)
+  branding     Json?
+  settings     Json?
+  created_by   Int?
+  updated_by   Int?
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+  updated_at   DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted   Boolean?  @default(false)
+
+  @@unique([hospital_id, branch_code])
+  @@index([tenant_id, hospital_id, status, is_deleted])
+}
+
+model clinical_security_settings {
+  id                                    Int       @id @default(autoincrement())
+  tenant_id                             Int
+  hospital_id                           Int?
+  branch_id                             Int?
+  encryption_at_rest                    String?   @default("AES-256") @db.VarChar(80)
+  encryption_in_transit                 String?   @default("TLS-1.3") @db.VarChar(80)
+  login_methods                         Json?
+  mfa_required                          Boolean?  @default(false)
+  patient_record_authorization_required Boolean?  @default(true)
+  audit_capture                         Json?
+  created_by                            Int?
+  updated_by                            Int?
+  created_at                            DateTime? @default(now()) @db.Timestamp(6)
+  updated_at                            DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted                            Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_id, branch_id])
+}
+
+model clinical_file_objects {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int
+  hospital_id      Int
+  branch_id        Int
+  patient_id       Int?
+  object_uid       String    @unique @db.VarChar(100)
+  object_type      String?   @db.VarChar(120)
+  file_name        String?   @db.VarChar(255)
+  file_extension   String?   @db.VarChar(20)
+  mime_type        String?   @db.VarChar(120)
+  storage_provider String?   @default("S3_COMPATIBLE") @db.VarChar(120)
+  bucket_name      String?   @db.VarChar(255)
+  object_key       String?
+  object_url       String?
+  checksum         String?   @db.VarChar(255)
+  size_bytes       BigInt?
+  metadata         Json?
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+}
+
+model clinical_api_services {
+  id             Int       @id @default(autoincrement())
+  tenant_id      Int?
+  hospital_id    Int?
+  branch_id      Int?
+  service_key    String    @unique @db.VarChar(150)
+  service_name   String    @db.VarChar(255)
+  service_type   String?   @default("NEXTJS_ROUTE_HANDLER") @db.VarChar(120)
+  target_runtime String?   @default("NEXTJS") @db.VarChar(120)
+  base_path      String?   @db.VarChar(255)
+  status         String?   @default("ACTIVE") @db.VarChar(80)
+  settings       Json?
+  created_by     Int?
+  updated_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted     Boolean?  @default(false)
+}
+
+model clinical_event_definitions {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  event_key        String    @unique @db.VarChar(150)
+  event_name       String    @db.VarChar(255)
+  event_bus        String?   @default("RABBITMQ_READY") @db.VarChar(120)
+  producer_service String?   @db.VarChar(150)
+  payload_schema   Json?
+  is_enabled       Boolean?  @default(true)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+}
+
+model clinical_integration_connectors {
+  id             Int       @id @default(autoincrement())
+  tenant_id      Int
+  hospital_id    Int?
+  branch_id      Int?
+  connector_key  String    @db.VarChar(150)
+  connector_name String    @db.VarChar(255)
+  connector_type String    @db.VarChar(120)
+  standard       String?   @db.VarChar(120)
+  status         String?   @default("CONFIG_REQUIRED") @db.VarChar(80)
+  config         Json?
+  created_by     Int?
+  updated_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted     Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_id, branch_id, connector_key])
+}
+
+model clinical_observability_config {
+  id                    Int       @id @default(autoincrement())
+  tenant_id             Int
+  hospital_id           Int?
+  branch_id             Int?
+  prometheus_enabled    Boolean?  @default(false)
+  grafana_enabled       Boolean?  @default(false)
+  elk_enabled           Boolean?  @default(false)
+  opentelemetry_enabled Boolean?  @default(false)
+  log_retention_days    Int?      @default(90)
+  config                Json?
+  created_by            Int?
+  updated_by            Int?
+  created_at            DateTime? @default(now()) @db.Timestamp(6)
+  updated_at            DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted            Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_id, branch_id])
+}
+
+model clinical_backup_policies {
+  id                         Int       @id @default(autoincrement())
+  tenant_id                  Int
+  hospital_id                Int?
+  branch_id                  Int?
+  daily_backup_enabled       Boolean?  @default(true)
+  weekly_full_backup_enabled Boolean?  @default(true)
+  monthly_archive_enabled    Boolean?  @default(true)
+  rpo_minutes                Int?      @default(15)
+  rto_minutes                Int?      @default(60)
+  retention_policy           Json?
+  created_by                 Int?
+  updated_by                 Int?
+  created_at                 DateTime? @default(now()) @db.Timestamp(6)
+  updated_at                 DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted                 Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_id, branch_id])
+}
+
+model clinical_notification_templates {
+  id            Int       @id @default(autoincrement())
+  tenant_id     Int
+  hospital_id   Int?
+  branch_id     Int?
+  template_key  String    @db.VarChar(150)
+  channel       String    @db.VarChar(80)
+  template_name String    @db.VarChar(255)
+  subject       String?   @db.VarChar(255)
+  body          String?
+  variables     Json?
+  status        String?   @default("ACTIVE") @db.VarChar(80)
+  created_by    Int?
+  updated_by    Int?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+  updated_at    DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted    Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_id, branch_id, template_key, channel])
+}
+
+model clinical_ai_governance_policies {
+  id                  Int       @id @default(autoincrement())
+  tenant_id           Int
+  hospital_id         Int?
+  branch_id           Int?
+  policy_key          String    @db.VarChar(150)
+  policy_name         String    @db.VarChar(255)
+  restrictions        Json?
+  required_disclaimer String?
+  is_active           Boolean?  @default(true)
+  created_by          Int?
+  updated_by          Int?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  updated_at          DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted          Boolean?  @default(false)
+
+  @@unique([tenant_id, hospital_id, branch_id, policy_key])
+}
+
+model organizations {
+  id                Int       @id @default(autoincrement())
+  tenant_id         Int?
+  clinic_id         Int?
+  hospital_id       Int?
+  branch_id         Int?
+  organization_name String    @db.VarChar(255)
+  organization_code String    @unique @db.VarChar(80)
+  legal_name        String?   @db.VarChar(255)
+  email             String?   @db.VarChar(255)
+  phone             String?   @db.VarChar(40)
+  address           String?
+  branding          Json?
+  settings          Json?
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted        Boolean?  @default(false)
+}
+
+model clinic_groups {
+  id              Int       @id @default(autoincrement())
+  tenant_id       Int?
+  clinic_id       Int?
+  hospital_id     Int?
+  branch_id       Int?
+  organization_id Int?
+  group_name      String    @db.VarChar(255)
+  group_code      String    @db.VarChar(80)
+  settings        Json?
+  created_by      Int?
+  updated_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted      Boolean?  @default(false)
+
+  @@unique([organization_id, group_code])
+}
+
+model clinics {
+  id              Int       @id @default(autoincrement())
+  tenant_id       Int?
+  clinic_id       Int?
+  hospital_id     Int?
+  branch_id       Int?
+  organization_id Int?
+  clinic_group_id Int?
+  clinic_name     String    @db.VarChar(255)
+  clinic_code     String    @db.VarChar(80)
+  clinic_type     String?   @default("IVF_CLINIC") @db.VarChar(120)
+  email           String?   @db.VarChar(255)
+  phone           String?   @db.VarChar(40)
+  address         String?
+  city            String?   @db.VarChar(120)
+  state           String?   @db.VarChar(120)
+  country         String?   @default("India") @db.VarChar(120)
+  branding        Json?
+  settings        Json?
+  created_by      Int?
+  updated_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted      Boolean?  @default(false)
+
+  @@unique([organization_id, clinic_code])
+  @@index([tenant_id, is_deleted])
+}
+
+model departments {
+  id              Int       @id @default(autoincrement())
+  tenant_id       Int?
+  clinic_id       Int?
+  hospital_id     Int?
+  branch_id       Int?
+  organization_id Int?
+  department_name String    @db.VarChar(255)
+  department_code String    @db.VarChar(80)
+  department_type String?   @db.VarChar(120)
+  created_by      Int?
+  updated_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted      Boolean?  @default(false)
+
+  doctors     doctors[]
+  appointments appointments[]
+
+  @@unique([clinic_id, department_code])
+  @@index([clinic_id, is_deleted])
+}
+
+model clinical_roles {
+  id                Int       @id @default(autoincrement())
+  tenant_id         Int?
+  clinic_id         Int?
+  hospital_id       Int?
+  branch_id         Int?
+  role_name         String    @db.VarChar(150)
+  role_key          String    @db.VarChar(150)
+  permissions       Json?
+  field_permissions Json?
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted        Boolean?  @default(false)
+
+  @@unique([tenant_id, clinic_id, role_key])
+}
+
+model clinical_user_profiles {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  clinic_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  user_id          Int?
+  clinical_role_id Int?
+  department_id    Int?
+  project_type     String?   @default("CLINICAL") @db.VarChar(50)
+  display_name     String?   @db.VarChar(255)
+  settings         Json?
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+
+  @@unique([user_id, tenant_id, clinic_id])
+}
+
+model clinical_menu_items {
+  id             Int       @id @default(autoincrement())
+  tenant_id      Int?
+  clinic_id      Int?
+  hospital_id    Int?
+  branch_id      Int?
+  menu_key       String    @db.VarChar(150)
+  label          String    @db.VarChar(255)
+  path           String?   @db.VarChar(255)
+  parent_key     String?   @db.VarChar(150)
+  module_name    String?   @db.VarChar(150)
+  permission_key String?   @db.VarChar(150)
+  sort_order     Int?      @default(0)
+  is_enabled     Boolean?  @default(true)
+  created_by     Int?
+  updated_by     Int?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted     Boolean?  @default(false)
+
+  @@unique([tenant_id, clinic_id, menu_key])
+}
+
+model patients {
+  id                      Int       @id @default(autoincrement())
+  tenant_id               Int?
+  clinic_id               Int?
+  hospital_id             Int?
+  branch_id               Int?
+  patient_uid             String    @unique @db.VarChar(80)
+  first_name              String    @db.VarChar(150)
+  middle_name             String?   @db.VarChar(150)
+  last_name               String?   @db.VarChar(150)
+  gender                  String?   @db.VarChar(40)
+  date_of_birth           DateTime? @db.Date
+  phone                   String?   @db.VarChar(40)
+  email                   String?   @db.VarChar(255)
+  address                 String?
+  emergency_contact_name  String?   @db.VarChar(255)
+  emergency_contact_phone String?   @db.VarChar(40)
+  insurance_provider      String?   @db.VarChar(255)
+  insurance_number        String?   @db.VarChar(120)
+  blood_group             String?   @db.VarChar(20)
+  allergies               String?
+  medical_history         String?
+  status                  String?   @default("ACTIVE") @db.VarChar(80)
+  qr_payload              Json?
+  metadata                Json?
+  created_by              Int?
+  updated_by              Int?
+  created_at              DateTime? @default(now()) @db.Timestamp(6)
+  updated_at              DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted              Boolean?  @default(false)
+
+  appointments appointments[]
+
+  @@index([tenant_id, clinic_id, is_deleted])
+}
+
+model doctors {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  clinic_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  user_id          Int?
+  doctor_uid       String?   @unique @db.VarChar(80)
+  full_name        String    @db.VarChar(255)
+  specialization   String?   @db.VarChar(255)
+  department_id    Int?
+  phone            String?   @db.VarChar(40)
+  email            String?   @db.VarChar(255)
+  consultation_fee Decimal?  @default(0) @db.Decimal(12, 2)
+  availability     Json?
+  status           String?   @default("AVAILABLE") @db.VarChar(80)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+
+  departments departments? @relation(fields: [department_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  appointments appointments[]
+
+  @@index([tenant_id, clinic_id, status, is_deleted])
+}
+
+model appointments {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  clinic_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  patient_id       Int?
+  doctor_id        Int?
+  department_id    Int?
+  appointment_uid  String    @unique @db.VarChar(80)
+  appointment_date DateTime  @db.Date
+  start_time       DateTime? @db.Time(6)
+  end_time         DateTime? @db.Time(6)
+  appointment_type String?   @default("OPD") @db.VarChar(120)
+  status           String?   @default("BOOKED") @db.VarChar(80)
+  token_number     String?   @db.VarChar(80)
+  queue_status     String?   @default("WAITING") @db.VarChar(80)
+  reason           String?
+  notes            String?
+  metadata         Json?
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+
+  patients      patients?  @relation(fields: [patient_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  doctors       doctors?   @relation(fields: [doctor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  departments   departments? @relation(fields: [department_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([tenant_id, clinic_id, appointment_date, status, is_deleted])
+}
+
+model medical_records {
+  id              Int       @id @default(autoincrement())
+  tenant_id       Int?
+  clinic_id       Int?
+  hospital_id     Int?
+  branch_id       Int?
+  patient_id      Int?
+  doctor_id       Int?
+  appointment_id  Int?
+  record_type     String?   @default("OPD_NOTE") @db.VarChar(120)
+  chief_complaint String?
+  vitals          Json?
+  diagnosis       String?
+  treatment_plan  String?
+  clinical_notes  String?
+  metadata        Json?
+  created_by      Int?
+  updated_by      Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  updated_at      DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted      Boolean?  @default(false)
+
+  @@index([tenant_id, clinic_id, patient_id, is_deleted])
+}
+
+model ivf_cases {
+  id                     Int       @id @default(autoincrement())
+  tenant_id              Int?
+  clinic_id              Int?
+  hospital_id            Int?
+  branch_id              Int?
+  patient_id             Int?
+  case_uid               String    @unique @db.VarChar(80)
+  female_partner_profile Json?
+  male_partner_profile   Json?
+  cycle_type             String?   @db.VarChar(120)
+  cycle_status           String?   @default("ACTIVE") @db.VarChar(120)
+  stimulation_protocol   String?
+  egg_retrieval_date     DateTime? @db.Date
+  embryo_transfer_date   DateTime? @db.Date
+  outcome_status         String?   @db.VarChar(120)
+  notes                  String?
+  metadata               Json?
+  created_by             Int?
+  updated_by             Int?
+  created_at             DateTime? @default(now()) @db.Timestamp(6)
+  updated_at             DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted             Boolean?  @default(false)
+
+  @@index([tenant_id, clinic_id, patient_id, cycle_status, is_deleted])
+}
+
+model lab_orders {
+  id          Int       @id @default(autoincrement())
+  tenant_id   Int?
+  clinic_id   Int?
+  hospital_id Int?
+  branch_id   Int?
+  patient_id  Int?
+  doctor_id   Int?
+  order_uid   String    @unique @db.VarChar(80)
+  order_type  String?   @db.VarChar(120)
+  priority    String?   @default("NORMAL") @db.VarChar(80)
+  status      String?   @default("ORDERED") @db.VarChar(80)
+  ordered_at  DateTime? @default(now()) @db.Timestamp(6)
+  notes       String?
+  metadata    Json?
+  created_by  Int?
+  updated_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted  Boolean?  @default(false)
+
+  @@index([tenant_id, clinic_id, status, is_deleted])
+}
+
+model lab_results {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  clinic_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  lab_order_id     Int?
+  patient_id       Int?
+  result_uid       String    @unique @db.VarChar(80)
+  result_status    String?   @default("PENDING_VALIDATION") @db.VarChar(80)
+  result_data      Json?
+  interpretation   String?
+  validated_by     Int?
+  validated_at     DateTime? @db.Timestamp(6)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+}
+
+model prescriptions {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  clinic_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  patient_id       Int?
+  doctor_id        Int?
+  appointment_id   Int?
+  prescription_uid String    @unique @db.VarChar(80)
+  medications      Json?
+  instructions     String?
+  status           String?   @default("ACTIVE") @db.VarChar(80)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+}
+
+model medical_documents {
+  id           Int       @id @default(autoincrement())
+  tenant_id    Int?
+  clinic_id    Int?
+  hospital_id  Int?
+  branch_id    Int?
+  patient_id   Int?
+  document_uid String    @unique @db.VarChar(80)
+  document_type String?  @db.VarChar(120)
+  title        String    @db.VarChar(255)
+  file_url     String?
+  version      Int?      @default(1)
+  metadata     Json?
+  created_by   Int?
+  updated_by   Int?
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+  updated_at   DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted   Boolean?  @default(false)
+}
+
+model clinical_forms {
+  id           Int       @id @default(autoincrement())
+  tenant_id    Int?
+  clinic_id    Int?
+  hospital_id  Int?
+  branch_id    Int?
+  form_key     String    @db.VarChar(150)
+  form_name    String    @db.VarChar(255)
+  module_name  String    @db.VarChar(150)
+  version      Int?      @default(1)
+  status       String?   @default("ACTIVE") @db.VarChar(80)
+  layout       Json?
+  validations  Json?
+  workflow_key String?   @db.VarChar(150)
+  created_by   Int?
+  updated_by   Int?
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+  updated_at   DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted   Boolean?  @default(false)
+
+  @@unique([tenant_id, clinic_id, form_key, version])
+  @@index([tenant_id, clinic_id, module_name, status, is_deleted])
+}
+
+model clinical_form_fields {
+  id               Int       @id @default(autoincrement())
+  tenant_id        Int?
+  clinic_id        Int?
+  hospital_id      Int?
+  branch_id        Int?
+  form_id          Int?
+  field_key        String    @db.VarChar(150)
+  label            String    @db.VarChar(255)
+  field_type       String    @db.VarChar(80)
+  section_key      String?   @db.VarChar(150)
+  tab_key          String?   @db.VarChar(150)
+  sort_order       Int?      @default(0)
+  is_required      Boolean?  @default(false)
+  options          Json?
+  validations      Json?
+  visibility_rules Json?
+  default_value    String?
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+
+  @@unique([form_id, field_key])
+}
+
+model clinical_workflows {
+  id            Int       @id @default(autoincrement())
+  tenant_id     Int?
+  clinic_id     Int?
+  hospital_id   Int?
+  branch_id     Int?
+  workflow_key  String    @db.VarChar(150)
+  workflow_name String    @db.VarChar(255)
+  module_name   String    @db.VarChar(150)
+  statuses      Json?
+  transitions   Json?
+  approvals     Json?
+  is_active     Boolean?  @default(true)
+  created_by    Int?
+  updated_by    Int?
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+  updated_at    DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted    Boolean?  @default(false)
+
+  @@unique([tenant_id, clinic_id, workflow_key])
+}
+
+model clinical_reports {
+  id          Int       @id @default(autoincrement())
+  tenant_id   Int?
+  clinic_id   Int?
+  hospital_id Int?
+  branch_id   Int?
+  report_key  String    @db.VarChar(150)
+  report_name String    @db.VarChar(255)
+  module_name String?   @db.VarChar(150)
+  definition  Json?
+  created_by  Int?
+  updated_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted  Boolean?  @default(false)
+
+  @@unique([tenant_id, clinic_id, report_key])
+}
+
+model clinical_audit_events {
+  id          Int       @id @default(autoincrement())
+  tenant_id   Int?
+  clinic_id   Int?
+  hospital_id Int?
+  branch_id   Int?
+  user_id     Int?
+  module_name String    @db.VarChar(150)
+  action      String    @db.VarChar(120)
+  entity_type String?   @db.VarChar(120)
+  entity_id   Int?
+  summary     String?
+  payload     Json?
+  created_by  Int?
+  updated_by  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted  Boolean?  @default(false)
+
+  @@index([tenant_id, clinic_id, module_name, created_at])
+}
+
+model clinical_ai_logs {
+  id                Int       @id @default(autoincrement())
+  tenant_id         Int?
+  clinic_id         Int?
+  hospital_id       Int?
+  branch_id         Int?
+  user_id           Int?
+  prompt            String
+  answer            String?
+  confidence_score  Int?      @default(0)
+  data_sources      Json?
+  reasoning_summary String?
+  metadata          Json?
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  updated_at        DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted        Boolean?  @default(false)
+}
+
+model clinical_medical_knowledge_documents {
+  id               Int       @id @default(autoincrement())
+  category         String    @db.VarChar(120)
+  specialty        String?   @db.VarChar(160)
+  title            String    @db.VarChar(500)
+  source           String    @db.VarChar(255)
+  source_url       String?
+  publication_date DateTime? @db.Date
+  content          String
+  keywords         Json?     @default("[]")
+  citations        Json?     @default("[]")
+  confidence_score Int?      @default(70)
+  embedding        Json?
+  status           String?   @default("ACTIVE") @db.VarChar(40)
+  created_by       Int?
+  updated_by       Int?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted       Boolean?  @default(false)
+}
+
+model clinical_medical_ai_retrievals {
+  id                  Int       @id @default(autoincrement())
+  tenant_id           Int?
+  hospital_id         Int?
+  branch_id           Int?
+  clinic_id           Int?
+  ai_log_id           Int?
+  query               String
+  audience            String?   @db.VarChar(80)
+  intent              String?   @db.VarChar(120)
+  retrieved_documents Json?     @default("[]")
+  hospital_records    Json?     @default("{}")
+  safety_flags        Json?     @default("[]")
+  created_by          Int?
+  created_at          DateTime? @default(now()) @db.Timestamp(6)
+  is_deleted          Boolean?  @default(false)
+}

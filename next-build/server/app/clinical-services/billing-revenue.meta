@@ -1,0 +1,18 @@
+{
+  "status": 307,
+  "headers": {
+    "location": "/clinical-services/finance",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/billing-revenue/layout,_N_T_/clinical-services/billing-revenue/page,_N_T_/clinical-services/billing-revenue"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/billing-revenue/__PAGE__",
+    "/clinical-services/billing-revenue",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

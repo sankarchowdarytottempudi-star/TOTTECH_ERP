@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/dictionary/layout,_N_T_/clinical-services/dictionary/page,_N_T_/clinical-services/dictionary"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/dictionary/__PAGE__",
+    "/clinical-services/dictionary",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

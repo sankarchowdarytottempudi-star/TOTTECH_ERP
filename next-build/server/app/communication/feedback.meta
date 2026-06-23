@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/communication/layout,_N_T_/communication/feedback/layout,_N_T_/communication/feedback/page,_N_T_/communication/feedback"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/communication/feedback/__PAGE__",
+    "/communication/feedback",
+    "/communication",
+    "/_index",
+    "/_head"
+  ]
+}

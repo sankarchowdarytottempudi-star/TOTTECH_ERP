@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinical-services/layout,_N_T_/clinical-services/consultations/layout,_N_T_/clinical-services/consultations/page,_N_T_/clinical-services/consultations"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/clinical-services/consultations/__PAGE__",
+    "/clinical-services/consultations",
+    "/clinical-services",
+    "/_index",
+    "/_head"
+  ]
+}

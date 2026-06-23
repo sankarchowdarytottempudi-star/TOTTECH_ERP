@@ -1,0 +1,76 @@
+name: Clinical Production Readiness
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-test-package:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-bookworm
+        env:
+          POSTGRES_USER: schooladmin
+          POSTGRES_PASSWORD: clinical_ci_password
+          POSTGRES_DB: schoolerp
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U schooladmin -d schoolerp"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-bookworm
+        ports:
+          - 6379:6379
+      rabbitmq:
+        image: rabbitmq:3-management
+        env:
+          RABBITMQ_DEFAULT_USER: clinical
+          RABBITMQ_DEFAULT_PASS: clinical_ci_password
+        ports:
+          - 5672:5672
+
+    env:
+      DATABASE_URL: postgresql://schooladmin:clinical_ci_password@localhost:5432/schoolerp
+      JWT_SECRET: ci_jwt_secret_with_sufficient_length
+      SESSION_SECRET: ci_session_secret_with_sufficient_length
+      NEXT_TELEMETRY_DISABLED: "1"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Prisma validate
+        run: npx prisma validate
+
+      - name: ESLint
+        run: npx eslint app lib components
+
+      - name: Production build
+        run: npm run build
+
+      - name: Validate backup script
+        run: bash -n infrastructure/clinical-production/backups/backup-clinical.sh
+
+      - name: Validate Docker Compose syntax
+        run: docker compose -f infrastructure/clinical-production/docker-compose.production.yml config
+
+      - name: Docker build
+        run: docker build -f infrastructure/clinical-production/Dockerfile.clinical -t tottech-clinical-services:ci .

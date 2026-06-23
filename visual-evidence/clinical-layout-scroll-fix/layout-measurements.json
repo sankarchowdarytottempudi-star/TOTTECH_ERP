@@ -1,0 +1,422 @@
+{
+  "desktopResults": [
+    {
+      "route": "/clinical-services",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentScrollHeight": 900,
+      "bodyScrollHeight": 900,
+      "windowScrollY": 0,
+      "shell": {
+        "top": 0,
+        "bottom": 900,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 900
+      },
+      "header": {
+        "top": 0,
+        "bottom": 64,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 64
+      },
+      "content": {
+        "top": 64,
+        "bottom": 900,
+        "left": 360,
+        "right": 1440,
+        "width": 1080,
+        "height": 836
+      },
+      "sidebar": {
+        "top": 64,
+        "bottom": 900,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 836
+      },
+      "bottomNav": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "contentScrollHeight": 4852,
+      "contentClientHeight": 836,
+      "contentOverflowingInternally": true,
+      "shellStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "contentStyles": {
+        "overflowY": "auto",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "sidebarStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/clinical-services/hms",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentScrollHeight": 900,
+      "bodyScrollHeight": 900,
+      "windowScrollY": 0,
+      "shell": {
+        "top": 0,
+        "bottom": 900,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 900
+      },
+      "header": {
+        "top": 0,
+        "bottom": 64,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 64
+      },
+      "content": {
+        "top": 64,
+        "bottom": 900,
+        "left": 360,
+        "right": 1440,
+        "width": 1080,
+        "height": 836
+      },
+      "sidebar": {
+        "top": 64,
+        "bottom": 900,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 836
+      },
+      "bottomNav": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "contentScrollHeight": 884,
+      "contentClientHeight": 836,
+      "contentOverflowingInternally": true,
+      "shellStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "contentStyles": {
+        "overflowY": "auto",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "sidebarStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/clinical-services/patients",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentScrollHeight": 900,
+      "bodyScrollHeight": 900,
+      "windowScrollY": 0,
+      "shell": {
+        "top": 0,
+        "bottom": 900,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 900
+      },
+      "header": {
+        "top": 0,
+        "bottom": 64,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 64
+      },
+      "content": {
+        "top": 64,
+        "bottom": 900,
+        "left": 360,
+        "right": 1440,
+        "width": 1080,
+        "height": 836
+      },
+      "sidebar": {
+        "top": 64,
+        "bottom": 900,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 836
+      },
+      "bottomNav": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "contentScrollHeight": 8133,
+      "contentClientHeight": 836,
+      "contentOverflowingInternally": true,
+      "shellStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "contentStyles": {
+        "overflowY": "auto",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "sidebarStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/clinical-services/finance",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentScrollHeight": 900,
+      "bodyScrollHeight": 900,
+      "windowScrollY": 0,
+      "shell": {
+        "top": 0,
+        "bottom": 900,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 900
+      },
+      "header": {
+        "top": 0,
+        "bottom": 64,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 64
+      },
+      "content": {
+        "top": 64,
+        "bottom": 900,
+        "left": 360,
+        "right": 1440,
+        "width": 1080,
+        "height": 836
+      },
+      "sidebar": {
+        "top": 64,
+        "bottom": 900,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 836
+      },
+      "bottomNav": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "contentScrollHeight": 1872,
+      "contentClientHeight": 836,
+      "contentOverflowingInternally": true,
+      "shellStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "contentStyles": {
+        "overflowY": "auto",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "sidebarStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/clinical-services/security",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentScrollHeight": 900,
+      "bodyScrollHeight": 900,
+      "windowScrollY": 0,
+      "shell": {
+        "top": 0,
+        "bottom": 900,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 900
+      },
+      "header": {
+        "top": 0,
+        "bottom": 64,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 64
+      },
+      "content": {
+        "top": 64,
+        "bottom": 900,
+        "left": 360,
+        "right": 1440,
+        "width": 1080,
+        "height": 836
+      },
+      "sidebar": {
+        "top": 64,
+        "bottom": 900,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 836
+      },
+      "bottomNav": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "contentScrollHeight": 4010,
+      "contentClientHeight": 836,
+      "contentOverflowingInternally": true,
+      "shellStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "contentStyles": {
+        "overflowY": "auto",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "sidebarStyles": {
+        "overflowY": "hidden",
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      "horizontalOverflow": false
+    }
+  ],
+  "mobileResult": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentScrollHeight": 844,
+    "bodyScrollHeight": 844,
+    "windowScrollY": 0,
+    "shell": {
+      "top": 0,
+      "bottom": 844,
+      "left": 0,
+      "right": 390,
+      "width": 390,
+      "height": 844
+    },
+    "header": {
+      "top": 0,
+      "bottom": 56,
+      "left": 0,
+      "right": 390,
+      "width": 390,
+      "height": 56
+    },
+    "content": {
+      "top": 56,
+      "bottom": 844,
+      "left": 0,
+      "right": 390,
+      "width": 390,
+      "height": 788
+    },
+    "sidebar": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "width": 0,
+      "height": 0
+    },
+    "bottomNav": {
+      "top": 739,
+      "bottom": 832,
+      "left": 12,
+      "right": 378,
+      "width": 366,
+      "height": 93
+    },
+    "contentScrollHeight": 9840,
+    "contentClientHeight": 788,
+    "contentOverflowingInternally": true,
+    "shellStyles": {
+      "overflowY": "hidden",
+      "overflowX": "hidden",
+      "position": "static"
+    },
+    "contentStyles": {
+      "overflowY": "auto",
+      "overflowX": "hidden",
+      "position": "static"
+    },
+    "sidebarStyles": {
+      "overflowY": "hidden",
+      "overflowX": "hidden",
+      "position": "static"
+    },
+    "horizontalOverflow": false
+  },
+  "mobileDrawer": {
+    "bodyLocked": true,
+    "drawerVisible": true,
+    "bodyOverflow": "hidden"
+  }
+}

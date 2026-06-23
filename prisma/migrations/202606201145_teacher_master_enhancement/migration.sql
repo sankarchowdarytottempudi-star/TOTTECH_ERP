@@ -1,0 +1,7 @@
+ALTER TABLE teachers
+ADD COLUMN IF NOT EXISTS current_address JSONB,
+ADD COLUMN IF NOT EXISTS permanent_address JSONB,
+ADD COLUMN IF NOT EXISTS employment_history JSONB,
+ADD COLUMN IF NOT EXISTS salary_history JSONB,
+ADD COLUMN IF NOT EXISTS documents JSONB;
+
