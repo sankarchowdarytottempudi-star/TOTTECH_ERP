@@ -20,6 +20,8 @@ Recover the production application within the target recovery window using the v
 - The backup archive was inspected with `pg_restore -l`.
 - The archive is non-empty and structurally valid.
 - The backup directory contains database, source, uploads, infra, and git artifacts.
+- An isolated restore check completed successfully into a throwaway PostgreSQL database.
+- The restored throwaway database reported `1194` public tables before being dropped.
 
 ## Operational Recovery Checks
 - Browser login
@@ -31,4 +33,3 @@ Recover the production application within the target recovery window using the v
 ## Notes
 - No production DNS, nginx, PM2, or live database changes are made by this runbook until an explicit recovery decision is approved.
 - Production restore should use the verified backup only after an isolated restore check passes.
-

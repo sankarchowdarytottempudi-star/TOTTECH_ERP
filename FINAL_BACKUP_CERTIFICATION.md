@@ -17,6 +17,7 @@ The recovery foundation backup is verified and usable as a baseline for rollback
 | Infra snapshot exists | PASS |
 | Git metadata snapshot exists | PASS |
 | Archive structure validated | PASS |
+| Isolated restore validation | PASS |
 
 ## Key Facts
 - Backup location: `/opt/backups/recovery-foundation/20260624-0758`
@@ -26,7 +27,7 @@ The recovery foundation backup is verified and usable as a baseline for rollback
 - Source snapshot file count: `13,189`
 - Upload snapshot file count: `46`
 - Total backup size: `3.2G`
+- Isolated restore check: `1194` public tables restored successfully in a throwaway database
 
 ## Conclusion
 The baseline is suitable for rollback and recovery work. Production application data was not modified during backup creation.
-
